@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'nunito';
+    src: url('/assets/fonts/nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('/assets/fonts/montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
