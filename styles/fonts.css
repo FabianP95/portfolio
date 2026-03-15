@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'nunito';
-    src: url('/assets/fonts/nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Anta';
+    src: url('/assets/fonts/Anta/Anta-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'montserrat';
-    src: url('/assets/fonts/montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Josefin';
+    src: url('/assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
 }

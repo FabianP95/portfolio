@@ -7,26 +7,24 @@
     <title>Mein Portfolio</title>
     <link rel="icon" href="./assets/icons/logo/logoDarkBlue.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/hero_section.css">
     <link rel="stylesheet" href="./styles/standard.css">
+    <link rel="stylesheet" href="./styles/content_section.css">
 </head>
 
 <body>
     <div class="wrapper-hero-section">
         <section class="hero">
-            <div class="swap-image">
-                <img src="./assets/icons/hero_section/heroBackground.svg" alt="background of the main image"
-                    class="image-default">
-                <img src="./assets/icons/hero_section/heroBackgroundHover.svg"
-                    alt="background of the main image in hover state" class="image-hover">
-                <img src="./assets/icons/skills/apiBig.svg" alt="photo of fabian puchta">
+            <div class="main-image-container"><img class="profil-img" src="./assets/img/profil.jpg"
+                    alt="photo of fabian puchta">
             </div>
             <div class="info-hero-section">
                 <div class="head-container">
                     <div class="wrapper-logo-header">
-                        <div class="swap-image">
-                            <img src="./assets/icons/logo/logoLightBlue.svg" alt="logo" class="image-default">
-                            <img src="./assets/icons/logo/logoHover.svg" alt="logo hover state" class="image-hover">
+                        <div class="logo-image">
+                            <img src="./assets/icons/logo/logoLightBlue.svg" alt="logo" class="logo-default">
+                            <img src="./assets/icons/logo/logoHover.svg" alt="logo hover state" class="logo-hover">
                         </div>
                         <div>
                             <p class="name">F. Puchta</p>
@@ -34,12 +32,14 @@
                         </div>
                     </div>
                     <div class="wrapper-social-media">
-                        <a href="" target="_blank" rel="noopener noreferrer" class="swap-image">
+                        <a href="mailto:fabianpuchta@hotmail.de" target="_blank" rel="noopener noreferrer"
+                            class="swap-image">
                             <img src="./assets/icons/social_media/emailBlue.svg" alt="email icon" class="image-default">
                             <img src="./assets/icons/social_media/mailMediaHover.svg" class="image-hover"
                                 alt="email icon in hovered state">
                         </a>
-                        <a href="" target="_blank" rel="noopener noreferrer" class="swap-image">
+                        <a href="https://www.linkedin.com/in/fabian-puchta-7ba7383b7/" target="_blank"
+                            rel="noopener noreferrer" class="swap-image">
                             <img src="./assets/icons/social_media/linkedIn.svg" alt="linkedIn icon"
                                 class="image-default">
                             <img src="./assets/icons/social_media/linkedInHover.svg" class="image-hover"
@@ -78,10 +78,10 @@
                 </div>
             </div>
             <div class="navbar-menu">
-                <a href="">Why Me</a>
-                <a href="">Skills</a>
-                <a href="">Projects</a>
-                <a href="">Contact</a>
+                <a href="#aboutSection">Why Me</a>
+                <a href="#skillSection">Skills</a>
+                <a href="#projectSection">Projects</a>
+                <a href="#contactSection">Contact</a>
             </div>
             <div class="navbar-language">
                 <a class="swap-image"> DE
@@ -94,7 +94,67 @@
             </div>
         </nav>
     </div>
-    <div style="height:400px"></div>
+    <div class="content-wrapper">
+        <section id="aboutSection" class="sub-section">
+            <h2 class="content-headlines">Why me</h2>
+            <div class="content-section-body">
+                <div class="content-about-left">
+                    <div class="info-left">
+                        <img class="location-image" src="./assets/icons/about_me/location.svg" alt="">
+                        <p class="info-location">
+                            <span class="color-writing-blue">I am</span> located in Berlin..
+                        </p>
+                    </div>
+                    <div class="info-left">
+                        <img class="location-image" src="./assets/icons/about_me/remote.svg" alt="">
+                        <p class="info-location">
+                            <span class="color-writing-blue">I am</span> open to work remote..
+                        </p>
+                    </div>
+                </div>
+                <div class="content-about-right">
+                    <p class="font-size-18 text-about-me">Stuff about me Stuff about me Stuff about me Stuff about me
+                        Stuff about me Stuff about me Stuff about me
+                        Stuff about me Stuff about me Stuff about me Stuff about me Stuff about me Stuff about me Stuff
+                        about meStuff about me Stuff about me
+                        Stuff about me Stuff about me Stuff about me Stuff about me Stuff about me Stuff about me Stuff
+                        about me Stuff about me
+                    </p>
+                    <div>
+                        <button class="btn font-size-18">Let's talk</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skillSection" class="sub-section">
+            <h2 class="content-headlines">My Skills</h2>
+            <div class="content-section-body">
+                <div class="content-skills-left">
+                    <img src="./assets/icons/skills/htmlBig.svg" alt="icon for html">
+                    <img src="./assets/icons/skills/cssBig.svg" alt="icon for css">
+                    <img src="./assets/icons/skills/jsBig.svg" alt="icon for java script">
+                    <img src="./assets/icons/skills/apiBig.svg" alt="icon for an API">
+                    <img src="./assets/icons/skills/firebaseBig.svg" alt="icon for firebase storage">
+                    <img src="./assets/icons/skills/gitBig.svg" alt="icon for gitHub">
+                    <img src="./assets/icons/skills/scrumBig.svg" alt="icon for scrum">
+                </div>
+                <div class="content-skills-right">
+                    <p>I am currently learning</p>
+                    <div>
+                        <img src="./assets/icons/skills/angularSmall.svg" alt="icon for an angular">
+                        <img src="./assets/icons/skills/typeScriptSmall.svg" alt="icon for an typescript">
+                    </div>
+                    <p>Stuff about me Stuff about me Stuff about me Stuff about me
+                        Stuff about me Stuff about me Stuff about me
+                        Stuff about me Stuff about me Stuff about me Stuff about me Stuff about me Stuff about me Stuff
+                        about meStuff about me Stuff about me
+                        Stuff about me Stuff about me Stuff about me Stuff about me Stuff about me Stuff about me Stuff
+                        about me Stuff about me</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
 
     <footer>
 

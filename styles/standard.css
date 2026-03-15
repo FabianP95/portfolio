@@ -1,6 +1,11 @@
 body {
     background-color: #262E34;
-    font-family: 'montserrat', sans-serif;
+    font-family: 'Josefin', sans-serif;
     color: white;
     margin: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
 }
