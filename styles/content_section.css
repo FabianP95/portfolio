@@ -22,7 +22,7 @@
     align-items: flex-start;
 }
 
-.info-left{
+.info-left {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -54,21 +54,59 @@
     color: #89BCD9;
 }
 
-.text-about-me{
+.text-about-me {
     line-height: 120%;
 }
 
 .content-skills-left {
     display: flex;
     width: 50%;
-    gap: 510px;
-    flex-direction: row;
-   
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .content-skills-right {
+    position: relative;
+    width:  clamp(280px, 90vw, 480px);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
     display: flex;
     flex-direction: column;
-    width: 50%;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px;
+    text-align: center;
+    overflow: hidden;
+   
+}
+
+.content-skills-right::before,
+.content-skills-right::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    transition: opacity 0.4s ease;
+}
+
+.content-skills-right::before {
+    background-image: url('/assets/icons/currently/currently.svg');
+    opacity: 1;
+}
+
+.content-skills-right::after {
+    background-image: url('/assets/icons/currently/currentlyHover.svg');
+    opacity: 0;
+}
+
+.content-skills-right:hover::before {
+    opacity: 0;
+}
+
+.content-skills-right:hover::after {
+    opacity: 1;
 }
