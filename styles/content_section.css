@@ -67,7 +67,7 @@
 
 .content-skills-right {
     position: relative;
-    width:  clamp(280px, 90vw, 480px);
+    width: clamp(280px, 90vw, 480px);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     display: flex;
@@ -78,7 +78,7 @@
     padding: 60px;
     text-align: center;
     overflow: hidden;
-   
+
 }
 
 .content-skills-right::before,
@@ -109,4 +109,292 @@
 
 .content-skills-right:hover::after {
     opacity: 1;
+}
+
+.stripe-background {
+    background-color: #2d383f;
+    height: 200px;
+}
+
+
+
+
+/* test */
+
+
+.tabs {
+    display: flex;
+    justify-content: center;
+
+}
+
+.tab {
+    padding: 0.85rem 2rem;
+    border-radius: var(--radius) var(--radius) 0 0;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+    position: relative;
+    font-size: 30px;
+}
+
+
+
+.tab.active {
+    color: #ffffff;
+    background-color: #2d383f;
+    border-radius: 20px 20px 0 0
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 2px 2px 0 0;
+}
+
+
+.card {
+    background-color: #2d383f;
+    padding: 2.5rem 2.75rem;
+}
+
+/* ── LEFT COLUMN ────────────────────────────────────────── */
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section {
+    display: flex;
+    gap: 1.1rem;
+    align-items: flex-start;
+}
+
+.dot-col {
+    padding-top: 0.25rem;
+}
+
+.dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--dot);
+    flex-shrink: 0;
+    box-shadow: 0 0 10px rgba(91, 140, 255, 0.45);
+}
+
+.section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.duration-badge {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--muted);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    padding: 0.2rem 0.75rem;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+}
+
+.section-text {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+/* ── RIGHT COLUMN ───────────────────────────────────────── */
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.tech-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.6rem;
+}
+
+.tech-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+}
+
+/* ICON PLACEHOLDER */
+.icon-ph {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.62rem;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* SCREENSHOT PLACEHOLDER */
+.screenshot-ph {
+    width: 100%;
+    aspect-ratio: 16/10;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px dashed rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.screenshot-ph::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(135deg, rgba(79, 195, 247, 0.04) 0%, transparent 60%),
+        repeating-linear-gradient(0deg,
+            transparent,
+            transparent 19px,
+            rgba(255, 255, 255, 0.025) 19px,
+            rgba(255, 255, 255, 0.025) 20px),
+        repeating-linear-gradient(90deg,
+            transparent,
+            transparent 19px,
+            rgba(255, 255, 255, 0.025) 19px,
+            rgba(255, 255, 255, 0.025) 20px);
+}
+
+.screenshot-ph span {
+    font-size: 0.72rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+/* ── BUTTONS ────────────────────────────────────────────── */
+.btn-row {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+}
+
+.btn {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.5rem;
+    border-radius: 999px;
+    border: 1.5px solid;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #0d1520;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+}
+
+.btn-outline {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--text);
+}
+
+.btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* ── TAB PANEL TRANSITIONS ──────────────────────────────── */
+.panel {
+    display: none;
+}
+
+.panel.active {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 2.5rem;
+    align-items: start;
+    animation: fadeIn 0.22s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 700px) {
+    .panel.active {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-row,
+    .btn-row {
+        justify-content: flex-start;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    :root {
+        --bg: #1e2533;
+        --surface: #252d3d;
+        --border: rgba(255, 255, 255, 0.07);
+        --accent: #4fc3f7;
+        --accent2: #7c86ff;
+        --dot: #5b8cff;
+        --text: #e8eaf0;
+        --muted: #8a93ad;
+        --tag-bg: rgba(79, 195, 247, 0.12);
+        --radius: 18px;
+        --tab-active: #fff;
+        --tab-idle: #5b6785;
+    }
 }
