@@ -1,4 +1,4 @@
-const tabs = document.querySelectorAll('.tab');
+const tabs = document.querySelectorAll('.nav-projects');
 const panels = document.querySelectorAll('.panel');
 
 tabs.forEach((tab, i) => {

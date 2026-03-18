@@ -8,11 +8,29 @@
     border: 1px solid;
     border-color: #89bcd9;
     background-color: transparent;
-    color: #ffffff;
     color: #89bcd9;
     padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Josefin', sans-serif;
 }
 
 .btn:hover {
     background-color: #3f454a;
+}
+
+.btn-live {
+    font-family: 'Josefin', sans-serif;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid;
+    background-color: #89bcd9;
+    border-color: #89bcd9;
+    color: #262e34;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.btn-live:hover {
+    background-color: #F8F5EC;
+    border-color: #F8F5EC;
 }

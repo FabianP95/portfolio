@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/hero_section.css">
     <link rel="stylesheet" href="./styles/standard.css">
     <link rel="stylesheet" href="./styles/content_section.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
 </head>
 
 <body>
@@ -101,19 +102,19 @@
                 <div class="content-about-left">
                     <div class="info-left">
                         <img class="location-image" src="./assets/icons/about_me/location.svg" alt="">
-                        <p class="info-location">
+                        <p class="font-size-30">
                             <span class="color-writing-blue">I am</span> located in Berlin..
                         </p>
                     </div>
                     <div class="info-left">
                         <img class="location-image" src="./assets/icons/about_me/remote.svg" alt="">
-                        <p class="info-location">
+                        <p class="font-size-30">
                             <span class="color-writing-blue">I am</span> open to work remote..
                         </p>
                     </div>
                 </div>
                 <div class="content-about-right">
-                    <p class="font-size-18 text-about-me">Stuff about me Stuff about me Stuff about me Stuff about me
+                    <p class="font-size-18 line-height">Stuff about me Stuff about me Stuff about me Stuff about me
                         Stuff about me Stuff about me Stuff about me
                         Stuff about me Stuff about me Stuff about me Stuff about me Stuff about me Stuff about me Stuff
                         about meStuff about me Stuff about me
@@ -153,58 +154,49 @@
                 </div>
             </div>
         </section>
-        <section id="projectSection" class="sub-section">
-            <h2 class="content-headlines">My Projects</h2>
-            <!-- Tab Bar -->
-            <nav class="tabs" role="tablist">
-                <button class="tab color-writing-blue info-location active" role="tab">1. Join</button>
-                <button class="tab color-writing-blue info-location" role="tab">2. El Pollo Loco</button>
-                <button class="tab color-writing-blue info-location" role="tab">3. Pokedex</button>
-                <button class="tab color-writing-blue info-location" role="tab">4. Ongoing Project</button>
-            </nav>
-
-            <!-- Card shell -->
-            <div class="card">
-
-                <!-- ══ PANEL 1: DA Bubble ══ -->
+    </div>
+    <section id="projectSection" class="sub-section">
+        <h2 class="content-headlines">My Projects</h2>
+        <nav class="nav-projects" role="tablist">
+            <button class="tab color-writing-blue font-size-30 active" role="tab">1. Join</button>
+            <button class="tab color-writing-blue font-size-30" role="tab">2. El Pollo Loco</button>
+            <button class="tab color-writing-blue font-size-30" role="tab">3. Pokedex</button>
+            <button class="tab color-writing-blue font-size-30" role="tab">4. Ongoing Project</button>
+        </nav>
+        <div class="card">
+            <div class="content-wrapper">
                 <div class="panel active" data-panel="0">
-                    <div class="left">
-                        <div class="section">
-                            <div class="dot-col">
-                                <div class="dot"></div>
-                            </div>
-                            <div class="section-body">
-                                <div class="section-title">
+                    <div class="pr-card-left">
+                        <div class="pr-section">
+                            <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
+                            <div>
+                                <h3 class="pr-title">
                                     About the project
-                                    <span class="duration-badge">Duration: 3 weeks</span>
-                                </div>
-                                <p class="section-text">
+                                    <span class="font-size-18">Duration: 3 weeks</span>
+                                </h3>
+                                <p class="font-size-18 line-height">
                                     This App is a Slack Clone App.<br>
                                     It revolutionizes team communication and collaboration with its intuitive
                                     interface, real-time messaging, and robust channel organization.
                                 </p>
                             </div>
                         </div>
-                        <div class="section">
-                            <div class="dot-col">
-                                <div class="dot"></div>
-                            </div>
-                            <div class="section-body">
-                                <div class="section-title">How I have organised my work process</div>
-                                <p class="section-text">
+                        <div class="pr-section">
+                            <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
+                            <div>
+                                <h3 class="pr-title">How I have organised my work process</h3>
+                                <p class="font-size-18 line-height">
                                     How do you keep your code clean and maintainable? Have you broken the
                                     project down into reusable modules or components? Focus on documentation,
                                     naming files, variables, classes and testing.
                                 </p>
                             </div>
                         </div>
-                        <div class="section">
-                            <div class="dot-col">
-                                <div class="dot"></div>
-                            </div>
-                            <div class="section-body">
-                                <div class="section-title">My group work experience</div>
-                                <p class="section-text">
+                        <div class="pr-section">
+                            <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
+                            <div>
+                                <h3 class="pr-title">My group work experience</h3>
+                                <p class="font-size-18 line-height">
                                     How many people were in the team and what was your role? Describe your
                                     tasks in 1–2 sentences, for example: login form, dashboard or chat
                                     functionality. What technologies did you use?<br>
@@ -213,226 +205,211 @@
                             </div>
                         </div>
                     </div>
-                    <div class="right">
-                        <div class="tech-row">
-                            <span class="tech-label">Technologies</span>
-                            <div class="icon-ph" title="Angular">Icon<br>1</div>
-                            <div class="icon-ph" title="TypeScript">Icon<br>2</div>
-                            <div class="icon-ph" title="Firebase">Icon<br>3</div>
+                    <div class="pr-right ">
+                        <div class="sub-section">
+                            <p class="font-size-18">Technologies</p>
+                            <div class="tech-icon-row">
+                                <img src="./assets/icons/skills/htmlSmall.svg" alt="html icon">
+                                <img src="./assets/icons/skills/jsSmall.svg" alt="javascript icon">
+                                <img src="./assets/icons/skills/cssSmall.svg" alt="css icon">
+                            </div>
+
                         </div>
                         <div class="screenshot-ph">
                             <!-- Replace with <img src="da-bubble-screenshot.png" …> -->
                             <span>App Screenshot</span>
                         </div>
-                        <div class="btn-row">
-                            <button class="btn btn-primary">Live Test</button>
-                            <button class="btn btn-outline">GitHub</button>
+                        <div class="tech-icon-row">
+                            <button class="btn-live">Live Test</button>
+                            <button class="btn">GitHub</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- ══ PANEL 2: Sharkie ══ -->
                 <div class="panel" data-panel="1">
-                    <div class="left">
-                        <div class="section">
-                            <div class="dot-col">
-                                <div class="dot"></div>
-                            </div>
-                            <div class="section-body">
-                                <div class="section-title">
+                    <div class="pr-card-left">
+                        <div class="pr-section">
+                            <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
+                            <div>
+                                <h3 class="pr-title">
                                     About the project
-                                    <span class="duration-badge">Duration: 2 weeks</span>
-                                </div>
-                                <p class="section-text">
-                                    Sharkie is a 2D side-scrolling jump-and-run game.<br>
-                                    Built with vanilla JavaScript and an object-oriented approach, it features
-                                    animated enemies, collectibles, and a boss encounter.
+                                    <span class="font-size-18">Duration: 3 weeks</span>
+                                </h3>
+                                <p class="font-size-18 line-height">
+                                    This App is a Slack Clone App.<br>
+                                    It revolutionizes team communication and collaboration with its intuitive
+                                    interface, real-time messaging, and robust channel organization.
                                 </p>
                             </div>
                         </div>
-                        <div class="section">
-                            <div class="dot-col">
-                                <div class="dot"></div>
-                            </div>
-                            <div class="section-body">
-                                <div class="section-title">How I have organised my work process</div>
-                                <p class="section-text">
-                                    The project is structured around a class hierarchy for game objects,
-                                    with a central game loop managing rendering and collision detection.
-                                    Assets are preloaded and sprite sheets are managed per entity class.
+                        <div class="pr-section">
+                            <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
+                            <div>
+                                <h3 class="pr-title">How I have organised my work process</h3>
+                                <p class="font-size-18 line-height">
+                                    How do you keep your code clean and maintainable? Have you broken the
+                                    project down into reusable modules or components? Focus on documentation,
+                                    naming files, variables, classes and testing.
                                 </p>
                             </div>
                         </div>
-                        <div class="section">
-                            <div class="dot-col">
-                                <div class="dot"></div>
-                            </div>
-                            <div class="section-body">
-                                <div class="section-title">My solo work experience</div>
-                                <p class="section-text">
-                                    Developed independently. Responsible for game logic, animation system,
-                                    level design, and audio integration. Learned canvas rendering and
-                                    game-loop architecture from the ground up.
+                        <div class="pr-section">
+                            <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
+                            <div>
+                                <h3 class="pr-title">My group work experience</h3>
+                                <p class="font-size-18 line-height">
+                                    How many people were in the team and what was your role? Describe your
+                                    tasks in 1–2 sentences, for example: login form, dashboard or chat
+                                    functionality. What technologies did you use?<br>
+                                    It is nice to mention good teamwork and cooperation.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="right">
-                        <div class="tech-row">
-                            <span class="tech-label">Technologies</span>
-                            <div class="icon-ph" title="HTML5">Icon<br>1</div>
-                            <div class="icon-ph" title="CSS3">Icon<br>2</div>
-                            <div class="icon-ph" title="JavaScript">Icon<br>3</div>
+                    <div class="pr-right ">
+                        <div class="sub-section">
+                            <p class="font-size-18">Technologies</p>
+                            <div class="tech-icon-row">
+                                <img src="./assets/icons/skills/htmlSmall.svg" alt="html icon">
+                                <img src="./assets/icons/skills/jsSmall.svg" alt="javascript icon">
+                                <img src="./assets/icons/skills/cssSmall.svg" alt="css icon">
+                            </div>
+
                         </div>
                         <div class="screenshot-ph">
-                            <!-- Replace with <img src="sharkie-screenshot.png" …> -->
+                            <!-- Replace with <img src="da-bubble-screenshot.png" …> -->
                             <span>App Screenshot</span>
                         </div>
-                        <div class="btn-row">
-                            <button class="btn btn-primary">Live Test</button>
-                            <button class="btn btn-outline">GitHub</button>
+                        <div class="tech-icon-row">
+                            <button class="btn-live">Live Test</button>
+                            <button class="btn">GitHub</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- ══ PANEL 3: Join ══ -->
                 <div class="panel" data-panel="2">
-                    <div class="left">
-                        <div class="section">
-                            <div class="dot-col">
-                                <div class="dot"></div>
-                            </div>
-                            <div class="section-body">
-                                <div class="section-title">
+                    <div class="pr-card-left">
+                        <div class="pr-section">
+                            <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
+                            <div>
+                                <h3 class="pr-title">
                                     About the project
-                                    <span class="duration-badge">Duration: 4 weeks</span>
-                                </div>
-                                <p class="section-text">
-                                    Join is a Kanban-style project management tool.<br>
-                                    It allows teams to create tasks, assign contacts, set priorities, and
-                                    track progress across customisable board columns.
+                                    <span class="font-size-18">Duration: 3 weeks</span>
+                                </h3>
+                                <p class="font-size-18 line-height">
+                                    This App is a Slack Clone App.<br>
+                                    It revolutionizes team communication and collaboration with its intuitive
+                                    interface, real-time messaging, and robust channel organization.
                                 </p>
                             </div>
                         </div>
-                        <div class="section">
-                            <div class="dot-col">
-                                <div class="dot"></div>
-                            </div>
-                            <div class="section-body">
-                                <div class="section-title">How I have organised my work process</div>
-                                <p class="section-text">
-                                    Components are split by feature: board, contacts, add-task, and summary.
-                                    Shared utilities handle Firebase CRUD operations and drag-and-drop logic,
-                                    keeping feature modules clean and independently testable.
+                        <div class="pr-section">
+                            <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
+                            <div>
+                                <h3 class="pr-title">How I have organised my work process</h3>
+                                <p class="font-size-18 line-height">
+                                    How do you keep your code clean and maintainable? Have you broken the
+                                    project down into reusable modules or components? Focus on documentation,
+                                    naming files, variables, classes and testing.
                                 </p>
                             </div>
                         </div>
-                        <div class="section">
-                            <div class="dot-col">
-                                <div class="dot"></div>
-                            </div>
-                            <div class="section-body">
-                                <div class="section-title">My group work experience</div>
-                                <p class="section-text">
-                                    Team of 3. I was responsible for the board view and drag-and-drop
-                                    functionality, as well as the overall Firebase data structure.
-                                    We used Git feature branches and daily standups to stay aligned.
+                        <div class="pr-section">
+                            <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
+                            <div>
+                                <h3 class="pr-title">My group work experience</h3>
+                                <p class="font-size-18 line-height">
+                                    How many people were in the team and what was your role? Describe your
+                                    tasks in 1–2 sentences, for example: login form, dashboard or chat
+                                    functionality. What technologies did you use?<br>
+                                    It is nice to mention good teamwork and cooperation.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="right">
-                        <div class="tech-row">
-                            <span class="tech-label">Technologies</span>
-                            <div class="icon-ph" title="HTML5">Icon<br>1</div>
-                            <div class="icon-ph" title="CSS3">Icon<br>2</div>
-                            <div class="icon-ph" title="Firebase">Icon<br>3</div>
+                    <div class="pr-right ">
+                        <div class="sub-section">
+                            <p class="font-size-18">Technologies</p>
+                            <div class="tech-icon-row">
+                                <img src="./assets/icons/skills/htmlSmall.svg" alt="html icon">
+                                <img src="./assets/icons/skills/jsSmall.svg" alt="javascript icon">
+                                <img src="./assets/icons/skills/cssSmall.svg" alt="css icon">
+                            </div>
+
                         </div>
                         <div class="screenshot-ph">
-                            <!-- Replace with <img src="join-screenshot.png" …> -->
                             <span>App Screenshot</span>
                         </div>
-                        <div class="btn-row">
-                            <button class="btn btn-primary">Live Test</button>
-                            <button class="btn btn-outline">GitHub</button>
+                        <div class="tech-icon-row">
+                            <button class="btn-live">Live Test</button>
+                            <button class="btn">GitHub</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- ══ PANEL 4: Ongoing Project ══ -->
                 <div class="panel" data-panel="3">
-                    <div class="left">
-                        <div class="section">
-                            <div class="dot-col">
-                                <div class="dot" style="background:#7c86ff;box-shadow:0 0 10px rgba(124,134,255,0.45);">
-                                </div>
-                            </div>
-                            <div class="section-body">
-                                <div class="section-title">
+                    <div class="pr-card-left">
+                        <div class="pr-section">
+                            <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
+                            <div>
+                                <h3 class="pr-title">
                                     About the project
-                                    <span class="duration-badge"
-                                        style="color:#7c86ff;border-color:rgba(124,134,255,0.3);">In progress</span>
-                                </div>
-                                <p class="section-text">
-                                    This is an ongoing project currently in active development.<br>
-                                    Details and a live demo will be published once the project reaches a
-                                    stable, presentable state.
+                                    <span class="font-size-18">Duration: 3 weeks</span>
+                                </h3>
+                                <p class="font-size-18 line-height">
+                                    This App is a Slack Clone App.<br>
+                                    It revolutionizes team communication and collaboration with its intuitive
+                                    interface, real-time messaging, and robust channel organization.
                                 </p>
                             </div>
                         </div>
-                        <div class="section">
-                            <div class="dot-col">
-                                <div class="dot" style="background:#7c86ff;box-shadow:0 0 10px rgba(124,134,255,0.45);">
-                                </div>
-                            </div>
-                            <div class="section-body">
-                                <div class="section-title">Current focus</div>
-                                <p class="section-text">
-                                    Architecture planning, component design, and setting up the CI/CD
-                                    pipeline. Documentation is being written in parallel to keep the
-                                    codebase maintainable from day one.
+                        <div class="pr-section">
+                            <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
+                            <div>
+                                <h3 class="pr-title">How I have organised my work process</h3>
+                                <p class="font-size-18 line-height">
+                                    How do you keep your code clean and maintainable? Have you broken the
+                                    project down into reusable modules or components? Focus on documentation,
+                                    naming files, variables, classes and testing.
                                 </p>
                             </div>
                         </div>
-                        <div class="section">
-                            <div class="dot-col">
-                                <div class="dot" style="background:#7c86ff;box-shadow:0 0 10px rgba(124,134,255,0.45);">
-                                </div>
-                            </div>
-                            <div class="section-body">
-                                <div class="section-title">Team & timeline</div>
-                                <p class="section-text">
-                                    Placeholder — describe team size, your role, and expected completion.
-                                    Mention any interesting challenges or technologies you are exploring
-                                    for the first time.
+                        <div class="pr-section">
+                            <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
+                            <div>
+                                <h3 class="pr-title">My group work experience</h3>
+                                <p class="font-size-18 line-height">
+                                    How many people were in the team and what was your role? Describe your
+                                    tasks in 1–2 sentences, for example: login form, dashboard or chat
+                                    functionality. What technologies did you use?<br>
+                                    It is nice to mention good teamwork and cooperation.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="right">
-                        <div class="tech-row">
-                            <span class="tech-label">Technologies</span>
-                            <div class="icon-ph" title="TBD">Icon<br>1</div>
-                            <div class="icon-ph" title="TBD">Icon<br>2</div>
-                            <div class="icon-ph" title="TBD">Icon<br>3</div>
+                    <div class="pr-right ">
+                        <div class="sub-section">
+                            <p class="font-size-18">Technologies</p>
+                            <div class="tech-icon-row">
+                                <img src="./assets/icons/skills/htmlSmall.svg" alt="html icon">
+                                <img src="./assets/icons/skills/jsSmall.svg" alt="javascript icon">
+                                <img src="./assets/icons/skills/cssSmall.svg" alt="css icon">
+                            </div>
+
                         </div>
-                        <div class="screenshot-ph" style="border-color:rgba(124,134,255,0.2);">
-                            <!-- Replace with project screenshot when available -->
-                            <span>Coming Soon</span>
+                        <div class="screenshot-ph">
+                           
+                            <span>App Screenshot</span>
                         </div>
-                        <div class="btn-row">
-                            <button class="btn btn-primary" disabled style="opacity:0.45;cursor:not-allowed;">Live
-                                Test</button>
-                            <button class="btn btn-outline">GitHub</button>
+                        <div class="tech-icon-row">
+                            <button class="btn-live">Live Test</button>
+                            <button class="btn">GitHub</button>
                         </div>
                     </div>
                 </div>
-
-            </div><!-- /card -->
-        </section>
-
-    </div>
-
+            </div>
+        </div>
+    </section>
 
 
 
