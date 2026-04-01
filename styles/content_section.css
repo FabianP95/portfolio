@@ -275,3 +275,68 @@
         transform: translateY(0);
     }
 }
+
+.team-title {
+    font-size: 28px;
+    color: #89BCD9;
+}
+
+.quote-section {
+    display: flex;
+    gap: 20px;
+}
+
+.single-quote {
+    position: relative;
+    width: clamp(280px, 90vw, 280px);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.single-quote::before,
+.single-quote::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    transition: opacity 0.4s ease;
+
+}
+
+.single-quote::before {
+    background-image: url('/assets/icons/references/reference.svg');
+    opacity: 1;
+}
+
+.single-quote::after {
+    background-image: url('/assets/icons//references/referenceHover.svg');
+    opacity: 0;
+}
+
+.single-quote:hover::before {
+    opacity: 0;
+}
+
+.single-quote:hover::after {
+    opacity: 1;
+}
+
+.single-link {
+    text-decoration-line: underline;
+    color: #89BCD9;
+    font-size: 16px;
+}
+
+.margin-team{
+    margin: 5px;
+}

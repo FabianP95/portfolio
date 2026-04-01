@@ -2,6 +2,10 @@
     font-size: 18px;
 }
 
+.font-size-26 {
+    font-size: 26px;
+}
+
 .btn {
     cursor: pointer;
     border-radius: 20px;
