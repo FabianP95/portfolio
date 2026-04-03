@@ -38,3 +38,10 @@
     background-color: #F8F5EC;
     border-color: #F8F5EC;
 }
+
+.wrapper-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #89BCD9;
+}

@@ -1,0 +1,11 @@
+.wrapper-arrow-up {
+    display: flex;
+    justify-content: center;
+    
+   
+   
+}
+
+.wrapper-arrow-up a {
+    cursor: pointer;
+}

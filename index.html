@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="./styles/hero_section.css">
     <link rel="stylesheet" href="./styles/standard.css">
     <link rel="stylesheet" href="./styles/content_section.css">
+    <link rel="stylesheet" href="./styles/contact.css">
     <link rel="stylesheet" href="./styles/responsive.css">
 </head>
 
 <body>
     <div class="wrapper-hero-section">
-        <section class="hero">
+        <section id="hero" class="hero">
             <div class="main-image-container"><img class="profil-img" src="./assets/img/profil.jpg"
                     alt="photo of fabian puchta">
             </div>
@@ -32,7 +33,7 @@
                             <p>developer</p>
                         </div>
                     </div>
-                    <div class="wrapper-social-media">
+                    <div class="wrapper-social-media-footer">
                         <a href="mailto:fabianpuchta@hotmail.de" target="_blank" rel="noopener noreferrer"
                             class="swap-image">
                             <img src="./assets/icons/social_media/emailBlue.svg" alt="email icon" class="image-default">
@@ -59,7 +60,7 @@
                     <p>Frontend Developer</p>
                 </div>
                 <div class="wrapper-arrow-down">
-                    <a href="" class="swap-image">
+                    <a href="#aboutSection" class="swap-image">
                         <img src="./assets/icons/hero_section/arrowDownHover.svg" class="image-hover"
                             alt="arrow pointing downward in hovered state">
                         <img src="./assets/icons/hero_section/arrowDown.svg" class="image-default"
@@ -415,38 +416,103 @@
         <div class="quote-section">
             <div class="single-quote">
                 <h4 class="font-size-26 margin-team">Sample</h4>
-                <p class="font-size-18 margin-team">Project <span class="color-writing-blue font-size-18">Join</span></p>
-                <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quasi aut eveniet placeat
+                <p class="font-size-18 margin-team">Project <span class="color-writing-blue font-size-18">Join</span>
+                </p>
+                <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quasi
+                    aut eveniet placeat
                     reprehenderit,
                     vel doloremque, rem autem alias, vero commodi corrupti tenetur est illum obcaecati libero eum? Qui,
                     molestias!</p>
-                <a class="single-link" href="#">Linked In Profile</a>
+                <a class="single-link margin-team-link" href="#">Linked In Profile</a>
             </div>
             <div class="single-quote">
                 <h4 class="font-size-26 margin-team">Sample Name LONG</h4>
-                <p class="font-size-18 margin-team">Project <span class="color-writing-blue font-size-18">Join</span></p>
-                <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quasi aut eveniet placeat
+                <p class="font-size-18 margin-team">Project <span class="color-writing-blue font-size-18">Join</span>
+                </p>
+                <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quasi
+                    aut eveniet placeat
                     reprehenderit,
                     vel doloremque, rem autem alias, vero commodi corrupti tenetur est illum obcaecati libero eum? Qui,
                     molestias!</p>
-                <a class="single-link" href="#">Linked In Profile</a>
+                <a class="single-link margin-team-link" href="#">Linked In Profile</a>
             </div>
             <div class="single-quote">
                 <h4 class="font-size-26 margin-team">Sample</h4>
-                <p class="font-size-18 margin-team">Project <span class="color-writing-blue font-size-18">Join</span></p>
-                <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quasi aut eveniet placeat
+                <p class="font-size-18 margin-team">Project <span class="color-writing-blue font-size-18">Join</span>
+                </p>
+                <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quasi
+                    aut eveniet placeat
                     reprehenderit,
                     vel doloremque, rem autem alias, vero commodi corrupti tenetur est illum obcaecati libero eum? Qui,
                     molestias!</p>
-                <a class="single-link margin-team" href="#" style="margin:auto">Linked In Profile</a>
+                <a class="single-link margin-team-link" href="#">Linked In Profile</a>
             </div>
         </div>
     </section>
-
-
-
-
-    <footer>
+    <section class="contact-section">
+        <div class="sub-section">
+            <h2 class="content-headlines">Contact me</h2>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi rem maiores eos, inventore quam, quas
+                    iste labore repellendus rerum,
+                    autem numquam vel fuga ipsum sed reiciendis quod et distinctio corporis.</p>
+                <div>
+                    <a class="contact-section-mail" href="mailto:fabianpuchta@hotmail.de">E-Mail:
+                        fabianpuchta@hotmail.de</a>
+                    <p class="contact-section-phone">Tel: 015124181798</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <input type="text">
+                    <input type="text">
+                </div>
+                <input type="text">
+            </div>
+            <div>I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.</div>
+            <div>
+                <button>Send</button>
+            </div>
+        </div>
+        <aside class="wrapper-arrow-up">
+            <a href="#hero" class="swap-image">
+                <img src="./assets/icons/hero_section/arrowUpHover.svg" class="image-hover"
+                    alt="arrow pointing downward in hovered state">
+                <img src="./assets/icons/hero_section/arrowUp.svg" class="image-default" alt="arrow pointing downward">
+            </a>
+        </aside>
+    </section>
+    <footer class="wrapper-footer">
+        <div class="content-wrapper-footer">
+            <div>
+                <a href="">Legal Notice</a>
+                <p>Fabian Puchta 2026</p>
+            </div>
+            <div class="wrapper-logo">
+                <img src="./assets/icons/logo/logoDarkBlue.svg" alt="logo">
+                <p class="name">F. Puchta</p>
+                <p>developer</p>
+            </div>
+            <div class="wrapper-social-media-footer">
+                <a href="https://github.com/FabianP95" target="_blank" rel="noopener noreferrer" class="swap-image">
+                    <img src="./assets/icons/contact/githubFooter.svg" alt="gitHub icon" class="image-default">
+                    <img src="./assets/icons/contact/gitHoverFooter.svg" class="image-hover"
+                        alt="gitHub icon in hovered state">
+                </a>
+                <a href="mailto:fabianpuchta@hotmail.de" target="_blank" rel="noopener noreferrer" class="swap-image">
+                    <img src="./assets/icons/contact/mailFooter.svg" alt="email icon" class="image-default">
+                    <img src="./assets/icons/contact/mailHoverFooter.svg" class="image-hover"
+                        alt="email icon in hovered state">
+                </a>
+                <a href="https://www.linkedin.com/in/fabian-puchta-7ba7383b7/" target="_blank" rel="noopener noreferrer"
+                    class="swap-image">
+                    <img src="./assets/icons/contact/linkedInFooter.svg" alt="linkedIn icon" class="image-default">
+                    <img src="./assets/icons/contact/linkedInHoverFooter.svg" class="image-hover"
+                        alt="linkedIn icon in hovered state">
+                </a>
+                
+            </div>
+        </div>
 
     </footer>
 

@@ -15,6 +15,12 @@
     align-items: center;
 }
 
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .content-section-body {
     display: flex;
     flex-direction: row;
@@ -337,6 +343,25 @@
     font-size: 16px;
 }
 
-.margin-team{
+.margin-team {
     margin: 5px;
 }
+
+.margin-team-link {
+    margin-top: auto;
+}
+
+.content-wrapper-footer{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wrapper-social-media-footer {
+    display: flex;
+    
+    gap: 40px;
+}
+

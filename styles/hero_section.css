@@ -15,7 +15,6 @@
     background-color: #89BCD9;
     position: sticky;
     top: 0;
-    
 }
 
 h1 {
@@ -63,9 +62,7 @@ h1 {
 .wrapper-social-media {
     display: flex;
     flex-direction: column;
-
     gap: 40px;
-
 }
 
 .head-container {
