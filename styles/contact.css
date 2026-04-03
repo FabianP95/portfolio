@@ -1,11 +1,241 @@
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 200px;
+    margin-bottom: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .wrapper-arrow-up {
     display: flex;
     justify-content: center;
-    
-   
-   
+    position: absolute;
+    right: 142px;
+    top: 101px;
 }
 
 .wrapper-arrow-up a {
     cursor: pointer;
+}
+
+.content-contact-body {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+.content-contact-left {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin-top: 0;
+}
+
+.content-contact-right {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+}
+
+.contact-section-mail {
+    color: #F8F5EC;
+    display: flex;
+    gap: 20px;
+}
+
+.contact-section-phone {
+    display: flex;
+    gap: 20px;
+}
+
+
+.contact-section-mail::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: url("/assets/icons/social_media/emailWhite.svg") center / contain no-repeat;
+}
+
+.contact-section-mail:hover::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: url("/assets/icons/contact/mailHover.svg") center / contain no-repeat;
+}
+
+.contact-section-mail:hover {
+    color: #89BCD9;
+}
+
+.contact-section-phone::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: url("/assets/icons/contact/phone.svg") center / contain no-repeat;
+}
+
+.contact-section-phone:hover::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: url("/assets/icons/contact/phoneHover.svg") center / contain no-repeat;
+}
+
+
+.contact-section-phone:hover {
+    color: #89BCD9;
+    cursor: context-menu;
+}
+
+.form-wrapper {
+    width: 100%;
+}
+
+.row-name-mail {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-wrapper .input-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-wrapper .input-field {
+    position: relative;
+    width: 100%;
+}
+
+.form-wrapper .input-wrapper label {
+    font-size: 16px;
+    color: #89BCD9;
+    padding-left: 27px;
+}
+
+.validation-icon {
+    position: absolute;
+    top: 23px;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.form-wrapper .input-wrapper input,
+.form-wrapper .input-wrapper textarea {
+    background-color: transparent;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid #89BCD9;
+    border-radius: 22px;
+    padding: 10px 25px;
+    color: #F8F5EC;
+    font-size: 18px;
+}
+
+.form-wrapper .input-wrapper input:focus-visible,
+.form-wrapper .input-wrapper textarea:focus-visible {
+    outline: none;
+    background-color: rgb(49 63 71);
+}
+
+
+.form-wrapper .input-wrapper textarea {
+    resize: vertical;
+}
+
+.form-wrapper .input-field input,
+.form-wrapper .input-field textarea {
+    padding-right: 50px;
+}
+
+.missing_inputs {
+    color: #E44C36 !important;
+    border-color: #E44C36 !important;
+}
+
+.missing_input_title {
+    color: #E44C36 !important;
+}
+
+.checkbox-wrapper {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.checkbox-wrapper .icon-default {
+    display: block;
+}
+
+.checkbox-wrapper:hover .icon-default {
+    display: none;
+}
+
+.checkbox-wrapper:hover .icon-hover {
+    display: block;
+}
+
+.checkbox-wrapper input:checked~.checkbox-icon .icon-default {
+    display: none;
+}
+
+.checkbox-wrapper input:checked~.checkbox-icon .icon-hover {
+    display: none;
+}
+
+.checkbox-wrapper input:checked~.checkbox-icon .icon-checked {
+    display: block;
+}
+
+.contact-accept-section {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.accept-policy-wrapper {
+    display: flex;
+    position: relative;
+    font-size: 16px;
+    gap: 10px;
+    align-items: center;
+}
+
+.accept-policy-wrapper a {
+    color: #89BCD9;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.red-error {
+    color: #E44C36;
+}
+
+.send-btn-pos {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.send-btn-pos button:disabled {
+    border-color: #8F9290 !important;
+    color: #8F9290 !important;
+    cursor: auto !important;
+}
+
+.send-btn-pos button:disabled:hover {
+    background-color: transparent;
 }

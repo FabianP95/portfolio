@@ -9,7 +9,7 @@
 
 .wrapper-navbar {
     width: 100%;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     justify-content: center;
     background-color: #89BCD9;
@@ -108,7 +108,6 @@ h1 {
 .wrapper-logo p {
     font-size: 16px;
     margin: 0;
-    color: #89BCD9;
 }
 
 .title {

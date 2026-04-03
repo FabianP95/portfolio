@@ -216,14 +216,13 @@
                             </div>
 
                         </div>
-                        <div class="screenshot-ph">
-                            <!-- Replace with <img src="da-bubble-screenshot.png" …> -->
-                            <span>App Screenshot</span>
+                        <div class="screenshot-project">
+                            <img src="/assets/img/joinScreen.png" alt="screenshot of the project 'join'">
                         </div>
-                        <div class="tech-icon-row">
-                            <button class="btn-live">Live Test</button>
-                            <button class="btn">GitHub</button>
-                        </div>
+                    </div>
+                    <div class="project-btns">
+                        <button class="btn-live">Live Test</button>
+                        <button class="btn">GitHub</button>
                     </div>
                 </div>
 
@@ -277,9 +276,8 @@
                             </div>
 
                         </div>
-                        <div class="screenshot-ph">
-                            <!-- Replace with <img src="da-bubble-screenshot.png" …> -->
-                            <span>App Screenshot</span>
+                        <div class="screenshot-project">
+                            <img src="/assets/img/polloScreen.png" alt="screenshot of the project 'el pollo loco'">
                         </div>
                         <div class="tech-icon-row">
                             <button class="btn-live">Live Test</button>
@@ -338,8 +336,8 @@
                             </div>
 
                         </div>
-                        <div class="screenshot-ph">
-                            <span>App Screenshot</span>
+                        <div class="screenshot-project">
+                            <img src="/assets/img/pokeScreen.png" alt="screenshot of the project 'el pollo loco'">
                         </div>
                         <div class="tech-icon-row">
                             <button class="btn-live">Live Test</button>
@@ -398,8 +396,7 @@
                             </div>
 
                         </div>
-                        <div class="screenshot-ph">
-
+                        <div class="screenshot-project">
                             <span>App Screenshot</span>
                         </div>
                         <div class="tech-icon-row">
@@ -412,7 +409,9 @@
         </div>
     </section>
     <section class="sub-section">
-        <h3 class="team-title">Need a teamplayer? Here what my colleagues said about me</h3>
+        <div>
+            <p class="team-title">Need a teamplayer?<span>Here's what my colleagues say about me</span></p>
+        </div>
         <div class="quote-section">
             <div class="single-quote">
                 <h4 class="font-size-26 margin-team">Sample</h4>
@@ -452,26 +451,76 @@
     <section class="contact-section">
         <div class="sub-section">
             <h2 class="content-headlines">Contact me</h2>
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi rem maiores eos, inventore quam, quas
+            <div class="content-contact-body">
+                <p class="content-contact-left font-size-18">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Sequi rem
+                    maiores eos, inventore quam, quas
                     iste labore repellendus rerum,
                     autem numquam vel fuga ipsum sed reiciendis quod et distinctio corporis.</p>
-                <div>
-                    <a class="contact-section-mail" href="mailto:fabianpuchta@hotmail.de">E-Mail:
+                <div class="content-contact-right">
+                    <a class="contact-section-mail font-size-20" href="mailto:fabianpuchta@hotmail.de">E-Mail:
                         fabianpuchta@hotmail.de</a>
-                    <p class="contact-section-phone">Tel: 015124181798</p>
+                    <p class="contact-section-phone font-size-20">Tel: 015124181798</p>
                 </div>
             </div>
-            <div>
-                <div>
-                    <input type="text">
-                    <input type="text">
-                </div>
-                <input type="text">
-            </div>
-            <div>I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.</div>
-            <div>
-                <button>Send</button>
+            <div class="form-wrapper">
+                <form onsubmit="">
+                    <div class="row-name-mail">
+                        <div class="input-wrapper">
+                            <label for="formName" id="formLabelName">Your Name <span class="d-none">is
+                                    required</span></label>
+                            <div class="input-field">
+                                <input type="text" name="name" id="formName">
+                                <img src="/assets/icons/contact/checkedValidation.svg" alt="input is valid"
+                                    class="validation-icon">
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="formMail" id="formLabelMail">Your Email <span class="d-none">is
+                                    required</span></label>
+                            <div class="input-field">
+                                <input type="email" name="mail" id="formMail">
+                                <img src="/assets/icons/contact/checkedValidation.svg" alt="input is valid"
+                                    class="validation-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-wrapper width-100">
+                        <label for="formMessage" id="formLabelMessage">Your Message <span class="d-none">is
+                                required</span></label>
+                        <div class="input-field">
+                            <textarea name="message" id="formMessage" rows="10"></textarea>
+                            <img src="/assets/icons/contact/checkedValidation.svg" alt="input is valid"
+                                class="validation-icon">
+                        </div>
+                    </div>
+                    <div class="contact-accept-section">
+                        <div class="accept-policy-wrapper">
+                            <label for="accept" class="checkbox-wrapper" id="checkbox" onclick="">
+                                <input class="d-none" type="checkbox" id="accept" value="accepted">
+                                <div class="checkbox-icon">
+                                    <img src="/assets/icons/contact/checkBox.svg" class="icon-default"
+                                        alt="checkbox icon in default state">
+                                    <img src="/assets/icons/contact/checkBoxHover.svg" class="icon-hover d-none"
+                                        alt="checkbox icon in hover state">
+                                    <img src="/assets/icons/contact/checkBoxChecked.svg" class="icon-checked d-none"
+                                        alt="checkbox icon in accepted state">
+                                    <img src="/assets/icons/contact/checkBoxMissing.svg" class="d-none"
+                                        alt="checkbox icon in missing state">
+                                </div>
+                            </label>
+                            <label for="accept" id="acceptPolicyText">I've read the <a href="#">privacy
+                                    policy</a> and accept to the processing of my
+                                data as outlined.</label>
+                            <span class="red-error d-none" id="errorPolicy">Please accept the privacy
+                                policy.</span>
+                        </div>
+                    </div>
+                    <div class="send-btn-pos">
+                        <button class="btn" type="submit" id="sendBtn" disabled>Send</button>
+                    </div>
+
+                </form>
             </div>
         </div>
         <aside class="wrapper-arrow-up">
@@ -484,14 +533,14 @@
     </section>
     <footer class="wrapper-footer">
         <div class="content-wrapper-footer">
-            <div>
-                <a href="">Legal Notice</a>
-                <p>Fabian Puchta 2026</p>
+            <div class="footer-legal">
+                <a href="#">Legal Notice</a>
+                <p><span>&copy;</span>Fabian Puchta 2026</p>
             </div>
-            <div class="wrapper-logo">
+            <div class="wrapper-logo-footer">
                 <img src="./assets/icons/logo/logoDarkBlue.svg" alt="logo">
                 <p class="name">F. Puchta</p>
-                <p>developer</p>
+                <span>developer</span>
             </div>
             <div class="wrapper-social-media-footer">
                 <a href="https://github.com/FabianP95" target="_blank" rel="noopener noreferrer" class="swap-image">
@@ -510,13 +559,12 @@
                     <img src="./assets/icons/contact/linkedInHoverFooter.svg" class="image-hover"
                         alt="linkedIn icon in hovered state">
                 </a>
-                
             </div>
         </div>
-
     </footer>
 
 </body>
 <script src="/script.js"></script>
+
 
 </html>
