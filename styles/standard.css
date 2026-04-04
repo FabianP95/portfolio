@@ -1,9 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #262E34;
     font-family: 'Josefin', sans-serif;
     color: #F8F5EC;
     margin: 0;
-    scroll-behavior: smooth;
 }
 
 a {

@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    scroll-margin-top: 100;
 }
 
 .content-section-body {
@@ -59,25 +60,37 @@
 }
 
 .content-skills-left {
-    display: flex;
-    width: 50%;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 50px;
 }
 
 .content-skills-right {
     position: relative;
-    width: clamp(280px, 90vw, 480px);
+    width: clamp(280px, 90vw, 290px);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     padding: 60px;
     text-align: center;
     overflow: hidden;
+}
+
+.skills-learning {
+    display: flex;
+    gap: 20px;
+}
+
+.new-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .content-skills-right::before,
@@ -214,6 +227,27 @@
     }
 }
 
+.write-me-btn{
+    margin: 35px 35px 0 0;
+}
+
+.future-project {
+    background-color: #F8F5EC;
+    width: 100%;
+    aspect-ratio: 16/10;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.future-project span {
+    font-size: 26px;
+    color: #89BCD9;
+}
+
 .team-title {
     font-size: 28px;
     color: #89BCD9;
@@ -283,4 +317,3 @@
 .margin-team-link {
     margin-top: auto;
 }
-
