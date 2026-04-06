@@ -1,6 +1,7 @@
 .content-wrapper {
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .content-headlines {
@@ -13,7 +14,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    scroll-margin-top: 100;
+
 }
 
 .content-section-body {
@@ -31,14 +32,14 @@
 
 .content-about-left {
     display: flex;
-    width: 50%;
+    flex: 1;
     flex-direction: column;
 }
 
 .content-about-right {
     display: flex;
     flex-direction: column;
-    max-width: 50%;
+    flex: 1;
     align-items: end;
 }
 
@@ -121,6 +122,52 @@
 
 .content-skills-right:hover::after {
     opacity: 1;
+}
+
+.write-me-btn-resp {
+    display: none;
+}
+
+.content-skills-resp {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.content-writing-resp {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.content-writing-resp p {
+    margin: 0;
+}
+
+.div-space {
+    flex: 1;
+}
+
+.skills-icons-resp {
+    display: flex;
+    position: relative;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.skills-icons-resp::before {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 180px;
+    width: 100%;
+    transform: rotate(130deg);
+    background-image: url('/assets/icons/currently/currently.svg');
 }
 
 .nav-projects {
@@ -227,7 +274,7 @@
     }
 }
 
-.write-me-btn{
+.write-me-btn {
     margin: 35px 35px 0 0;
 }
 

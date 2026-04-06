@@ -1,11 +1,6 @@
 .wrapper-hero-section {
-    width: 100%;
-
-    height: min(100vh, 811px);
-    z-index: 1;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1440px;
 }
 
 .wrapper-navbar {
@@ -32,16 +27,13 @@ h1 {
     justify-content: center;
     text-align: center;
     box-sizing: border-box;
-    flex-grow: 1;
-    margin: 0 auto;
-    max-width: 1440px;
     width: 100%;
-    gap: 130px;
     padding: 0px 50px;
+    height: min(100vh, 811px);
 }
 
 .info-hero-section {
-    margin: 180px 0 0 0;
+    margin: 180px 0 0 130px;
     display: flex;
     flex-direction: column;
 }
@@ -49,16 +41,6 @@ h1 {
 .info-hero-section p {
     font-size: 40px;
     margin: 0;
-}
-
-.image_background {
-    position: relative;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
-    transform: rotate(-45deg);
 }
 
 .wrapper-social-media {
@@ -78,7 +60,6 @@ h1 {
     align-items: center;
     flex: 1;
 }
-
 
 .wrapper-logo-header .name {
     font-size: 16px;
@@ -124,6 +105,7 @@ h1 {
     display: flex;
     justify-content: center;
     margin-top: 140px;
+    margin-right: 50px;
 }
 
 .wrapper-arrow-down a {
@@ -138,13 +120,13 @@ h1 {
 
 .logo-default,
 .logo-hover {
-    
+
     transition: opacity 0.5s;
 }
 
 .logo-hover {
     position: absolute;
-    
+
     opacity: 0;
 }
 
@@ -160,7 +142,7 @@ h1 {
     position: relative;
 }
 
-.pos-rel{
+.pos-rel {
     position: relative;
 }
 
@@ -190,11 +172,44 @@ h1 {
     inset: -5px;
 }
 
-.portfolio-main-img {
-    box-sizing: border-box;
-    margin: 80px 35px;
+
+.main-image-container {
+    width: 100%;
+    position: relative;
+    max-width: 550px;
 }
 
+.main-image-container img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+
+.main-image-default,
+.main-image-hover {
+    transition: opacity 0.5s;
+    transform: translate(-50%, -15%) rotate(-50deg);
+    height: 80%;
+}
+
+.main-image-hover {
+    opacity: 0;
+}
+
+.main-image-container:hover .main-image-default {
+    opacity: 0;
+}
+
+.main-image-container:hover .main-image-hover {
+    opacity: 1;
+}
+
+.profil-img {
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, 0);
+    z-index: 1;
+}
 
 nav {
     display: flex;
@@ -236,9 +251,7 @@ nav {
 
 .navbar-language {
     display: flex;
-   
     gap: 35px;
-   
     padding: 36px 110px;
 }
 
@@ -252,33 +265,6 @@ nav {
     color: #F8F5EC;
 }
 
-.profil-img {
-    height: auto;
-    max-height: 750px;
-    width: 100%;
-    border-radius: 20%;
-    z-index: 1;
-}
-
-.main-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    position: relative;
-}
-
-.main-image-container::after {
-    content: '';
-    position: absolute;
-    background-image: url('/assets/icons/hero_section/heroBackground.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-    transform: rotate(-50deg);
-}
-
-.main-image-container:hover::after {
-    background-image: url('/assets/icons/hero_section/heroBackgroundHover.svg');
+.header-resp {
+    display: none;
 }

@@ -1,4 +1,81 @@
-@media (max-width: 700px) {
+@media (max-width: 1450px) {
+    .content-section-body {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+
+    .write-me-btn {
+        display: none;
+    }
+
+    .write-me-btn-resp {
+        display: flex;
+        margin-top: 35px;
+    }
+
+    .content-skills-right {
+        display: none;
+    }
+
+    .content-skills-resp {
+        display: flex;
+        padding: 0 20px;
+    }
+
+    .content-about-right {
+        text-align: center;
+    }
+
+    .new-skill p {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1350px) {
+    .title h1 {
+        font-size: clamp(3rem, 2.2233rem + 3.8835vw, 5.5rem);
+    }
+
+    .title p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .main-image-default {
+        height: 80%;
+        transform: translate(-50%, -16%) rotate(0deg);
+    }
+
+    .main-image-container:hover .main-image-default {
+        opacity: 1;
+    }
+
+    .main-image-container:hover .main-image-hover {
+        opacity: 0;
+    }
+
+    .profil-img {
+        height: 70%;
+        transform: translate(-50%, -35%);
+    }
+
+
+}
+
+@media (max-width: 750px) {
+
+    .wrapper-navbar,
+    .head-container {
+        display: none
+    }
+
+    .wrapper-logo-header {
+        flex: 0;
+    }
+
     .panel.active {
         grid-template-columns: 1fr;
     }
@@ -8,26 +85,22 @@
         justify-content: flex-start;
     }
 
-    *,
+    /* *,
     *::before,
     *::after {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+    } */
+
+    .hero {
+        flex-direction: column;
     }
 
-    :root {
-        --bg: #1e2533;
-        --surface: #252d3d;
-        --border: rgba(255, 255, 255, 0.07);
-        --accent: #4fc3f7;
-        --accent2: #7c86ff;
-        --dot: #5b8cff;
-        --text: #e8eaf0;
-        --muted: #8a93ad;
-        --tag-bg: rgba(79, 195, 247, 0.12);
-        --radius: 18px;
-        --tab-active: #F8F5EC;
-        --tab-idle: #5b6785;
+    .header-resp {
+        display: flex;
+        justify-content: space-between;
     }
+
+
 }

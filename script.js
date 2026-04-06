@@ -9,3 +9,12 @@ tabs.forEach((tab, i) => {
         panels[i].classList.add('active');
     });
 });
+
+
+function toggleMenu(buttonElement) {
+    buttonElement.querySelector('span').classList.toggle('menu-toggle-icon--active');
+    const menu = document.querySelector('.burger_menu');
+    if (menu) {
+        menu.classList.toggle('is-active');
+    }
+}
