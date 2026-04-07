@@ -35,18 +35,30 @@
 
 @media (max-width: 1350px) {
     .title h1 {
-        font-size: clamp(3rem, 2.2233rem + 3.8835vw, 5.5rem);
+        font-size: clamp(44px, 2.2233rem + 2.8835vw, 5.5rem);
     }
 
     .title p {
         font-size: 24px;
     }
+
+    .main-image-default {
+        height: 70%;
+    }
+
+    .info-hero-section {
+        margin: 180px 0 0 40px;
+    }
 }
 
 @media (max-width: 1150px) {
     .main-image-default {
-        height: 80%;
+        height: 78%;
         transform: translate(-50%, -16%) rotate(0deg);
+    }
+
+    .main-image-container {
+        height: 400px;
     }
 
     .main-image-container:hover .main-image-default {
@@ -57,15 +69,34 @@
         opacity: 0;
     }
 
-    .profil-img {
-        height: 70%;
-        transform: translate(-50%, -35%);
+    .title h1 {
+        margin: 24px 0;
     }
 
+    .wrapper-arrow-down {
+        margin-top: 20px;
+    }
 
-}
+    .info-hero-section {
+        margin: 0 0 0 0;
+    }
 
-@media (max-width: 750px) {
+    .profil-img {
+        height: 90%;
+        transform: translate(-50%, -18%);
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .header-resp {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
 
     .wrapper-navbar,
     .head-container {
@@ -76,8 +107,67 @@
         flex: 0;
     }
 
+    .title {
+        width: fit-content;
+    }
+
+    .opacity-set {
+        opacity: 1;
+    }
+
+    .navbar-language a,
+    p {
+        font-size: 18px;
+    }
+
+    .nav-menu-content {
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    section {
+        scroll-margin-top: 10px;
+    }
+
+
+}
+
+@media (max-width: 750px) {
+    
+    .nav-menu-container img {
+        transform: translate(-50%, 0%);
+        height: 100%;
+    }
+
+    .opacity-set {
+        opacity: 1;
+    }
+
+    .navbar-language {
+        padding: 0 0;
+    }
+
+
+    .mrg-tp-section {
+        margin-top: 10px;
+    }
+
     .panel.active {
         grid-template-columns: 1fr;
+    }
+
+    .content-headlines {
+        font-size: 32px;
+        margin-top: 10px;
+    }
+
+    .hero {
+        padding: 40px 13px 0 13px;
+        justify-content: flex-start;
+    }
+
+    .title h1 {
+        font-size: 44px;
     }
 
     .tech-row,
@@ -93,14 +183,6 @@
         padding: 0;
     } */
 
-    .hero {
-        flex-direction: column;
-    }
-
-    .header-resp {
-        display: flex;
-        justify-content: space-between;
-    }
 
 
 }

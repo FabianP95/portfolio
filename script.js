@@ -13,8 +13,8 @@ tabs.forEach((tab, i) => {
 
 function toggleMenu(buttonElement) {
     buttonElement.querySelector('span').classList.toggle('menu-toggle-icon--active');
-    const menu = document.querySelector('.burger_menu');
+    const menu = document.getElementById('navMenuResp');
     if (menu) {
-        menu.classList.toggle('is-active');
+        menu.classList.toggle('opacity-set');
     }
 }
