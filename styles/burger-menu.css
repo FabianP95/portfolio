@@ -1,72 +1,82 @@
-.menu-toggle-btn {
-    display: grid;
-    place-items: center;
-    width: 32px;
-    height: 40px;
-    padding: 0;
-    overflow: hidden;
-    background: transparent;
-    border: 0;
-    border-radius: 8px;
-    scale: 1.0;
-    cursor: pointer;
-    transition: 0.175s;
+/* Menu Button Styles */
+.menu-button {
+  background: transparent;
+  border: 0;
+  width: 32px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  padding: 0;
+  scale: 1.0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.175s;
+  margin-right: 12px;
 }
 
-.menu-toggle-icon {
-    --gap: 10px;
-    --height-bar: 2px;
-    --pos-y-bar-one: 0;
-    --pos-y-bar-three: 0;
-    --scale-bar: 1;
-    --rotate-bar-one: 0;
-    --rotate-bar-three: 0;
-    display: flex;
-    flex-direction: column;
-    width: 25px;
-    gap: var(--gap);
-    position: relative;
-    scale: 1.2;
-    cursor: pointer;
+/* Burger Icon Container */
+.burger-icon {
+  scale: 1.2;
+  --gap: 10px;
+  --height-bar: 2px;
+  --pos-y-top: 0;
+  --pos-y-bottom: 0;
+  --scale-middle: 1;
+  --rotate-top: 0;
+  --rotate-bottom: 0;
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  cursor: pointer;
+  position: relative;
 }
 
-.menu-toggle-icon .menu-bar {
-    width: 100%;
-    height: var(--height-bar);
-    position: relative;
-    border-radius: 0.5rem;
-    background-color: #f9f9f9;
+/* Burger Lines Base Styles */
+.burger-line {
+  position: relative;
+  height: var(--height-bar);
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
 }
 
-.menu-toggle-icon .menu-bar--top {
-    top: var(--pos-y-bar-one);
-    transform: rotate(var(--rotate-bar-one));
-    transition: top 200ms 100ms, transform 100ms;
+/* Top Line */
+.burger-line--top {
+  top: var(--pos-y-top);
+  transform: rotate(var(--rotate-top));
+  transition: top 200ms 100ms, transform 100ms;
 }
 
-.menu-toggle-icon .menu-bar--middle {
-    transform: scaleX(var(--scale-bar));
-    transition: transform 150ms 100ms;
+/* Middle Line */
+.burger-line--middle {
+  transform: scaleX(var(--scale-middle));
+  transition: transform 150ms 100ms;
 }
 
-.menu-toggle-icon .menu-bar--bottom {
-    bottom: var(--pos-y-bar-three);
-    transform: rotate(var(--rotate-bar-three));
-    transition: bottom 200ms 100ms, transform 100ms;
+/* Bottom Line */
+.burger-line--bottom {
+  bottom: var(--pos-y-bottom);
+  transform: rotate(var(--rotate-bottom));
+  transition: bottom 200ms 100ms, transform 100ms;
 }
 
-.menu-toggle-icon--active>.menu-bar--top {
-    transition: top 200ms, transform 200ms 100ms;
+/* Open State - Top Line */
+.burger-icon--open > .burger-line--top {
+  transition: top 200ms, transform 200ms 100ms;
 }
 
-.menu-toggle-icon--active .menu-bar--bottom {
-    transition: bottom 200ms, transform 200ms 100ms;
+/* Open State - Bottom Line */
+.burger-icon--open .burger-line--bottom {
+  transition: bottom 200ms, transform 200ms 100ms;
 }
 
-.menu-toggle-icon--active {
-    --pos-y-bar-one: calc(var(--gap) + var(--height-bar));
-    --pos-y-bar-three: calc(var(--gap) + var(--height-bar));
-    --scale-bar: 0;
-    --rotate-bar-one: 45deg;
-    --rotate-bar-three: -45deg;
+/* Open State - All Lines Transform */
+.burger-icon--open {
+  --pos-y-top: calc(var(--gap) + var(--height-bar));
+  --pos-y-bottom: calc(var(--gap) + var(--height-bar));
+  --scale-middle: 0;
+  --rotate-top: 45deg;
+  --rotate-bottom: -45deg;
 }

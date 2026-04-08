@@ -11,10 +11,11 @@ tabs.forEach((tab, i) => {
 });
 
 
+
 function toggleMenu(buttonElement) {
-    buttonElement.querySelector('span').classList.toggle('menu-toggle-icon--active');
-    const menu = document.getElementById('navMenuResp');
-    if (menu) {
-        menu.classList.toggle('opacity-set');
+    buttonElement.querySelector('span').classList.toggle('burger-icon--open');
+    const burgerMenu = document.querySelector('.nav-menu-container');
+    if (burgerMenu) {
+        burgerMenu.classList.toggle('is-active');
     }
 }

@@ -17,84 +17,73 @@
 </head>
 
 <body>
-    <div class="wrapper-hero-section">
+   <div class="wrapper-hero-section">
         <section id="hero" class="hero">
-            <div class="header-resp">
-                <div class="wrapper-logo-header">
-                    <div class="logo-image">
-                        <img src="./assets/icons/logo/logoLightBlue.svg" alt="logo" class="logo-default">
-                        <img src="./assets/icons/logo/logoHover.svg" alt="logo hover state" class="logo-hover">
+            <div class="header-resp d-none">
+                <div class="logo-hero">
+                    <div class="logo-hero-icon">
+                        <img src="./assets/icons/logo/logoHover.svg" class="logo-hover" alt="logo icon">
+                        <img src="./assets/icons/logo/logoLightBlue.svg" class="logo-default" alt="logo icon">
                     </div>
-                    <div>
-                        <p class="name">F. Puchta</p>
-                        <p>Entwickler</p>
-                    </div>
+                    <p class="name">F. Puchta</p>
+                    <p>Entwickler</p>
                 </div>
-                <button onclick="toggleMenu(this)" class="menu-toggle-btn">
-                    <span class="menu-toggle-icon">
-                        <span class="menu-bar menu-bar--top"></span>
-                        <span class="menu-bar menu-bar--middle"></span>
-                        <span class="menu-bar menu-bar--bottom"></span>
+                <button onclick="toggleMenu(this)" class="menu-button">
+                    <span class="burger-icon">
+                    <span class="burger-line burger-line--top"></span>
+                    <span class="burger-line burger-line--middle"></span>
+                    <span class="burger-line burger-line--bottom"></span>
                     </span>
                 </button>
             </div>
             <div class="main-image-container">
-                <div class="nav-menu-container" id="navMenuResp">
-                    <img src="./assets/icons/hero_section/heroBackground.svg" alt="nav menu background">
-                    <div class="nav-menu-content">
+                <div class="nav-menu-container">
+                    <img src="./assets/img/respMenuBck.svg" alt="responsive menu background image">
+                    <div class="resp-menu-content">
                         <a href="#aboutSection">Warum ich</a>
                         <a href="#skillSection">Skills</a>
                         <a href="#projectSection">Projekte</a>
                         <a href="#contactSection">Kontakt</a>
-                        <div class="navbar-language">
-                            <p>DE</p>
-                            <a href="./html/english/english_main.html">EN</a>
+                        <div class="nav_language">
+                            <a href="#">DE</a>
+                            <a href="#" >EN</a>
                         </div>
                     </div>
                 </div>
-                <img src="./assets/img/profil.png" class="profil-img" alt="photo of fabian puchta">
-                <img src="./assets/icons/hero_section/heroBackground.svg" class="main-image-default"
-                    alt="background image of profil photo">
-                <img src="./assets/icons/hero_section/heroBackgroundHover.svg" class="main-image-hover"
-                    alt="background image of profil photo in hovered state">
+                <img src="./assets/img/heroBackgroundHover.png" class="img-background-hover" alt="background default state">
+                <img src="./assets/img/heroBackground.png" class="img-background-default" alt="background hover state">
+                <img src="./assets/img//profil.png" class="profil-img" alt="photo of fabian puchta">
             </div>
             <div class="info-hero-section">
-                <div class="head-container">
-                    <div class="wrapper-logo-header">
-                        <div class="logo-image">
-                            <img src="./assets/icons/logo/logoLightBlue.svg" alt="logo" class="logo-default">
-                            <img src="./assets/icons/logo/logoHover.svg" alt="logo hover state" class="logo-hover">
+                <div class="social-media-wrapper">
+                    <div class="social-media"></div>
+                    <div class="logo-hero">
+                        <div class="logo-hero-icon">
+                            <img src="./assets/icons/logo/logoHover.svg" class="logo-hover" alt="logo icon">
+                            <img src="./assets/icons/logo/logoLightBlue.svg" class="logo-default" alt="logo icon">
                         </div>
-                        <div>
                             <p class="name">F. Puchta</p>
                             <p>Entwickler</p>
-                        </div>
                     </div>
-                    <div class="wrapper-social-media">
-                        <a href="mailto:fabianpuchta@hotmail.de" target="_blank" rel="noopener noreferrer"
-                            class="swap-image">
-                            <img src="./assets/icons/social_media/emailBlue.svg" alt="email icon" class="image-default">
-                            <img src="./assets/icons/social_media/mailMediaHover.svg" class="image-hover"
-                                alt="email icon in hovered state">
-                        </a>
-                        <a href="https://github.com/FabianP95" target="_blank" rel="noopener noreferrer"
-                            class="swap-image">
-                            <img src="./assets/icons/social_media/github.svg" alt="gitHub icon" class="image-default">
-                            <img src="./assets/icons/social_media/githubHover.svg" class="image-hover"
-                                alt="gitHub icon in hovered state">
+                    <div class="social-media">
+                        <a href="mailto:fabianpuchta@hotmail.de" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/social_media/emailBlue.svg" class="social-media-default" alt="mail icon">
+                            <img src="./assets/icons/social_media/mailMediaHover.svg" class="social-media-hover" alt=",ail icon in hover state">
                         </a>
                         <a href="https://www.linkedin.com/in/fabian-puchta-7ba7383b7/" target="_blank"
-                            rel="noopener noreferrer" class="swap-image">
-                            <img src="./assets/icons/social_media/linkedIn.svg" alt="linkedIn icon"
-                                class="image-default">
-                            <img src="./assets/icons/social_media/linkedInHover.svg" class="image-hover"
-                                alt="linkedIn icon in hovered state">
+                            rel="noopener noreferrer">
+                            <img src="./assets/icons/social_media/linkedIn.svg" class="social-media-default" alt="linkedIn icon">
+                            <img src="./assets/icons/social_media/linkedInHover.svg" class="social-media-hover" alt="linkedIn icon in hover state">
+                        </a>
+                        <a href="https://github.com/FabianP95" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/social_media/github.svg" class="social-media-default" alt="gitHub icon">
+                            <img src="./assets/icons/social_media/githubHover.svg" class="social-media-hover" alt="github icon in hover state">
                         </a>
                     </div>
                 </div>
                 <div class="title">
                     <h1>Fabian Puchta</h1>
-                    <p>Frontend Entwickler</p>
+                    <p>Software Entwickler</p>
                 </div>
                 <div class="wrapper-arrow-down">
                     <a href="#aboutSection" class="swap-image">
