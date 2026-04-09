@@ -19,3 +19,4 @@ function toggleMenu(buttonElement) {
         burgerMenu.classList.toggle('is-active');
     }
 }
+

@@ -35,15 +35,15 @@
 
 @media (max-width: 1330px) {
     h1 {
-        font-size: clamp(3rem, -2.23rem + 9.3vw, 5.5rem);
-    }
-
-    h2 {
-        font-size: clamp(2rem, 0.86rem + 3.01vw, 3.75rem);
+        font-size: clamp(2.5rem, -2.23rem + 9.3vw, 5.5rem);
     }
 
     .title p {
         font-size: clamp(1.5rem, 0.86rem + 1.72vw, 2.5rem);
+    }
+
+    h2 {
+        font-size: clamp(2rem, 0.86rem + 3.01vw, 3.75rem);
     }
 
     .hero {
@@ -60,12 +60,21 @@
     }
 }
 
-
 @media (max-width: 1150px) {
-    
+    .navbar-language {
+        gap: 20px;
+        padding: 20px 20px 20px 0;
+    }
 
-    .navbar-language a,
-    p {
+    .navbar-logo {
+        padding: 0 0 0 20px;
+    }
+
+    .wrapper-navbar {
+        margin-top: 100px;
+    }
+
+    .navbar-language a {
         font-size: 18px;
     }
 
@@ -102,41 +111,14 @@
     }
 }
 
-@media (max-width: 750px) {
-    .navbar-language {
-        padding: 0 0;
-    }
-
-    .mrg-tp-section {
-        margin-top: 10px;
-    }
-
-    .panel.active {
-        grid-template-columns: 1fr;
+@media (max-width: 700px) {
+    h1 {
+        margin: 0 auto 16px auto;
     }
 
     .content-headlines {
         font-size: 32px;
-        margin-top: 10px;
-    }
-
-    .tech-row,
-    .btn-row {
-        justify-content: flex-start;
-    }
-
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-}
-
-@media (max-width: 700px) {
-    h1 {
-        margin: 0 auto 16px auto;
+        margin-top: 70px;
     }
 
     .wrapper-navbar {
@@ -190,28 +172,12 @@
         height: 100%;
     }
 
-    .resp-menu-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 36px;
-        position: absolute;
-        bottom: 0;
-        height: 100%;
-        width: 100%;
+    .navbar-language {
+        padding: 0px 0px 0px 0;
     }
 
-    .resp-menu-content a {
-        font-size: 22px;
-        color: #262E34;
-        font-family: 'Josefin', Arial, sans-serif;
-        text-decoration: none;
-    }
-
-    .nav_language {
-        justify-content: center;
-        gap: 0px;
-        padding: 0;
+    .navbar-language p {
+        margin: 0;
     }
 
     .social-media a:active .social-media-default,
@@ -223,12 +189,63 @@
     .social-media a:hover .social-media-default {
         opacity: 1;
     }
+
+    .content-wrapper {
+        margin-top: 150px;
+    }
+
+    .info-left img {
+        height: 45px;
+        width: 50px;
+    }
+
+    .resp-location-icon {
+        display: flex;
+    }
+
+    .location-icon {
+        display: none;
+    }
+
+    .font-size-30 {
+        font-size: 18px;
+    }
+
+    .font-size-18 {
+        font-size: 16px;
+    }
+
+    .content-skills-left {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 35px;
+    }
+
+    .content-skills-left img {
+        height: 50px;
+        width: auto;
+    }
+
+    .skill-icon-small {
+        display: flex;
+    }
+
+    .skill-icon-big {
+        display: none;
+    }
+
+    .skills-icons-resp {
+        gap: 10px;
+    }
 }
 
 @media (max-width: 440px) {
     .hero {
         padding: 40px 20px 0 20px;
     }
+
+
 
     .title p {
         font-size: 20px;
@@ -237,4 +254,6 @@
     .resp-menu-content {
         gap: 24px;
     }
+
+
 }

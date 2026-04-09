@@ -24,7 +24,7 @@ h1 {
     margin: 36px 0;
 }
 
-.hero{
+.hero {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -38,17 +38,17 @@ h1 {
     box-sizing: border-box;
 }
 
-.info-hero-section{
+.info-hero-section {
     margin: 68px 0 0 auto;
     padding-left: 24px;
 }
 
-.info-hero-section p{
+.info-hero-section p {
     font-size: 40px;
     margin: 0;
 }
 
-.social-media{
+.social-media {
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -56,38 +56,38 @@ h1 {
     width: 30px;
 }
 
-.social-media a{
+.social-media a {
     position: relative;
     width: 30px;
     height: 30px;
 }
 
-.social-media-wrapper{
+.social-media-wrapper {
     display: flex;
     flex-direction: row;
 }
 
 .social-media-default,
-.social-media-hover{
+.social-media-hover {
     position: absolute;
     transition: opacity 0.3s;
     right: 0;
 }
 
-.social-media-default{
+.social-media-default {
     opacity: 1;
 }
 
-.social-media-hover{
+.social-media-hover {
     position: absolute;
     opacity: 0;
 }
 
-.social-media a:hover .social-media-default{
+.social-media a:hover .social-media-default {
     opacity: 0;
 }
 
-.social-media a:hover .social-media-hover{
+.social-media a:hover .social-media-hover {
     opacity: 1;
 }
 
@@ -140,7 +140,7 @@ h1 {
     opacity: 1;
 }
 
-.main-image-container .main-image-container{
+.main-image-container .main-image-container {
     width: 100%;
     max-width: 535px;
     position: relative;
@@ -148,7 +148,7 @@ h1 {
 }
 
 .main-image-container img,
-.menu_container_impressum img{
+.menu_container_impressum img {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -173,13 +173,13 @@ h1 {
     opacity: 1;
 }
 
-.profil-img{
+.profil-img {
     height: 100%;
     object-fit: cover;
     transform: translate(-50%, 0);
 }
 
-.logo-hero{
+.logo-hero {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -188,7 +188,7 @@ h1 {
     gap: 1px;
 }
 
-.logo-hero-icon{
+.logo-hero-icon {
     position: relative;
     height: 38px;
     min-width: 70px;
@@ -196,78 +196,79 @@ h1 {
     justify-content: center;
 }
 
-.logo-hero .name{
+.logo-hero .name {
     font-size: 16px;
     margin: 4px 0 0 0;
     color: #F8F5EC;
 }
 
-.logo-hero p{
+.logo-hero p {
     font-size: 16px;
     margin: 0;
     color: #89BCD9;
 }
 
 .logo-default,
-.logo-hover{
+.logo-hover {
     position: absolute;
     transition: opacity 1s;
 }
 
-.logo-default{
+.logo-default {
     opacity: 1;
 }
 
-.logo-hover{
+.logo-hover {
     position: absolute;
     opacity: 0;
 }
 
-.logo-hero-icon:hover .logo-default{
+.logo-hero-icon:hover .logo-default {
     opacity: 0;
 }
 
-.logo-hero-icon:hover .logo-hover{
+.logo-hero-icon:hover .logo-hover {
     opacity: 1;
 }
 
-.title{
+.title {
     width: 100%;
 }
 
-.title p{
+.title p {
     letter-spacing: 2px;
     text-wrap-mode: nowrap;
 }
 
-.main-image-container{
+.main-image-container {
     width: 100%;
     max-width: 535px;
     position: relative;
     margin: 22px 25px 0 25px;
 }
 
-.main-image-container img{
+.main-image-container img {
     position: absolute;
     bottom: 0;
     left: 50%;
 }
 
 .img-background-default,
-.img-background-hover{
+.img-background-hover {
     transition: opacity 0.5s;
     transform: translate(-50%, -15%) rotate(-45deg);
     height: 80%;
 }
 
-.img-background-hover{
+.img-background-hover {
     opacity: 0;
 }
 
-.main-image-container:hover .img-background-default{
+.main-image-container:hover .img-background-default {
     opacity: 0;
 }
-.main-image-container:hover .img-background-hover{
+
+.main-image-container:hover .img-background-hover {
     opacity: 1;
 }
 
@@ -314,21 +315,25 @@ nav {
     gap: 35px;
     padding: 20px 110px;
     align-items: center;
+    justify-content: center;
     font-size: 16px;
 }
 
 .navbar-language p {
     cursor: default;
+    font-size: 18px;
     background-image: url(../assets/icons/languages/languageBackground.svg);
     background-repeat: no-repeat;
     background-position: center;
     padding: 8px 8px 4px 6px;
+
 }
 
 .navbar-language a {
     color: #262E34;
-    font-size: 16px;
+    font-size: 18px;
     transition: background-color 0.3s, color 0.3s;
+    padding: 8px 8px 4px 6px;
 }
 
 .navbar-language a:hover {
@@ -344,26 +349,26 @@ nav {
     transition: opacity 0.6s ease;
 }
 
-.nav-menu-content {
+
+
+
+.resp-menu-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    gap: 36px;
     position: absolute;
+    bottom: 0;
+    height: 100%;
     width: 100%;
-    gap: 30px;
 }
 
-.nav-menu-content a {
+.resp-menu-content a {
     font-size: 22px;
     color: #262E34;
-    cursor: pointer;
+    font-family: 'Josefin', Arial, sans-serif;
 }
 
-.nav-menu-content a:hover {
+.resp-menu-content a:hover {
     color: #F8F5EC;
 }
-
-
-
-
-

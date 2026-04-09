@@ -30,6 +30,15 @@
     gap: 20px;
 }
 
+.info-left img {
+    height: 60px;
+    width: 66px;
+}
+
+.resp-location-icon {
+    display: none;
+}
+
 .content-about-left {
     display: flex;
     flex: 1;
@@ -41,11 +50,6 @@
     flex-direction: column;
     flex: 1;
     align-items: end;
-}
-
-.location-image {
-    height: 60px;
-    width: 74px;
 }
 
 .font-size-30 {
@@ -65,6 +69,10 @@
     grid-template-columns: repeat(4, auto);
     justify-content: center;
     gap: 50px;
+}
+
+.skill-icon-small {
+    display: none;
 }
 
 .content-skills-right {
@@ -138,7 +146,7 @@
 .content-writing-resp {
     display: flex;
     gap: 20px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .content-writing-resp p {
@@ -155,19 +163,12 @@
     gap: 20px;
     align-items: center;
     justify-content: center;
-
-}
-
-.skills-icons-resp::before {
-    content: '';
-    position: absolute;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     height: 180px;
     width: 100%;
-    transform: rotate(130deg);
-    background-image: url('/assets/icons/currently/currently.svg');
+    background-image: url('/assets/icons/currently/currentlyResp.svg');
 }
 
 .nav-projects {
@@ -300,10 +301,7 @@
     color: #89BCD9;
 }
 
-.quote-section {
-    display: flex;
-    gap: 20px;
-}
+
 
 .single-quote {
     position: relative;
@@ -317,37 +315,21 @@
     padding: 80px;
     text-align: center;
     overflow: hidden;
-}
 
-.single-quote::before,
-.single-quote::after {
-    content: '';
-    position: absolute;
-    inset: 0;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
     transition: opacity 0.4s ease;
-}
-
-.single-quote::before {
     background-image: url('/assets/icons/references/reference.svg');
-    opacity: 1;
 }
 
-.single-quote::after {
+
+.single-quote:hover {
     background-image: url('/assets/icons//references/referenceHover.svg');
-    opacity: 0;
 }
 
-.single-quote:hover::before {
-    opacity: 0;
-}
 
-.single-quote:hover::after {
-    opacity: 1;
-}
 
 .single-link {
     text-decoration-line: underline;
