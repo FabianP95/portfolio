@@ -299,36 +299,60 @@
 .team-title {
     font-size: 28px;
     color: #89BCD9;
+    text-align: center;
 }
 
-
+.quote-section {
+    box-sizing: border-box;
+    display: flex;
+    padding: 0 22px;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+}
 
 .single-quote {
     position: relative;
-    width: clamp(280px, 90vw, 280px);
     aspect-ratio: 1 / 1;
-    border-radius: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 80px;
     text-align: center;
-    overflow: hidden;
+    height: 250px;
+}
 
+.single-quote::before,
+.single-quote::after {
+    content: '';
+    position: absolute;
     background-repeat: no-repeat;
-    background-size: cover;
+    aspect-ratio: 1 / 1;
+    background-size: contain;
     background-position: center;
-    border-radius: 50%;
-    transition: opacity 0.4s ease;
-    background-image: url('/assets/icons/references/reference.svg');
+    transition: opacity 1s ease;
+    height: 100%;
+    width: 100%;
 }
 
-
-.single-quote:hover {
-    background-image: url('/assets/icons//references/referenceHover.svg');
+.single-quote::before {
+    background-image: url('../assets/icons/references/reference.svg');
+    opacity: 1;
 }
 
+.single-quote::after {
+    background-image: url('../assets/icons//references/referenceHover.svg');
+    opacity: 0;
+}
+
+.single-quote:hover::before {
+    opacity: 0;
+}
+
+.single-quote:hover::after {
+    opacity: 1;
+}
 
 
 .single-link {

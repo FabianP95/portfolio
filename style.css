@@ -67,18 +67,19 @@
     gap: 40px;
 }
 
-.footer-legal{
+.footer-legal {
     padding-top: 50px;
     display: flex;
     flex-direction: column;
     font-size: 18px;
 }
 
-.footer-legal a, .footer-legal p{
+.footer-legal a,
+.footer-legal p {
     color: #262E34;
 }
 
-.footer-legal a:hover{
+.footer-legal a:hover {
     color: #F8F5EC;
 }
 
@@ -90,21 +91,19 @@
     gap: 1px;
 }
 
-.wrapper-logo-footer span{
+.wrapper-logo-footer span {
     color: #262E34;
     margin: 0;
 }
 
-.wrapper-logo-footer p{
+.wrapper-logo-footer p {
     margin: 0;
 }
 
-.mrg-tp-section{
+.mrg-tp-section {
     margin-top: 70px;
 }
 
 section {
-  scroll-margin-top: 80px;
+    scroll-margin-top: 80px;
 }
-
-

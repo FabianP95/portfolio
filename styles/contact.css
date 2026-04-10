@@ -47,11 +47,13 @@
     color: #F8F5EC;
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .contact-section-phone {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 

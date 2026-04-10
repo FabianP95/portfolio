@@ -58,7 +58,37 @@
         max-width: unset;
         margin: 0;
     }
+
+    .single-quote {
+        padding: 60px 80px 60px 80px;
+    }
+
+    .quote-section {
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+        scrollbar-color: #89BCD9 transparent;
+    }
+
+    .quote-section::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .quote-section::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .quote-section::-webkit-scrollbar-thumb {
+        background: #89BCD9;
+        border-radius: 999px;
+    }
+
+    .quote-section::-webkit-scrollbar-thumb:hover {
+        background: #6aaac8;
+    }
 }
+
 
 @media (max-width: 1150px) {
     .navbar-language {
@@ -109,7 +139,26 @@
     .main-image-container:hover .img-background-hover {
         opacity: 0;
     }
+
+    .team-title {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .team-title-sub {
+        color: #F8F5EC;
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .contact-section {
+        padding: 0 20px;
+    }
 }
+
+
+
 
 @media (max-width: 700px) {
     h1 {
@@ -238,14 +287,140 @@
     .skills-icons-resp {
         gap: 10px;
     }
+
+    .quote-section {
+
+        padding: 0 0px;
+        justify-content: flex-start;
+    }
+
+    .single-quote {
+        height: 230px;
+        padding: 60px 35px 34px 46px;
+        text-align: left;
+        align-items: start;
+        overflow-y: clip;
+    }
+
+    .margin-team-link {
+        margin-top: 5px;
+    }
+
+    .single-quote::before,
+    .single-quote::after {
+        width: 85%;
+        transition: none;
+        inset: 12px 0px 0px 0px;
+        background-image: url('../assets/icons/references/referenceResp.svg');
+    }
+
+    .margin-team {
+        margin: 5px 0 5px 0;
+        max-width: 205px;
+    }
+
+    /* contact form */
+    .contact-section {
+        padding: 0 10px;
+    }
+
+    .content-contact-body {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .content-contact-right {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .font-size-20 {
+        font-size: 16px;
+    }
+
+    .contact-section-mail {
+        gap: 10px;
+    }
+
+    .content-contact-left {
+        width: 100%;
+    }
+
+    .contact-section-phone {
+        gap: 10px;
+    }
+
+    .wrapper-arrow-up {
+        margin: 80px 0 0 -20px;
+        bottom: 0;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .row-name-mail {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .form-wrapper{
+        margin-top: 10px;
+    }
+
+    
+
+    /* footer */
+    .content-wrapper-footer {
+        height: 200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5px;
+    }
+
+    .content-wrapper-footer> :nth-child(1) {
+        order: 3;
+    }
+
+    .content-wrapper-footer> :nth-child(2) {
+        order: 1;
+    }
+
+    .content-wrapper-footer> :nth-child(3) {
+        order: 2;
+    }
+
+    .footer-legal {
+        padding-top: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .wrapper-logo-footer {
+        margin-top: 20px;
+    }
+
+    .wrapper-social-media-footer {
+        display: flex;
+        gap: 40px;
+        height: 20px;
+        justify-content: center;
+        margin-left: -40px;
+    }
+
+    .wrapper-footer {
+        margin-top: 250px;
+    }
 }
 
 @media (max-width: 440px) {
     .hero {
         padding: 40px 20px 0 20px;
     }
-
-
 
     .title p {
         font-size: 20px;
@@ -254,6 +429,5 @@
     .resp-menu-content {
         gap: 24px;
     }
-
 
 }
