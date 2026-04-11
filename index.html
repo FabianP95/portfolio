@@ -220,21 +220,38 @@
     <section id="projectSection" class="sub-section mrg-tp-section">
         <h2 class="content-headlines">Meine Projekte</h2>
         <nav class="nav-projects" role="tablist">
-            <button class="tab color-writing-blue font-size-30 active" role="tab">1. Join</button>
-            <button class="tab color-writing-blue font-size-30" role="tab">2. El Pollo Loco</button>
-            <button class="tab color-writing-blue font-size-30" role="tab">3. Pokedex</button>
-            <button class="tab color-writing-blue font-size-30" role="tab">4. Kommende</button>
+            <button class="tab active" role="tab"><span class="color-writing-blue font-size-30 desktop-content">1.
+                    Join</span>
+                <span class="color-writing-blue font-size-30 resp-content">1. Projekt</span>
+            </button>
+            <button class="tab color-writing-blue font-size-30" role="tab"><span
+                    class="color-writing-blue font-size-30 desktop-content">2. Pollo Loco</span>
+                <span class="color-writing-blue font-size-30 resp-content">2. Projekt</span>
+            </button>
+            <button class="tab color-writing-blue font-size-30" role="tab"><span
+                    class="color-writing-blue font-size-30 desktop-content">3. Pokedex</span>
+                <span class="color-writing-blue font-size-30 resp-content">3. Projekt</span>
+            </button>
+            <button class="tab color-writing-blue font-size-30" role="tab"><span
+                    class="color-writing-blue font-size-30 desktop-content">4. Kommende</span>
+                <span class="color-writing-blue font-size-30 resp-content">4. Projekt</span>
+            </button>
         </nav>
-        <div class="card">
+        <div id="projectsContainer" class="card">
             <div class="content-wrapper">
                 <div class="panel active" data-panel="0">
+                    <div class="project-btns-resp">
+                        <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                        <a href="https://github.com/FabianP95/Join" class="btn" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                    </div>
                     <div class="pr-card-left">
                         <div class="pr-section">
                             <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
                             <div>
                                 <h3 class="pr-title">
                                     Über das Projekt
-                                    <span class="font-size-18">Dauer: 5 Wochen</span>
+                                    <span class="font-size-18 pr-duration">Dauer: 5 Wochen</span>
                                 </h3>
                                 <p class="font-size-18 line-height">
                                     Join ist eine Plattform zum Organisieren von Arbeit.<br>
@@ -272,12 +289,19 @@
                         </div>
                     </div>
                     <div class="pr-right ">
-                        <div class="sub-section">
+                        <div class="sub-section pr-tech">
                             <p class="font-size-18">Technologien</p>
                             <div class="tech-icon-row">
                                 <img src="./assets/icons/skills/jsSmall.svg" alt="javascript icon">
                                 <img src="./assets/icons/skills/htmlSmall.svg" alt="html icon">
                                 <img src="./assets/icons/skills/cssSmall.svg" alt="css icon">
+                            </div>
+                        </div>
+                        <div class="pr-section">
+                            <div class="pr-header-resp">
+                                <h3 class="pr-title-resp">Join</h3>
+                                <p>Technologien: HTML, CSS, JavaScript</p>
+                                <p>Dauer: 5 Wochen</p>
                             </div>
                         </div>
                         <div class="screenshot-project">
@@ -291,13 +315,18 @@
                     </div>
                 </div>
                 <div class="panel" data-panel="1">
+                    <div class="project-btns-resp">
+                        <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                        <a href="https://github.com/FabianP95/el_pollo_loco" target="_blank" rel="noopener noreferrer"
+                            class="btn">GitHub</a>
+                    </div>
                     <div class="pr-card-left">
                         <div class="pr-section">
                             <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
                             <div>
                                 <h3 class="pr-title">
                                     Über das Projekt
-                                    <span class="font-size-18">Dauer: 3 Wochen</span>
+                                    <span class="font-size-18 pr-duration">Dauer: 3 Wochen</span>
                                 </h3>
                                 <p class="font-size-18 line-height">
                                     Ein klassisches Jump&Run Spiel.<br>
@@ -331,19 +360,25 @@
                         </div>
                     </div>
                     <div class="pr-right ">
-                        <div class="sub-section">
+                        <div class="sub-section pr-tech">
                             <p class="font-size-18">Technologien</p>
                             <div class="tech-icon-row">
                                 <img src="./assets/icons/skills/htmlSmall.svg" alt="html icon">
                                 <img src="./assets/icons/skills/jsSmall.svg" alt="javascript icon">
                                 <img src="./assets/icons/skills/cssSmall.svg" alt="css icon">
                             </div>
-
+                        </div>
+                        <div class="pr-section">
+                            <div class="pr-header-resp">
+                                <h3 class="pr-title-resp">Pollo Loco</h3>
+                                <p>Technologien: HTML, CSS, JavaScript</p>
+                                <p>Dauer: 3 Wochen</p>
+                            </div>
                         </div>
                         <div class="screenshot-project">
                             <img src="/assets/img/polloScreen.png" alt="screenshot of the project 'el pollo loco'">
                         </div>
-                        <div class="tech-icon-row">
+                        <div class="project-btns">
                             <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                             <a href="https://github.com/FabianP95/el_pollo_loco" target="_blank"
                                 rel="noopener noreferrer" class="btn">GitHub</a>
@@ -351,13 +386,18 @@
                     </div>
                 </div>
                 <div class="panel" data-panel="2">
+                    <div class="project-btns-resp">
+                        <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                        <a href="https://github.com/FabianP95/pokedex" class="btn" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                    </div>
                     <div class="pr-card-left">
                         <div class="pr-section">
                             <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
                             <div>
                                 <h3 class="pr-title">
                                     Über das Projekt
-                                    <span class="font-size-18">Dauer: 4 Wochen</span>
+                                    <span class="font-size-18 pr-duration">Dauer: 4 Wochen</span>
                                 </h3>
                                 <p class="font-size-18 line-height">
                                     Pokedex ist die Darstellung aller Pokemon, nach der bekannten Vorlage aus den
@@ -389,19 +429,25 @@
                         </div>
                     </div>
                     <div class="pr-right ">
-                        <div class="sub-section">
+                        <div class="sub-section pr-tech">
                             <p class="font-size-18">Technologien</p>
                             <div class="tech-icon-row">
                                 <img src="./assets/icons/skills/htmlSmall.svg" alt="html icon">
                                 <img src="./assets/icons/skills/cssSmall.svg" alt="css icon">
                                 <img src="./assets/icons/skills/jsSmall.svg" alt="javascript icon">
                             </div>
-
+                        </div>
+                        <div class="pr-section">
+                            <div class="pr-header-resp">
+                                <h3 class="pr-title-resp">Pokedex</h3>
+                                <p>Technologien: Firebase, CSS, JavaScript, HTML</p>
+                                <p>Dauer: 4 Wochen</p>
+                            </div>
                         </div>
                         <div class="screenshot-project">
                             <img src="/assets/img/pokeScreen.png" alt="screenshot of the project 'el pollo loco'">
                         </div>
-                        <div class="tech-icon-row">
+                        <div class="project-btns">
                             <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                             <a href="https://github.com/FabianP95/pokedex" class="btn" target="_blank"
                                 rel="noopener noreferrer">GitHub</a>
@@ -425,11 +471,17 @@
                         </div>
                     </div>
                     <div class="pr-right ">
-                        <div class="sub-section">
+                        <div class="sub-section pr-tech">
                             <p class="font-size-18">Technologien</p>
                             <div class="tech-icon-row">
                                 <img src="./assets/icons/skills/typeScriptSmall.svg" alt="typescript icon">
                                 <img src="./assets/icons/skills/angularSmall.svg" alt="angular icon">
+                            </div>
+                        </div>
+                        <div class="pr-section">
+                            <div class="pr-header-resp">
+                                <h3 class="pr-title-resp">Kommendes Projekt</h3>
+                                <p>Technologien: TypeScript, Angular, HTML, CSS, JavaScript</p>
                             </div>
                         </div>
                         <div class="future-project">
@@ -442,41 +494,44 @@
     </section>
     <section class="sub-section mrg-tp-section content-wrapper">
         <div>
-            <p class="team-title">Sie wollen einen Teamplayer?<span class="team-title-sub"> Das sagen meine Kollegen</span></p>
+            <p class="team-title">Sie wollen einen Teamplayer?<span class="team-title-sub"> Das sagen meine
+                    Kollegen</span></p>
         </div>
         <div class="quote-section">
-                <div class="single-quote">
-                    <h4 class="font-size-26 margin-team">Gerd Lödige</h4>
-                    <p class="font-size-18 margin-team">Projekt <span
-                            class="color-writing-blue font-size-18 ">Join</span>
-                    </p>
-                    <p class="font-size-18 margin-team">"Fabians Engagement, seine Zielstrebigkeit und seine Detailgenauigkeit machen ihn zu einer unschätzbaren Bereicherung für jedes Projekt."</p>
-                    <a class="single-link margin-team-link" href="https://www.linkedin.com/in/gerd-l%C3%B6dige-4a08802a9/" target="_blank" rel="noopener noreferrer">LinkedIn Profil</a>
-                </div>
-                <div class="single-quote">
-                    <h4 class="font-size-26 margin-team">Max Lehmann</h4>
-                    <p class="font-size-18 margin-team">Projekt <span
-                            class="color-writing-blue font-size-18 ">Join</span>
-                    </p>
-                    <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                        quasi
-                        aut eveniet placeat
-                        reprehenderit,
-                        vel doloremque, </p>
-                    <a class="single-link margin-team-link" href="#" target="_blank" rel="noopener noreferrer">LinkedIn Profil</a>
-                </div>
-                <div class="single-quote">
-                    <h4 class="font-size-26 margin-team">Max O.</h4>
-                    <p class="font-size-18 margin-team">Projekt <span
-                            class="color-writing-blue font-size-18">Kochwelt</span>
-                    </p>
-                    <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                        quasi
-                        aut eveniet placeat
-                        reprehenderit,
-                        vel doloremque, </p>
-                    <a class="single-link margin-team-link" href="#" target="_blank" rel="noopener noreferrer">LinkedIn Profil</a>
-                </div>
+            <div class="single-quote">
+                <h4 class="font-size-26 margin-team">Gerd Lödige</h4>
+                <p class="font-size-18 margin-team">Projekt <span class="color-writing-blue font-size-18 ">Join</span>
+                </p>
+                <p class="font-size-18 margin-team">"Fabians Engagement, seine Zielstrebigkeit und seine
+                    Detailgenauigkeit machen ihn zu einer unschätzbaren Bereicherung für jedes Projekt."</p>
+                <a class="single-link margin-team-link" href="https://www.linkedin.com/in/gerd-l%C3%B6dige-4a08802a9/"
+                    target="_blank" rel="noopener noreferrer">LinkedIn Profil</a>
+            </div>
+            <div class="single-quote">
+                <h4 class="font-size-26 margin-team">Max Lehmann</h4>
+                <p class="font-size-18 margin-team">Projekt <span class="color-writing-blue font-size-18 ">Join</span>
+                </p>
+                <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                    quasi
+                    aut eveniet placeat
+                    reprehenderit,
+                    vel doloremque, </p>
+                <a class="single-link margin-team-link" href="#" target="_blank" rel="noopener noreferrer">LinkedIn
+                    Profil</a>
+            </div>
+            <div class="single-quote">
+                <h4 class="font-size-26 margin-team">Max O.</h4>
+                <p class="font-size-18 margin-team">Projekt <span
+                        class="color-writing-blue font-size-18">Kochwelt</span>
+                </p>
+                <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                    quasi
+                    aut eveniet placeat
+                    reprehenderit,
+                    vel doloremque, </p>
+                <a class="single-link margin-team-link" href="#" target="_blank" rel="noopener noreferrer">LinkedIn
+                    Profil</a>
+            </div>
         </div>
     </section>
     <section id="contactSection" class="contact-section">

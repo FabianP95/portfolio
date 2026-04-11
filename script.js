@@ -7,8 +7,24 @@ tabs.forEach((tab, i) => {
         panels.forEach(p => p.classList.remove('active'));
         tab.classList.add('active');
         panels[i].classList.add('active');
+        addBorderRadius(i);
+
     });
 });
+
+function addBorderRadius(i) {
+    document.getElementById('projectsContainer').classList.remove('border-radius-0');
+    document.getElementById('projectsContainer').classList.remove('border-radius-1-2');
+    document.getElementById('projectsContainer').classList.remove('border-radius-3');
+    if (i <= 0) {
+        document.getElementById('projectsContainer').classList.add('border-radius-0');  
+    } else
+        if (i >= 1 && i <= 2) {
+            document.getElementById('projectsContainer').classList.add('border-radius-1-2');
+        } else {
+            document.getElementById('projectsContainer').classList.add('border-radius-3');
+        }
+};
 
 
 
@@ -18,5 +34,5 @@ function toggleMenu(buttonElement) {
     if (burgerMenu) {
         burgerMenu.classList.toggle('is-active');
     }
-}
+};
 
