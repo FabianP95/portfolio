@@ -5,10 +5,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impressum</title>
+    <link rel="icon" href="../../assets/icons/logo/logoDarkBlue.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../styles/fonts.css">
+    <link rel="stylesheet" href="../../styles/hero_section.css">
+    <link rel="stylesheet" href="../../styles/standard.css">
+    <link rel="stylesheet" href="../../styles/content_section.css">
+    <link rel="stylesheet" href="../../styles/contact.css">
+    <link rel="stylesheet" href="../../styles/legal.css">
+    <link rel="stylesheet" href="../../styles/legal_resp.css">
+    <link rel="stylesheet" href="../../styles/responsive.css">
 </head>
 
 <body>
-    
+    <header>
+        <div class="header-resp d-none header-legal-resp">
+            <div class="logo-hero">
+                <div class="logo-hero-icon">
+                    <img src="../../assets/icons/logo/logoHover.svg" class="logo-hover" alt="logo icon">
+                    <img src="../../assets/icons/logo/logoLightBlue.svg" class="logo-default" alt="logo icon">
+                </div>
+                <p class="name">F. Puchta</p>
+                <p>Developer</p>
+            </div>
+            <button onclick="redirectBack()" class="btn-legal"><img src="../../assets/icons/arrowBackImprint.svg"
+                    alt="go back to source site"></button>
+        </div>
+        <div class="wrapper-navbar legal-nav">
+            <nav>
+                <div class="navbar-logo">
+                    <div class="wrapper-logo-footer">
+                        <img src="../../assets/icons/logo/logoDarkBlue.svg" alt="logo">
+                        <p class="name">F. Puchta</p>
+                        <span>Developer</span>
+                    </div>
+                </div>
+                <div class="navbar-menu font-size-26">
+                    <a href="../../index.html#aboutSection">Warum ich</a>
+                    <a href="../../index.html#skillSection">Skills</a>
+                    <a href="../../index.html#projectSection">Projekte</a>
+                    <a href="../../index.html#contactSection">Kontakt</a>
+                </div>
+                <div class="navbar-language">
+                    <p>DE</p>
+                    <a href="../../html/english/english_main.html">EN</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <h1>Legal Notice</h1>
+        <section class="imprint-container">
+            <h2 class="pr-title-resp">Impressum</h2>
+            <ul>
+                <li>Fabian Puchta</li>
+                <li>Sondershauserstr. 67b</li>
+                <li>12249 Berlin, Germany</li>
+            </ul>
+        </section>
+        <section class="imprint-container">
+            <p class="section-title">Betreiber der Seite</p>
+            <p>Email: fabianpuchta@hotmail.de</p>
+        </section>
+        <section class="imprint-container">
+            <p class="section-title">Zustimmung zu den Nutzungsbedingungen</p>
+            <p>
+                Durch den Zugriff auf und die Nutzung von <span>Portfolio</span> (Produkt) erkennen Sie die folgenden
+                Nutzungsbedingungen sowie alle Richtlinien, Leitlinien oder Änderungen daran, die Ihnen von
+                Zeit zu Zeit vorgelegt werden, an und erklären sich damit einverstanden. Wir, die aufgeführten
+                Studierenden, können die Nutzungsbedingungen von Zeit zu Zeit
+                ohne vorherige Ankündigung aktualisieren oder ändern.
+            </p>
+        </section>
+        <section class="imprint-container">
+            <p class="section-title">Umfang und Eigentum des Produkts</p>
+            <p><span>Portfolio</span> wurde im Rahmen eines Studentenprojekts in einem Webentwicklungs-Bootcamp bei der
+                <span>Developer Akademie GmbH</span>. entwickelt. Es hat einen Bildungszweck und ist nicht für
+                umfangreiche persönliche und geschäftliche Nutzung vorgesehen. Daher können wir keine konsistente
+                Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder andere Qualitätsaspekte in Bezug auf dieses Produkt
+                garantieren.
+            </p>
+            <br>
+            <p>Das Design von <span>Portfolio</span> gehört der <span>Developer Akademie GmbH</span>. Eine unbefugte
+                Nutzung, Vervielfältigung, Modifikation, Verbreitung oder Replikation des Designs ist strengstens
+                untersagt.</p>
+        </section>
+        <section class="imprint-container">
+            <p class="section-title">Eigentumsrechte</p>
+            <p>Abgesehen vom Design, das der <span>Developer Akademie GmbH</span>gehört, behalten ich, der aufgeführte
+                Student, alle Eigentumsrechte an <span>Portfolio</span>, einschließlich aller damit verbundenen
+                urheberrechtlich
+                geschützten Materialien, Marken und anderer proprietärer Informationen.</p>
+        </section>
+        <section class="imprint-container">
+            <p class="section-title">Nutzung des Produkts</p>
+            <p><span>Portfolio</span> darf nur für rechtmäßige Zwecke verwendet werden, in Übereinstimmung mit
+                allen geltenden Gesetzen und Vorschriften. Jede Nutzung von <span>Portfolio</span> für illegale
+                Aktivitäten oder zur
+                Belästigung, Schädigung, Bedrohung oder Einschüchterung einer anderen Person ist strengstens untersagt.
+                Sie allein sind verantwortlich für Ihre Interaktionen mit anderen Nutzern von <span>Portfolio</span>.
+            </p>
+        </section>
+        <section class="imprint-container">
+            <p class="section-title">Haftungsausschluss und Begrenzung der Haftung</p>
+            <p><span>Portfolio</span> wird "wie besehen" ohne jegliche Garantie bereitgestellt, sei es ausdrücklich oder
+                stillschweigend, einschließlich, aber nicht beschränkt auf die stillschweigenden Garantien der
+                Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung. In keinem Fall haften
+                wir, der aufgeführte Student, oder die <span>Developer Akademie GmbH</span> für direkte, indirekte,
+                zufällige,
+                besondere, Folgeschäden oder exemplarische Schäden, einschließlich, aber nicht beschränkt auf Schäden
+                für entgangene Gewinne, Wohlwollen, Nutzung, Daten oder andere immaterielle Verluste, selbst wenn wir
+                auf die Möglichkeit solcher Schäden hingewiesen wurden, die sich aus oder im Zusammenhang mit der
+                Nutzung oder Leistung von <span>Portfolio</span> ergeben.</p>
+        </section>
+        <section class="imprint-container">
+            <p class="section-title">Haftungsfreistellung</p>
+            <p>Sie erklären sich damit einverstanden, uns, der aufgeführte Student, die <span>Developer Akademie
+                    GmbH</span> und
+                unsere verbundenen Unternehmen, Partner, Führungskräfte, Direktoren, Vertreter und Mitarbeiter von und
+                gegen jegliche Ansprüche, Forderungen, Verluste, Schäden, Kosten oder Haftungen (einschließlich
+                angemessener Anwaltsgebühren) freizustellen, zu verteidigen und schadlos zu halten, die sich aus oder im
+                Zusammenhang mit Ihrer Nutzung von <span>Portfolio</span> und/oder Ihrem Verstoß gegen dieses Impressum
+                ergeben.</p>
+            <br>
+            <p>Bei Fragen oder Mitteilungen kontaktieren Sie uns bitte unter <a
+                    href="mailto:fabianpuchta@hotmail.de">fabianpuchta@hotmail.de</a>.</p>
+            <br>
+            <p>Date: April 12, 2026</p>
+        </section>
+    </main>
+    <footer class="wrapper-footer">
+        <div class="content-wrapper-footer">
+            <div class="footer-legal">
+                <a href="../german/impressum.html">Impressum</a>
+                <a href="../german/datenschutz.html">Datenschutz</a>
+                <p>&copy;Fabian Puchta 2026</p>
+            </div>
+            <div class="wrapper-logo-footer">
+                <img src="../../assets/icons/logo/logoDarkBlue.svg" alt="logo">
+                <p class="name">F. Puchta</p>
+                <span>Entwickler</span>
+            </div>
+            <div class="wrapper-social-media-footer">
+                <a href="https://github.com/FabianP95" target="_blank" rel="noopener noreferrer" class="swap-image">
+                    <img src="../../assets/icons/contact/githubFooter.svg" alt="gitHub icon" class="image-default">
+                    <img src="../../assets/icons/contact/gitHoverFooter.svg" class="image-hover"
+                        alt="gitHub icon in hovered state">
+                </a>
+                <a href="mailto:fabianpuchta@hotmail.de" target="_blank" rel="noopener noreferrer" class="swap-image">
+                    <img src="../../assets/icons/contact/mailFooter.svg" alt="email icon" class="image-default">
+                    <img src="../../assets/icons/contact/mailHoverFooter.svg" class="image-hover"
+                        alt="email icon in hovered state">
+                </a>
+                <a href="https://www.linkedin.com/in/fabian-puchta-7ba7383b7/" target="_blank" rel="noopener noreferrer"
+                    class="swap-image">
+                    <img src="../../assets/icons/contact/linkedInFooter.svg" alt="linkedIn icon" class="image-default">
+                    <img src="../../assets/icons/contact/linkedInHoverFooter.svg" class="image-hover"
+                        alt="linkedIn icon in hovered state">
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
+<script src="/script.js"></script>
 
 </html>

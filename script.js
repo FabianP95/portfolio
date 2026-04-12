@@ -17,7 +17,7 @@ function addBorderRadius(i) {
     document.getElementById('projectsContainer').classList.remove('border-radius-1-2');
     document.getElementById('projectsContainer').classList.remove('border-radius-3');
     if (i <= 0) {
-        document.getElementById('projectsContainer').classList.add('border-radius-0');  
+        document.getElementById('projectsContainer').classList.add('border-radius-0');
     } else
         if (i >= 1 && i <= 2) {
             document.getElementById('projectsContainer').classList.add('border-radius-1-2');
@@ -35,4 +35,17 @@ function toggleMenu(buttonElement) {
         burgerMenu.classList.toggle('is-active');
     }
 };
+
+/**
+ * function to send user back to referrer site
+ */
+function redirectBack() {
+    if (["datenschutz.html", "impressum.html"].some(page => document.referrer.includes(page))) {
+        window.location.href = '../../index.html';
+    } else if (["imprint.html", "privacy_policy.html"].some(page => document.referrer.includes(page))) {
+        window.location.href = '../../html/english/english_main.html';
+    } else {
+        window.location.href = document.referrer;
+    }
+}
 

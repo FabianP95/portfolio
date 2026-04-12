@@ -1,0 +1,12 @@
+@media (max-width: 1150px) {
+    .legal-nav {
+        margin-top: 0 !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-legal-resp {
+        padding: 20px 20px;
+        align-items: center;
+    }
+}

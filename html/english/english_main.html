@@ -12,48 +12,79 @@
     <link rel="stylesheet" href="../../styles/standard.css">
     <link rel="stylesheet" href="../../styles/content_section.css">
     <link rel="stylesheet" href="../../styles/contact.css">
+    <link rel="stylesheet" href="../../styles/burger_menu.css">
     <link rel="stylesheet" href="../../styles/responsive.css">
 </head>
 
 <body>
     <div class="wrapper-hero-section">
         <section id="hero" class="hero">
-            <div class="main-image-container"><img class="profil-img" src="../../assets/img/profil.jpg"
-                    alt="photo of fabian puchta">
+            <div class="header-resp d-none">
+                <div class="logo-hero">
+                    <div class="logo-hero-icon">
+                        <img src="../../assets/icons/logo/logoHover.svg" class="logo-hover" alt="logo icon">
+                        <img src="../../assets/icons/logo/logoLightBlue.svg" class="logo-default" alt="logo icon">
+                    </div>
+                    <p class="name">F. Puchta</p>
+                    <p>Developer</p>
+                </div>
+                <button onclick="toggleMenu(this)" class="menu-button">
+                    <span class="burger-icon">
+                        <span class="burger-line burger-line--top"></span>
+                        <span class="burger-line burger-line--middle"></span>
+                        <span class="burger-line burger-line--bottom"></span>
+                    </span>
+                </button>
             </div>
-            <div class="info-hero-section">
-                <div class="head-container">
-                    <div class="wrapper-logo-header">
-                        <div class="logo-image">
-                            <img src="../../assets/icons/logo/logoLightBlue.svg" alt="logo" class="logo-default">
-                            <img src="../../assets/icons/logo/logoHover.svg" alt="logo hover state" class="logo-hover">
-                        </div>
-                        <div>
-                            <p class="name">F. Puchta</p>
-                            <p>Developer</p>
+            <div class="main-image-container">
+                <div class="nav-menu-container">
+                    <img src="../../assets/img/respMenuBck.svg" alt="responsive menu background image">
+                    <div class="resp-menu-content">
+                        <a href="#aboutSection">Why me</a>
+                        <a href="#skillSection">Skills</a>
+                        <a href="#projectSection">Projects</a>
+                        <a href="#contactSection">Contact</a>
+                        <div class="navbar-language">
+                            <a href="../../index.html">DE</a>
+                            <p>EN</p>
                         </div>
                     </div>
-                    <div class="wrapper-social-media">
-                        <a href="mailto:fabianpuchta@hotmail.de" target="_blank" rel="noopener noreferrer"
-                            class="swap-image">
-                            <img src="../../assets/icons/social_media/emailBlue.svg" alt="email icon"
-                                class="image-default">
-                            <img src="../../assets/icons/social_media/mailMediaHover.svg" class="image-hover"
-                                alt="email icon in hovered state">
-                        </a>
-                        <a href="https://github.com/FabianP95" target="_blank" rel="noopener noreferrer"
-                            class="swap-image">
-                            <img src="../../assets/icons/social_media/github.svg" alt="gitHub icon"
-                                class="image-default">
-                            <img src="../../assets/icons/social_media/githubHover.svg" class="image-hover"
-                                alt="gitHub icon in hovered state">
+                </div>
+                <img src="../../assets/img/heroBackgroundHover.png" class="img-background-hover"
+                    alt="background default state">
+                <img src="../../assets/img/heroBackground.png" class="img-background-default" alt="background hover state">
+                <img src="../../assets/img/profil.png" class="profil-img" alt="photo of fabian puchta">
+            </div>
+            <div class="info-hero-section">
+                <div class="social-media-wrapper">
+                    <div class="social-media"></div>
+                    <div class="logo-hero">
+                        <div class="logo-hero-icon">
+                            <img src="../../assets/icons/logo/logoHover.svg" class="logo-hover" alt="logo icon">
+                            <img src="../../assets/icons/logo/logoLightBlue.svg" class="logo-default" alt="logo icon">
+                        </div>
+                        <p class="name">F. Puchta</p>
+                        <p>Frontend Developer</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="mailto:fabianpuchta@hotmail.de" target="_blank" rel="noopener noreferrer">
+                            <img src="../../assets/icons/social_media/emailBlue.svg" class="social-media-default"
+                                alt="mail icon">
+                            <img src="../../assets/icons/social_media/mailMediaHover.svg" class="social-media-hover"
+                                alt="mail icon in hover state">
                         </a>
                         <a href="https://www.linkedin.com/in/fabian-puchta-7ba7383b7/" target="_blank"
-                            rel="noopener noreferrer" class="swap-image">
-                            <img src="../../assets/icons/social_media/linkedIn.svg" alt="linkedIn icon"
-                                class="image-default">
-                            <img src="../../assets/icons/social_media/linkedInHover.svg" class="image-hover"
-                                alt="linkedIn icon in hovered state">
+                            rel="noopener noreferrer">
+                            <img src="../../assets/icons/social_media/linkedIn.svg" class="social-media-default"
+                                alt="linkedIn icon">
+                            <img src="../../assets/icons/social_media/linkedInHover.svg" class="social-media-hover"
+                                alt="linkedIn icon in hover state">
+                        </a>
+                        <a href="https://github.com/FabianP95" target="_blank" rel="noopener noreferrer">
+                            <img src="../../assets/icons/social_media/github.svg" class="social-media-default"
+                                alt="gitHub icon">
+                            <img src="../../assets/icons/social_media/githubHover.svg" class="social-media-hover"
+                                alt="github icon in hover state">
                         </a>
                     </div>
                 </div>
@@ -75,43 +106,39 @@
     <div class="wrapper-navbar">
         <nav>
             <div class="navbar-logo">
-                <div class="wrapper-logo">
+                <div class="wrapper-logo-footer">
                     <img src="../../assets/icons/logo/logoDarkBlue.svg" alt="logo">
                     <p class="name">F. Puchta</p>
-                    <p>Developer</p>
+                    <span>Developer</span>
                 </div>
             </div>
             <div class="navbar-menu font-size-26">
-                <a href="#aboutSection">Why Me</a>
+                <a href="#aboutSection">Why me</a>
                 <a href="#skillSection">Skills</a>
                 <a href="#projectSection">Projects</a>
                 <a href="#contactSection">Contact</a>
             </div>
             <div class="navbar-language">
-                <a href="../../index.html" class="swap-image"> DE
-                    <img class="image-hover pos-hover" src="../../assets/icons/languages/deHover.svg"
-                        alt="set content to german in hover state">
-                </a>
-                <div class="pos-rel">
-                    <img class="image-default" src="../../assets/icons/languages/enApplied.svg"
-                        alt="content is set in german">
-                </div>
+                <a href="../../index.html">DE</a>
+                <p>EN</p>
             </div>
         </nav>
     </div>
-    <div class="content-wrapper">
+    <main class="content-wrapper">
         <section id="aboutSection" class="sub-section mrg-tp-section">
-            <h2 class="content-headlines">About Me</h2>
+            <h2 class="content-headlines">Why me</h2>
             <div class="content-section-body">
                 <div class="content-about-left">
                     <div class="info-left">
-                        <img class="location-image" src="../../assets/icons/about_me/location.svg" alt="">
+                        <img class="location-icon" src="../../assets/icons/about_me/locationIcon.png" alt="location pin">
+                        <img class="resp-location-icon" src="../../assets/icons/about_me/locationResp.svg"
+                            alt="location pin">
                         <p class="font-size-30">
                             <span class="color-writing-blue">I</span> live in Berlin..
                         </p>
                     </div>
                     <div class="info-left">
-                        <img class="location-image" src="../../assets/icons/about_me/remote.svg" alt="">
+                        <img src="../../assets/icons/about_me/remote.svg" alt=" laptop with wifi signal">
                         <p class="font-size-30">
                             <span class="color-writing-blue">I</span> am open to working remotely..
                         </p>
@@ -127,7 +154,7 @@
                         stressful or difficult situations.
                     </p>
                     <div class="write-me-btn">
-                        <a href="#contactSection" class="btn font-size-18">Contact Me!</a>
+                        <a href="#contactSection" class="btn font-size-18">Contact me</a>
                     </div>
                 </div>
             </div>
@@ -136,16 +163,25 @@
             <h2 class="content-headlines">My Skills</h2>
             <div class="content-section-body">
                 <div class="content-skills-left">
-                    <img src="../../assets/icons/skills/htmlBig.svg" alt="icon for html">
-                    <img src="../../assets/icons/skills/cssBig.svg" alt="icon for css">
-                    <img src="../../assets/icons/skills/jsBig.svg" alt="icon for java script">
-                    <img src="../../assets/icons/skills/apiBig.svg" alt="icon for an API">
-                    <img src="../../assets/icons/skills/firebaseBig.svg" alt="icon for firebase storage">
-                    <img src="../../assets/icons/skills/gitBig.svg" alt="icon for gitHub">
-                    <img src="../../assets/icons/skills/scrumBig.svg" alt="icon for scrum">
+                    <img class="skill-icon-big" src="../../assets/icons/skills/htmlBig.svg" alt="icon for html">
+                    <img class="skill-icon-big" src="../../assets/icons/skills/cssBig.svg" alt="icon for css">
+                    <img class="skill-icon-big" src="../../assets/icons/skills/jsBig.svg" alt="icon for java script">
+                    <img class="skill-icon-big" src="../../assets/icons/skills/apiBig.svg" alt="icon for an API">
+                    <img class="skill-icon-big" src="../../assets/icons/skills/firebaseBig.svg"
+                        alt="icon for firebase storage">
+                    <img class="skill-icon-big" src="../../assets/icons/skills/gitBig.svg" alt="icon for gitHub">
+                    <img class="skill-icon-big" src="../../assets/icons/skills/scrumBig.svg" alt="icon for scrum">
+                    <img class="skill-icon-small" src="../../assets/icons/skills/htmlSmall.svg" alt="icon for html">
+                    <img class="skill-icon-small" src="../../assets/icons/skills/cssSmall.svg" alt="icon for css">
+                    <img class="skill-icon-small" src="../../assets/icons/skills/jsSmall.svg" alt="icon for java script">
+                    <img class="skill-icon-small" src="../../assets/icons/skills/apiSmall.svg" alt="icon for an API">
+                    <img class="skill-icon-small" src="../../assets/icons/skills/firebaseSmall.svg"
+                        alt="icon for firebase storage">
+                    <img class="skill-icon-small" src="../../assets/icons/skills/gitSmall.svg" alt="icon for gitHub">
+                    <img class="skill-icon-small" src="../../assets/icons/skills/scrumSmall.svg" alt="icon for scrum">
                 </div>
                 <div class="content-skills-right">
-                    <p class="font-size-18">I am currently Learning</p>
+                    <p class="font-size-18">I am currently learning</p>
                     <div class="skills-learning">
                         <div class="new-skill">
                             <img src="../../assets/icons/skills/angularSmall.svg" alt="icon for an angular">
@@ -159,27 +195,63 @@
                     <p>To keep up with modern web development approaches
                     </p>
                 </div>
+                <div class="content-skills-resp">
+                    <p class="font-size-18 color-writing-blue">I am currently learning</p>
+                    <div class="content-writing-resp">
+                        <p class="div-space line-height">To keep up with modern web development approaches</p>
+                        <div class="div-space skills-icons-resp">
+                            <div class="new-skill">
+                                <img src="../../assets/icons/skills/angularSmall.svg" alt="icon for an angular">
+                                <p>Angular</p>
+                            </div>
+                            <div class="new-skill">
+                                <img src="../../assets/icons/skills/typeScriptSmall.svg" alt="icon for an typescript">
+                                <p>TypeScript</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="write-me-btn-resp">
+                    <a href="#contactSection" class="btn-live font-size-18">Contact me</a>
+                </div>
             </div>
         </section>
-    </div>
+    </main>
     <section id="projectSection" class="sub-section mrg-tp-section">
         <h2 class="content-headlines">My Projects</h2>
         <nav class="nav-projects" role="tablist">
-            <button class="tab color-writing-blue font-size-30 active" role="tab">1. Join</button>
-            <button class="tab color-writing-blue font-size-30" role="tab">2. El Pollo Loco</button>
-            <button class="tab color-writing-blue font-size-30" role="tab">3. Pokedex</button>
-            <button class="tab color-writing-blue font-size-30" role="tab">4. Upcoming</button>
+            <button class="tab active" role="tab"><span class="color-writing-blue font-size-30 desktop-content">1.
+                    Join</span>
+                <span class="color-writing-blue font-size-30 resp-content">1. Project</span>
+            </button>
+            <button class="tab color-writing-blue font-size-30" role="tab"><span
+                    class="color-writing-blue font-size-30 desktop-content">2. Pollo Loco</span>
+                <span class="color-writing-blue font-size-30 resp-content">2. Project</span>
+            </button>
+            <button class="tab color-writing-blue font-size-30" role="tab"><span
+                    class="color-writing-blue font-size-30 desktop-content">3. Pokedex</span>
+                <span class="color-writing-blue font-size-30 resp-content">3. Project</span>
+            </button>
+            <button class="tab color-writing-blue font-size-30" role="tab"><span
+                    class="color-writing-blue font-size-30 desktop-content">4. Upcoming</span>
+                <span class="color-writing-blue font-size-30 resp-content">4. Project</span>
+            </button>
         </nav>
-        <div class="card">
-            <div class="content-wrapper">
+        <div id="projectsContainer" class="card">
+            <div class="content-wrapper-projects">
                 <div class="panel active" data-panel="0">
+                    <div class="project-btns-resp">
+                        <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                        <a href="https://github.com/FabianP95/Join" class="btn" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                    </div>
                     <div class="pr-card-left">
                         <div class="pr-section">
                             <img src="../../assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
                             <div>
                                 <h3 class="pr-title">
                                     About the Project
-                                    <span class="font-size-18">Duration: 5 Weeks</span>
+                                    <span class="font-size-18 pr-duration">Duration: 5 Weeks</span>
                                 </h3>
                                 <p class="font-size-18 line-height">
                                     Join is a platform for organizing work.<br>
@@ -216,7 +288,7 @@
                         </div>
                     </div>
                     <div class="pr-right ">
-                        <div class="sub-section">
+                        <div class="sub-section pr-tech">
                             <p class="font-size-18">Technologies</p>
                             <div class="tech-icon-row">
                                 <img src="../../assets/icons/skills/jsSmall.svg" alt="javascript icon">
@@ -224,24 +296,36 @@
                                 <img src="../../assets/icons/skills/cssSmall.svg" alt="css icon">
                             </div>
                         </div>
+                        <div class="pr-section">
+                            <div class="pr-header-resp">
+                                <h3 class="pr-title-resp">Join</h3>
+                                <p>Technologies: HTML, CSS, JavaScript</p>
+                                <p>Duration: 5 Weeks</p>
+                            </div>
+                        </div>
                         <div class="screenshot-project">
-                            <img src="../../../assets/img/joinScreen.png" alt="screenshot of the project 'join'">
+                            <img src="../../assets/img/joinScreen.png" alt="screenshot of the project 'join'">
                         </div>
                         <div class="project-btns">
-                            <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                            <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                             <a href="https://github.com/FabianP95/Join" class="btn" target="_blank"
                                 rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div class="panel" data-panel="1">
+                    <div class="project-btns-resp">
+                        <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                        <a href="https://github.com/FabianP95/el_pollo_loco" target="_blank" rel="noopener noreferrer"
+                            class="btn">GitHub</a>
+                    </div>
                     <div class="pr-card-left">
                         <div class="pr-section">
                             <img src="../../assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
                             <div>
                                 <h3 class="pr-title">
                                     About the Project
-                                    <span class="font-size-18">Duration: 3 Weeks</span>
+                                    <span class="font-size-18 pr-duration">Duration: 3 Weeks</span>
                                 </h3>
                                 <p class="font-size-18 line-height">
                                     A classic Jump & Run game.<br>
@@ -274,34 +358,44 @@
                         </div>
                     </div>
                     <div class="pr-right ">
-                        <div class="sub-section">
+                        <div class="sub-section pr-tech">
                             <p class="font-size-18">Technologies</p>
                             <div class="tech-icon-row">
                                 <img src="../../assets/icons/skills/htmlSmall.svg" alt="html icon">
                                 <img src="../../assets/icons/skills/jsSmall.svg" alt="javascript icon">
                                 <img src="../../assets/icons/skills/cssSmall.svg" alt="css icon">
                             </div>
-
+                        </div>
+                        <div class="pr-section">
+                            <div class="pr-header-resp">
+                                <h3 class="pr-title-resp">Pollo Loco</h3>
+                                <p>Technologies: HTML, CSS, JavaScript</p>
+                                <p>Duration: 3 Weeks</p>
+                            </div>
                         </div>
                         <div class="screenshot-project">
-                            <img src="../../../assets/img/polloScreen.png"
-                                alt="screenshot of the project 'el pollo loco'">
+                            <img src="/assets/img/polloScreen.png" alt="screenshot of the project 'el pollo loco'">
                         </div>
-                        <div class="tech-icon-row">
-                            <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        <div class="project-btns">
+                            <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                             <a href="https://github.com/FabianP95/el_pollo_loco" target="_blank"
                                 rel="noopener noreferrer" class="btn">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div class="panel" data-panel="2">
+                    <div class="project-btns-resp">
+                        <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                        <a href="https://github.com/FabianP95/pokedex" class="btn" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                    </div>
                     <div class="pr-card-left">
                         <div class="pr-section">
                             <img src="../../assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
                             <div>
                                 <h3 class="pr-title">
                                     About the Project
-                                    <span class="font-size-18">Duration: 4 Weeks</span>
+                                    <span class="font-size-18 pr-duration">Duration: 4 Weeks</span>
                                 </h3>
                                 <p class="font-size-18 line-height">
                                     The Pokédex is a collection of all Pokémon, based on the familiar format from the
@@ -334,21 +428,26 @@
                         </div>
                     </div>
                     <div class="pr-right ">
-                        <div class="sub-section">
+                        <div class="sub-section pr-tech">
                             <p class="font-size-18">Technologies</p>
                             <div class="tech-icon-row">
                                 <img src="../../assets/icons/skills/htmlSmall.svg" alt="html icon">
                                 <img src="../../assets/icons/skills/cssSmall.svg" alt="css icon">
                                 <img src="../../assets/icons/skills/jsSmall.svg" alt="javascript icon">
                             </div>
-
+                        </div>
+                        <div class="pr-section">
+                            <div class="pr-header-resp">
+                                <h3 class="pr-title-resp">Pokedex</h3>
+                                <p>Technologies: Firebase, CSS, JavaScript, HTML</p>
+                                <p>Duration: 4 Weeks</p>
+                            </div>
                         </div>
                         <div class="screenshot-project">
-                            <img src="../../../assets/img/pokeScreen.png"
-                                alt="screenshot of the project 'el pollo loco'">
+                            <img src="../../assets/img/pokeScreen.png" alt="screenshot of the project 'el pollo loco'">
                         </div>
-                        <div class="tech-icon-row">
-                            <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        <div class="project-btns">
+                            <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                             <a href="https://github.com/FabianP95/pokedex" class="btn" target="_blank"
                                 rel="noopener noreferrer">GitHub</a>
                         </div>
@@ -371,60 +470,66 @@
                         </div>
                     </div>
                     <div class="pr-right ">
-                        <div class="sub-section">
+                        <div class="sub-section pr-tech">
                             <p class="font-size-18">Technologies</p>
                             <div class="tech-icon-row">
                                 <img src="../../assets/icons/skills/typeScriptSmall.svg" alt="typescript icon">
                                 <img src="../../assets/icons/skills/angularSmall.svg" alt="angular icon">
                             </div>
                         </div>
+                        <div class="pr-section">
+                            <div class="pr-header-resp">
+                                <h3 class="pr-title-resp">Upcoming projects</h3>
+                                <p>Technologies: TypeScript, Angular, HTML, CSS, JavaScript</p>
+                            </div>
+                        </div>
                         <div class="future-project">
-                            <span>Coming Soon...</span>
+                            <span>Coming soon...</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="sub-section mrg-tp-section">
+    <section class="sub-section mrg-tp-section content-wrapper">
         <div>
-            <p class="team-title">Need a team player?<span> Here's what my colleagues say about me</span></p>
+            <p class="team-title">Need a team player?<span class="team-title-sub"> Here's what my colleagues say about me</span></p>
         </div>
         <div class="quote-section">
-            <div class="single-quote">
-                <h4 class="font-size-26 margin-team">Sample</h4>
-                <p class="font-size-18 margin-team">Project <span class="color-writing-blue font-size-18">Join</span>
+            <article class="single-quote">
+                <h4 class="font-size-26 margin-team">Gerd Lödige</h4>
+                <p class="font-size-18 margin-team">Project <span class="color-writing-blue font-size-18 ">Join</span>
                 </p>
-                <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quasi
+                <p class="font-size-18 margin-team">"Fabian's dedication, determination, and
+                    attention to detail make him an invaluable asset to any project."</p>
+                <a class="single-link margin-team-link" href="https://www.linkedin.com/in/gerd-l%C3%B6dige-4a08802a9/"
+                    target="_blank" rel="noopener noreferrer">LinkedIn Profil</a>
+            </article>
+            <article class="single-quote">
+                <h4 class="font-size-26 margin-team">Max Lehmann</h4>
+                <p class="font-size-18 margin-team">Project <span class="color-writing-blue font-size-18 ">Join</span>
+                </p>
+                <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                    quasi
                     aut eveniet placeat
                     reprehenderit,
-                    vel doloremque, rem autem alias, vero commodi corrupti tenetur est illum obcaecati libero eum? Qui,
-                    molestias!</p>
-                <a class="single-link margin-team-link" href="#">LinkedIn Profil</a>
-            </div>
-            <div class="single-quote">
-                <h4 class="font-size-26 margin-team">Sample Name LONG</h4>
-                <p class="font-size-18 margin-team">Project <span class="color-writing-blue font-size-18">Join</span>
-                </p>
-                <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quasi
-                    aut eveniet placeat
-                    reprehenderit,
-                    vel doloremque, rem autem alias, vero commodi corrupti tenetur est illum obcaecati libero eum? Qui,
-                    molestias!</p>
-                <a class="single-link margin-team-link" href="#">LinkedIn Profil</a>
-            </div>
-            <div class="single-quote">
-                <h4 class="font-size-26 margin-team">Sample</h4>
+                    vel doloremque, </p>
+                <a class="single-link margin-team-link" href="#" target="_blank" rel="noopener noreferrer">LinkedIn
+                    Profil</a>
+            </article>
+            <article class="single-quote">
+                <h4 class="font-size-26 margin-team">Max O.</h4>
                 <p class="font-size-18 margin-team">Project <span
                         class="color-writing-blue font-size-18">Kochwelt</span>
                 </p>
-                <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quasi
+                <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                    quasi
                     aut eveniet placeat
                     reprehenderit,
-                    vel doloremque, rem autem alias, vero commodi corrupti tenetur est illum obcaecati libero eum? Qui,
-                    molestias!</p>
-                <a class="single-link margin-team-link" href="#">LinkedIn Profil</a>
-            </div>
+                    vel doloremque, </p>
+                <a class="single-link margin-team-link" href="#" target="_blank" rel="noopener noreferrer">LinkedIn
+                    Profil</a>
+            </article>
         </div>
     </section>
     <section id="contactSection" class="contact-section">
@@ -437,20 +542,20 @@
                     I look forward to hearing from you!
                 </p>
                 <div class="content-contact-right">
-                    <a class="contact-section-mail font-size-20" href="mailto:fabianpuchta@hotmail.de">Email:
+                    <a class="contact-section-mail font-size-20" href="mailto:fabianpuchta@hotmail.de">E-Mail:
                         fabianpuchta@hotmail.de</a>
-                    <p class="contact-section-phone font-size-20">Phone: +4915124181798</p>
+                    <p class="contact-section-phone font-size-20">Phone: 015124181798</p>
                 </div>
             </div>
             <div class="form-wrapper">
                 <form onsubmit="">
                     <div class="row-name-mail">
                         <div class="input-wrapper">
-                            <label for="formName" id="formLabelName">Your Name <span class="d-none">is required
+                            <label for="formName" id="formLabelName">Your name <span class="d-none">is required
                                 </span></label>
                             <div class="input-field">
                                 <input type="text" name="name" id="formName">
-                                <img src="/assets/icons/contact/checkedValidation.svg" alt="input is valid"
+                                <img src="../../assets/icons/contact/checkedValidation.svg" alt="input is valid"
                                     class="validation-icon">
                             </div>
                         </div>
@@ -459,7 +564,7 @@
                                 </span></label>
                             <div class="input-field">
                                 <input type="email" name="mail" id="formMail">
-                                <img src="/assets/icons/contact/checkedValidation.svg" alt="input is valid"
+                                <img src="../../assets/icons/contact/checkedValidation.svg" alt="input is valid"
                                     class="validation-icon">
                             </div>
                         </div>
@@ -469,7 +574,7 @@
                                 is required</span></label>
                         <div class="input-field">
                             <textarea name="message" id="formMessage" rows="10"></textarea>
-                            <img src="/assets/icons/contact/checkedValidation.svg" alt="input is valid"
+                            <img src="../../assets/icons/contact/checkedValidation.svg" alt="input is valid"
                                 class="validation-icon">
                         </div>
                     </div>
@@ -478,17 +583,18 @@
                             <label for="accept" class="checkbox-wrapper" id="checkbox" onclick="">
                                 <input class="d-none" type="checkbox" id="accept" value="accepted">
                                 <div class="checkbox-icon">
-                                    <img src="../../assets/icons/contact/checkBox.svg" class="icon-default"
-                                        alt="checkbox icon in default state">
-                                    <img src="../../assets/icons/contact/checkBoxHover.svg" class="icon-hover d-none"
-                                        alt="checkbox icon in hover state">
-                                    <img src="../../assets/icons/contact/checkBoxChecked.svg"
-                                        class="icon-checked d-none" alt="checkbox icon in accepted state">
-                                    <img src="../../assets/icons/contact/checkBoxMissing.svg" class="d-none"
+                                <img src="../../assets/icons/contact/checkBox.svg" class="icon-default"
+                                    alt="checkbox icon in default state">
+                                <img src="../../assets/icons/contact/checkBoxHover.svg" class="icon-hover d-none"
+                                    alt="checkbox icon in hover state">
+                                <img src="../../assets/icons/contact/checkBoxChecked.svg" class="icon-checked d-none"
+                                    alt="checkbox icon in accepted state">
+                                <img src="../../assets/icons/contact/checkBoxMissing.svg" class="d-none"
                                         alt="checkbox icon in missing state">
                                 </div>
                             </label>
-                            <label for="accept" id="acceptPolicyText">I've read the <a href="../english/privacy_policy.html">privacy policy
+                            <label for="accept" id="acceptPolicyText">I've read the <a
+                                    href="../../html/german/datenschutz.html">privacy policy
                                 </a> and agree to the processing of my data as outlined.</label>
                             <span class="red-error d-none" id="errorPolicy">Please accept the privacy policy.</span>
                         </div>
@@ -496,6 +602,7 @@
                     <div class="send-btn-pos">
                         <button class="btn" type="submit" id="sendBtn" disabled>Send</button>
                     </div>
+
                 </form>
             </div>
         </div>
@@ -510,7 +617,7 @@
     <footer class="wrapper-footer">
         <div class="content-wrapper-footer">
             <div class="footer-legal">
-                <a href="../english/legal_notice.html">Legal Notice</a>
+                <a href="../../html/english/legal_notice.html">Imprint</a>
                 <a href="../english/privacy_policy.html">Privacy Policy</a>
                 <p>&copy;Fabian Puchta 2026</p>
             </div>

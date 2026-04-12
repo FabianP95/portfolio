@@ -1,0 +1,57 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 60px 20px 100px 20px;
+}
+
+.imprint-container {
+    line-height: 120%;
+}
+
+.imprint-container a {
+    color: #F8F5EC;
+}
+
+.imprint-container a:hover {
+    color: #89BCD9;
+}
+
+.imprint-container span {
+    color: #89BCD9;
+}
+
+.imprint-container p {
+    margin: 0;
+}
+
+.font-size-19 {
+    font-size: 19px;
+}
+
+.section-title {
+    font-size: 19px;
+    color: #89BCD9;
+}
+
+.btn-legal {
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid;
+    border-color: #89bcd9;
+    background-color: transparent;
+    color: #89bcd9;
+    padding: 2px 20px;
+    font-size: 18px;
+    font-family: 'Josefin', sans-serif;
+    height: 35px;
+}
+
+.btn-legal:hover {
+    background-color: #3f454a;
+}
