@@ -21,7 +21,7 @@
 
     .content-skills-resp {
         display: flex;
-        padding: 0 20px;
+        padding: 0 13px;
     }
 
     .content-about-right {
@@ -214,6 +214,10 @@
         display: flex;
     }
 
+    .pr-header-resp p {
+        margin: 0;
+    }
+
     .pr-duration {
         display: none;
     }
@@ -235,7 +239,7 @@
         width: 100%;
     }
 
-    .pr-right{
+    .pr-right {
         width: 100%;
     }
 

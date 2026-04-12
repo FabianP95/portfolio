@@ -4,6 +4,12 @@
     padding: 0 20px;
 }
 
+.content-wrapper-projects{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .content-headlines {
     font-size: 60px;
     color: #89BCD9;
@@ -253,6 +259,7 @@
     font-size: 24px;
     color: #89BCD9;
     font-weight: 400;
+    margin: 0 0 1em 0;
 }
 
 .pr-right {
