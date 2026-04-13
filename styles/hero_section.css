@@ -255,7 +255,7 @@ h1 {
 
 .img-background-default,
 .img-background-hover {
-    transition: opacity 0.5s;
+    transition: opacity 1s ease;
     transform: translate(-50%, -15%) rotate(-45deg);
     height: 80%;
 }

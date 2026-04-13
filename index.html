@@ -51,8 +51,8 @@
                     </div>
                 </div>
                 <img src="./assets/img/heroBackgroundHover.png" class="img-background-hover"
-                    alt="background default state">
-                <img src="./assets/img/heroBackground.png" class="img-background-default" alt="background hover state">
+                    alt="background in hover state">
+                <img src="./assets/img/heroBackground.png" class="img-background-default" alt="background in default state">
                 <img src="./assets/img//profil.png" class="profil-img" alt="photo of fabian puchta">
             </div>
             <div class="info-hero-section">
@@ -554,7 +554,7 @@
                 <form onsubmit="">
                     <div class="row-name-mail">
                         <div class="input-wrapper">
-                            <label for="formName" id="formLabelName">Ihr Name <span class="d-none">erforderlich
+                            <label for="formName" id="formLabelName">Ihr Name <span class="error-message d-none">ist erforderlich
                                 </span></label>
                             <div class="input-field">
                                 <input type="text" name="name" id="formName">
@@ -563,7 +563,7 @@
                             </div>
                         </div>
                         <div class="input-wrapper">
-                            <label for="formMail" id="formLabelMail">Ihre Email<span class="d-none">erforderlich
+                            <label for="formMail" id="formLabelMail">Ihre Email<span class="error-message d-none">ist erforderlich
                                 </span></label>
                             <div class="input-field">
                                 <input type="email" name="mail" id="formMail">
@@ -573,7 +573,7 @@
                         </div>
                     </div>
                     <div class="input-wrapper width-100">
-                        <label for="formMessage" id="formLabelMessage">Ihre Nachricht an mich <span class="d-none">
+                        <label for="formMessage" id="formLabelMessage">Ihre Nachricht an mich <span class=" error-message d-none">ist 
                                 erforderlich</span></label>
                         <div class="input-field">
                             <textarea name="message" id="formMessage" rows="10"></textarea>
@@ -599,7 +599,7 @@
                             <label for="accept" id="acceptPolicyText">Ich habe die <a
                                     href="/html/german/datenschutz.html">Datenschutzbestimmungen
                                 </a> gelesen und stimme diesen zu.</label>
-                            <span class="red-error d-none" id="errorPolicy">Akzeptieren der Datenschutzbestimmung
+                            <span class="error-message d-none" id="errorPolicy">Akzeptieren der Datenschutzbestimmung
                                 erforderlich.</span>
                         </div>
                     </div>
@@ -653,6 +653,7 @@
 
 </body>
 <script src="/script.js"></script>
+<script src="./scripts/mail.js"></script>
 
 
 </html>

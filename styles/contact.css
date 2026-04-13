@@ -223,8 +223,17 @@
     font-size: 16px;
 }
 
-.red-error {
+.error-message {
     color: #E44C36;
+    font-size: 17px;
+}
+
+.font-color-red{
+    color: #E44C36 !important;
+}
+
+.border-red{
+    border-color: #E44C36 !important;
 }
 
 .send-btn-pos {
