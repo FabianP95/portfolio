@@ -5,39 +5,155 @@ const formMail = document.getElementById('formMail');
 const mailLabel = document.getElementById('formLabelMail');
 const formMesssage = document.getElementById('formMessage');
 const messageLabel = document.getElementById('formLabelMessage');
+const form = document.getElementById('form');
+const privacyCheckbox = document.getElementById('checkbox');
 
-addInputEventListeners()
+const sendBtn = document.getElementById('sendBtn');
 
-function addInputEventListeners() {
+let privacyAccepted = false;
+
+addEventListeners()
+
+function addEventListeners() {
     addFocusListener();
     addBlurListener();
+    sendBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        activateHint()
+
+
+    });
 }
 
 
 function addFocusListener() {
     formName.addEventListener("focus", (e) => {
-        console.log("hi");
-
+        resetHighlight('nameContainer');
     });
     formMail.addEventListener("focus", (e) => {
-        console.log("hi");
+        resetHighlight('mailContainer');
     });
     formMesssage.addEventListener("focus", (e) => {
-        console.log("hi");
+        resetHighlight('messageContainer');
     });
 }
 
 function addBlurListener() {
     formName.addEventListener("blur", (e) => {
-        console.log("Bye");
+        checkName(formName.value);
+        checkBtnActivation();
     });
     formMail.addEventListener("blur", (e) => {
-        console.log("Bye");
+        checkMail(formMail.value);
+        checkBtnActivation();
     });
     formMesssage.addEventListener("blur", (e) => {
-        console.log("Bye");
+        checkMessage(formMesssage.value);
+        checkBtnActivation();
     });
 }
+
+function checkName(name) {
+    switch (validateName(name)) {
+        case false:
+            highlightError('nameContainer');
+            break;
+    }
+}
+
+function checkMail(mail) {
+    switch (validateEmail(mail)) {
+        case false:
+            highlightError('mailContainer');
+            break;
+    }
+}
+
+function checkMessage(msg) {
+    switch (validateMessageLength(msg)) {
+        case false:
+            highlightError('messageContainer');
+            break;
+    }
+}
+
+function highlightError(idContainer) {
+    let container = document.getElementById(idContainer);
+    container.querySelector('span').classList.remove('d-none');
+    container.querySelector('label').classList.add('font-color-red');
+    if (idContainer === 'messageContainer') {
+        container.querySelector('textarea').classList.add('border-red');
+    } else {
+        container.querySelector('input').classList.add('border-red');
+    }
+}
+
+function resetHighlight(idContainer) {
+    let container = document.getElementById(idContainer);
+    container.querySelector('span').classList.add('d-none');
+    container.querySelector('label').classList.remove('font-color-red');
+    if (idContainer === 'messageContainer') {
+        container.querySelector('textarea').classList.remove('border-red');
+    } else {
+        container.querySelector('input').classList.remove('border-red');
+    }
+}
+
+function setPrivacySwitch() {
+    switch (privacyAccepted) {
+        case true:
+            privacyAccepted = false;
+            break;
+        case false:
+            privacyAccepted = true;
+            break;
+    }
+    privacyCheckbox.querySelector('.checkbox-icon').classList.remove('d-none');
+    privacyCheckbox.querySelector('.checkbox-error').classList.add('d-none');
+    document.getElementById('errorPolicy').classList.add('vis-hidden');
+    checkBtnActivation();
+}
+
+function checkBtnActivation() {
+    if (allInputCheck() && privacyAccepted == true) {
+        sendBtn.classList.remove('btn-disabled');
+        sendBtn.classList.add('btn');
+    } else {
+        sendBtn.classList.add('btn-disabled');
+        sendBtn.classList.remove('btn');
+    }
+}
+
+function allInputCheck() {
+    return validateName(formName.value) && validateEmail(formMail.value) && validateMessageLength(formMesssage.value);
+}
+
+function activateHint() {
+    switch (false) {
+        case privacyAccepted:
+            hintOnPrivacy()
+            break;
+        case validateName(formName.value):
+            highlightError('nameContainer');
+            break;
+        case validateEmail(formMail.value):
+            highlightError('mailContainer');
+            break;
+        case validateMessageLength(formMesssage.value):
+            highlightError('messageContainer');
+            break;
+    }
+
+}
+
+function hintOnPrivacy() {
+    privacyCheckbox.querySelector('.checkbox-icon').classList.add('d-none');
+    privacyCheckbox.querySelector('.checkbox-error').classList.remove('d-none');
+    document.getElementById('errorPolicy').classList.remove('vis-hidden');
+}
+
+
 
 /**
  * empties input fields after the message has successfully been send
@@ -46,21 +162,6 @@ function emptiesInputs() {
     formName.value = "";
     formMail.value = "";
     formMesssage.value = "";
-}
-
-
-function validateInputs(user, hintKeys) {
-    let valid = true;
-    if (formName.value.length <= 3 || !validateName(formName.value)) {
-        displayHint(hintKeys.name);
-        valid = false;
-    }
-    if (!validateEmail(user.email) || user.email === "") {
-        displayHint(hintKeys.email);
-        valid = false;
-    }
-
-    return valid;
 }
 
 /**

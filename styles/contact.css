@@ -97,6 +97,7 @@
 
 .form-wrapper {
     width: 100%;
+    position: relative;
 }
 
 .row-name-mail {
@@ -119,19 +120,7 @@
 .form-wrapper .input-wrapper label {
     font-size: 16px;
     color: #89BCD9;
-    padding-left: 27px;
-}
-
-.validation-icon {
-    position: absolute;
-    top: 23px;
-    right: 12px;
-    transform: translateY(-50%);
-    width: 24px;
-    height: 24px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease;
+    padding-left: 18px;
 }
 
 .form-wrapper .input-wrapper input,
@@ -225,14 +214,13 @@
 
 .error-message {
     color: #E44C36;
-    font-size: 17px;
 }
 
-.font-color-red{
+.font-color-red {
     color: #E44C36 !important;
 }
 
-.border-red{
+.border-red {
     border-color: #E44C36 !important;
 }
 
@@ -249,4 +237,38 @@
 
 .send-btn-pos button:disabled:hover {
     background-color: transparent;
+}
+
+.response-window {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 35%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease;
+    background-color: #89bcd9;
+    border-radius: 22px;
+}
+
+.response-window.active {
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.response-content {
+    font-size: 20px;
+    text-align: center;
+    padding: 0 20px;
+    line-height: 120%;
+    color: #262e34;
+}
+
+.vis-hidden {
+    visibility: hidden !important;
 }

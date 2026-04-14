@@ -52,7 +52,8 @@
                 </div>
                 <img src="./assets/img/heroBackgroundHover.png" class="img-background-hover"
                     alt="background in hover state">
-                <img src="./assets/img/heroBackground.png" class="img-background-default" alt="background in default state">
+                <img src="./assets/img/heroBackground.png" class="img-background-default"
+                    alt="background in default state">
                 <img src="./assets/img//profil.png" class="profil-img" alt="photo of fabian puchta">
             </div>
             <div class="info-hero-section">
@@ -149,7 +150,8 @@
                         Kreativität voll ausleben.
                         Ob im Team oder alleine, kann ich durch mein diszipliniertes Arbeiten und strukturiertes
                         Vorgehen, komplexe Probleme lösen.
-                        Meine Social Skills machen mich zu einem hervorragenden Teamplayer, wo ich auch in stressigen oder
+                        Meine Social Skills machen mich zu einem hervorragenden Teamplayer, wo ich auch in stressigen
+                        oder
                         schwierigen Situationen handlungsfähig bleibe.
                     </p>
                     <div class="write-me-btn">
@@ -511,11 +513,8 @@
                 <h4 class="font-size-26 margin-team">Max Lehmann</h4>
                 <p class="font-size-18 margin-team">Projekt <span class="color-writing-blue font-size-18 ">Join</span>
                 </p>
-                <p class="font-size-18 margin-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                    quasi
-                    aut eveniet placeat
-                    reprehenderit,
-                    vel doloremque, </p>
+                <p class="font-size-18 margin-team">"Ich bedanke mich bei Fabian für seine Zusammenarbeit. Es war sehr
+                    angenehm mit ihm Zusammen zu Arbeiten und ich wünsche ihm alles gute auf seinem weiteren Weg."</p>
                 <a class="single-link margin-team-link" href="#" target="_blank" rel="noopener noreferrer">LinkedIn
                     Profil</a>
             </article>
@@ -551,63 +550,69 @@
                 </div>
             </div>
             <div class="form-wrapper">
-                <form onsubmit="">
+                <form id="form" onsubmit="">
                     <div class="row-name-mail">
-                        <div class="input-wrapper">
-                            <label for="formName" id="formLabelName">Ihr Name <span class="error-message d-none">ist erforderlich
+                        <div id="nameContainer" class="input-wrapper">
+                            <label for="formName" id="formLabelName">Ihr Name <span class="error-message d-none">ist
+                                    erforderlich
                                 </span></label>
                             <div class="input-field">
                                 <input type="text" name="name" id="formName">
-                                <img src="/assets/icons/contact/checkedValidation.svg" alt="input is valid"
-                                    class="validation-icon">
                             </div>
                         </div>
-                        <div class="input-wrapper">
-                            <label for="formMail" id="formLabelMail">Ihre Email<span class="error-message d-none">ist erforderlich
+                        <div id="mailContainer" class="input-wrapper">
+                            <label for="formMail" id="formLabelMail">Ihre Email<span class="error-message d-none"> ist
+                                    erforderlich
                                 </span></label>
                             <div class="input-field">
                                 <input type="email" name="mail" id="formMail">
-                                <img src="/assets/icons/contact/checkedValidation.svg" alt="input is valid"
-                                    class="validation-icon">
                             </div>
                         </div>
                     </div>
-                    <div class="input-wrapper width-100">
-                        <label for="formMessage" id="formLabelMessage">Ihre Nachricht an mich <span class=" error-message d-none">ist 
+                    <div id="messageContainer" class="input-wrapper width-100">
+                        <label for="formMessage" id="formLabelMessage">Ihre Nachricht an mich <span
+                                class=" error-message d-none">ist
                                 erforderlich</span></label>
                         <div class="input-field">
                             <textarea name="message" id="formMessage" rows="10"></textarea>
-                            <img src="/assets/icons/contact/checkedValidation.svg" alt="input is valid"
-                                class="validation-icon">
                         </div>
                     </div>
                     <div class="contact-accept-section">
-                        <div class="accept-policy-wrapper">
-                            <label for="accept" class="checkbox-wrapper" id="checkbox" onclick="">
-                                <input class="d-none" type="checkbox" id="accept" value="accepted">
-                                <div class="checkbox-icon">
-                                    <img src="/assets/icons/contact/checkBox.svg" class="icon-default"
-                                        alt="checkbox icon in default state">
-                                    <img src="/assets/icons/contact/checkBoxHover.svg" class="icon-hover d-none"
-                                        alt="checkbox icon in hover state">
-                                    <img src="/assets/icons/contact/checkBoxChecked.svg" class="icon-checked d-none"
-                                        alt="checkbox icon in accepted state">
-                                    <img src="/assets/icons/contact/checkBoxMissing.svg" class="d-none"
-                                        alt="checkbox icon in missing state">
-                                </div>
-                            </label>
-                            <label for="accept" id="acceptPolicyText">Ich habe die <a
-                                    href="/html/german/datenschutz.html">Datenschutzbestimmungen
-                                </a> gelesen und stimme diesen zu.</label>
-                            <span class="error-message d-none" id="errorPolicy">Akzeptieren der Datenschutzbestimmung
+                        <div>
+                            <div class="accept-policy-wrapper">
+                                <label for="accept" class="checkbox-wrapper" id="checkbox" onclick="">
+                                    <input onchange="setPrivacySwitch()" class="d-none" type="checkbox" id="accept"
+                                        value="accepted">
+                                    <div class="checkbox-icon">
+                                        <img src="/assets/icons/contact/checkBox.svg" class="icon-default"
+                                            alt="checkbox icon in default state">
+                                        <img src="/assets/icons/contact/checkBoxHover.svg" class="icon-hover d-none"
+                                            alt="checkbox icon in hover state">
+                                        <img src="/assets/icons/contact/checkBoxChecked.svg" class="icon-checked d-none"
+                                            alt="checkbox icon in accepted state">
+                                    </div>
+                                    <div class="checkbox-error d-none">
+                                        <img src="/assets/icons/contact/checkBoxMissing.svg" class="icon-error"
+                                            alt="checkbox icon in missing state">
+                                    </div>
+                                </label>
+                                <p id="acceptPolicyText">Ich habe die <a
+                                        href="/html/german/datenschutz.html">Datenschutzbestimmungen
+                                    </a> gelesen und stimme diesen zu.</p>
+                            </div>
+                            <span class="error-message vis-hidden" id="errorPolicy">Akzeptieren der Datenschutzbestimmung
                                 erforderlich.</span>
                         </div>
                     </div>
                     <div class="send-btn-pos">
-                        <button class="btn" type="submit" id="sendBtn" disabled>Senden</button>
+                        <button class="btn-disabled" type="submit" id="sendBtn">Senden</button>
                     </div>
-
                 </form>
+                <div class="response-window" id="responseContainer">
+                    <div class="response-content">
+                        <p id="responseMessage">Ihre Nachricht wurde erfolgreich an mich geschickt. Vielen Dank!</p>
+                    </div>
+                </div>
             </div>
         </div>
         <aside class="wrapper-arrow-up">
