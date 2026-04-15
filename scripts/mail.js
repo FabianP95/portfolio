@@ -1,4 +1,3 @@
-/* body for mail object: email, name, message */
 const formName = document.getElementById('formName');
 const nameLabel = document.getElementById('formLabelName');
 const formMail = document.getElementById('formMail');
@@ -7,23 +6,107 @@ const formMesssage = document.getElementById('formMessage');
 const messageLabel = document.getElementById('formLabelMessage');
 const form = document.getElementById('form');
 const privacyCheckbox = document.getElementById('checkbox');
-
 const sendBtn = document.getElementById('sendBtn');
+const answer = document.getElementById('responseContainer');
+const answerText = document.getElementById('responseMessage');
 
+let sending = false;
 let privacyAccepted = false;
 
 addEventListeners()
 
+sendBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    activateHint()
+    if (sending) {
+        disableBtn()
+        try {
+            const response = await postMail();
+            await handleResponse(response);
+        } catch (error) {
+            handleResponseError(error);
+        } finally {
+            activateBtn();
+        }
+    }
+});
+
+async function handleResponse(response) {
+    const result = await response.json();
+    if (response.ok && result.success) {
+        hideForm();
+        resetCheckbox();
+        showAnswer();
+    } else {
+        alert('Error: ' + (result.error || 'Failed to send message.'));
+    }
+}
+
+function handleResponseError() {
+    hideForm();
+    resetCheckbox();
+    showFailedAnswer();
+}
+
+function showFailedAnswer() {
+    answerText.innerText = "Ihre Nachricht konnte leider nicht verschickt werden.";
+    answer.classList.add('activeResponse');
+    setTimeout(() => {
+        answer.classList.remove('activeResponse');
+        showForm();
+    }, 2000);
+}
+
+function hideForm() {
+    form.classList.add('vis-hidden');
+    sending = false;
+    emptiesInputs();
+}
+
+function showForm() {
+    form.classList.remove('vis-hidden');
+}
+
+function showAnswer() {
+    answer.classList.add('response-window.active');
+    setTimeout(() => {
+        answer.classList.remove('response-window.active');
+    }, 200);
+
+}
+
+function disableBtn() {
+    sendBtn.disabled = true;
+}
+
+function activateBtn() {
+    sendBtn.disabled = false;
+}
+
 function addEventListeners() {
     addFocusListener();
     addBlurListener();
-    sendBtn.addEventListener('click', (e) => {
-        e.preventDefault();
+}
 
-        activateHint()
-
-
+async function postMail() {
+    const contactData = getDataFromForm();
+    const response = await fetch('/send_mail.php', {
+        method: 'POST',
+        body: JSON.stringify(contactData),
+        headers: {
+            'Content-Type': 'application/json'
+        }
     });
+    return response;
+}
+
+function getDataFromForm() {
+    const formData = new FormData(form);
+    return {
+        name: formData.get('name'),
+        email: formData.get('mail'),
+        message: formData.get('message')
+    };
 }
 
 
@@ -100,6 +183,14 @@ function resetHighlight(idContainer) {
     }
 }
 
+function resetCheckbox() {
+    privacyAccepted = false;
+    privacyCheckbox.querySelector('.checkbox-icon').classList.remove('d-none');
+    privacyCheckbox.querySelector('.checkbox-error').classList.add('d-none');
+    privacyCheckbox.querySelector('.checkbox-error').classList.add('d-none');
+    document.getElementById('errorPolicy').classList.add('vis-hidden');
+}
+
 function setPrivacySwitch() {
     switch (privacyAccepted) {
         case true:
@@ -131,17 +222,23 @@ function allInputCheck() {
 
 function activateHint() {
     switch (false) {
-        case privacyAccepted:
-            hintOnPrivacy()
-            break;
         case validateName(formName.value):
             highlightError('nameContainer');
+            sending = false;
             break;
         case validateEmail(formMail.value):
             highlightError('mailContainer');
+            sending = false;
             break;
         case validateMessageLength(formMesssage.value):
             highlightError('messageContainer');
+            sending = false;
+            break;
+        case privacyAccepted:
+            hintOnPrivacy();
+            sending = false;
+            break;
+        default: sending = true;
             break;
     }
 
