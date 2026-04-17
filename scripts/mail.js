@@ -22,6 +22,8 @@ sendBtn.addEventListener('click', async (e) => {
         disableBtn()
         try {
             const response = await postMail();
+            console.log(response);
+
             await handleResponse(response);
         } catch (error) {
             handleResponseError(error);
@@ -35,14 +37,16 @@ async function handleResponse(response) {
     const result = await response.json();
     if (response.ok && result.success) {
         hideForm();
-        resetCheckbox();
         showAnswer();
+        resetCheckbox();
     } else {
         alert('Error: ' + (result.error || 'Failed to send message.'));
     }
 }
 
-function handleResponseError() {
+function handleResponseError(error) {
+    console.log(error);
+
     hideForm();
     resetCheckbox();
     showFailedAnswer();
@@ -68,10 +72,12 @@ function showForm() {
 }
 
 function showAnswer() {
-    answer.classList.add('response-window.active');
+    answerText.innerText = "Vielen Dank für Ihre Nachricht";
+    answer.classList.add('activeResponse');
     setTimeout(() => {
-        answer.classList.remove('response-window.active');
-    }, 200);
+        answer.classList.remove('activeResponse');
+        showForm();
+    }, 2000);
 
 }
 
@@ -90,13 +96,13 @@ function addEventListeners() {
 
 async function postMail() {
     const contactData = getDataFromForm();
-    const response = await fetch('/send_mail.php', {
+    const response = await fetch('./send_mail.php', {
         method: 'POST',
         body: JSON.stringify(contactData),
         headers: {
             'Content-Type': 'application/json'
         }
-    });
+    })
     return response;
 }
 
@@ -185,8 +191,8 @@ function resetHighlight(idContainer) {
 
 function resetCheckbox() {
     privacyAccepted = false;
+    privacyCheckbox.querySelector('.checkbox-wrapper input').checked = false;
     privacyCheckbox.querySelector('.checkbox-icon').classList.remove('d-none');
-    privacyCheckbox.querySelector('.checkbox-error').classList.add('d-none');
     privacyCheckbox.querySelector('.checkbox-error').classList.add('d-none');
     document.getElementById('errorPolicy').classList.add('vis-hidden');
 }

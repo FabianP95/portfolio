@@ -374,7 +374,7 @@
                             </div>
                         </div>
                         <div class="screenshot-project">
-                            <img src="/assets/img/polloScreen.png" alt="screenshot of the project 'el pollo loco'">
+                            <img src="../../assets/img/polloScreen.png" alt="screenshot of the project 'el pollo loco'">
                         </div>
                         <div class="project-btns">
                             <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
@@ -551,8 +551,6 @@
                                 </span></label>
                             <div class="input-field">
                                 <input type="text" name="name" id="formName">
-                                <img src="../../assets/icons/contact/checkedValidation.svg" alt="input is valid"
-                                    class="validation-icon">
                             </div>
                         </div>
                         <div class="input-wrapper">
@@ -560,8 +558,6 @@
                                 </span></label>
                             <div class="input-field">
                                 <input type="email" name="mail" id="formMail">
-                                <img src="../../assets/icons/contact/checkedValidation.svg" alt="input is valid"
-                                    class="validation-icon">
                             </div>
                         </div>
                     </div>
@@ -570,25 +566,26 @@
                                 is required</span></label>
                         <div class="input-field">
                             <textarea name="message" id="formMessage" rows="10"></textarea>
-                            <img src="../../assets/icons/contact/checkedValidation.svg" alt="input is valid"
-                                class="validation-icon">
                         </div>
                     </div>
                     <div class="contact-accept-section">
                         <div class="accept-policy-wrapper">
-                            <label for="accept" class="checkbox-wrapper" id="checkbox" onclick="">
-                                <input class="d-none" type="checkbox" id="accept" value="accepted">
-                                <div class="checkbox-icon">
-                                <img src="../../assets/icons/contact/checkBox.svg" class="icon-default"
-                                    alt="checkbox icon in default state">
-                                <img src="../../assets/icons/contact/checkBoxHover.svg" class="icon-hover d-none"
-                                    alt="checkbox icon in hover state">
-                                <img src="../../assets/icons/contact/checkBoxChecked.svg" class="icon-checked d-none"
-                                    alt="checkbox icon in accepted state">
-                                <img src="../../assets/icons/contact/checkBoxMissing.svg" class="d-none"
-                                        alt="checkbox icon in missing state">
-                                </div>
-                            </label>
+                            <label for="accept" class="checkbox-wrapper" id="checkbox">
+                                    <input onchange="setPrivacySwitch()" class="d-none" type="checkbox" id="accept"
+                                        value="accepted">
+                                    <div class="checkbox-icon">
+                                        <img src="../../assets/icons/contact/checkBox.svg" class="icon-default"
+                                            alt="checkbox icon in default state">
+                                        <img src="../../assets/icons/contact/checkBoxHover.svg" class="icon-hover d-none"
+                                            alt="checkbox icon in hover state">
+                                        <img src="../../assets/icons/contact/checkBoxChecked.svg" class="icon-checked d-none"
+                                            alt="checkbox icon in accepted state">
+                                    </div>
+                                    <div class="checkbox-error d-none">
+                                        <img src="../../assets/icons/contact/checkBoxMissing.svg" class="icon-error"
+                                            alt="checkbox icon in missing state">
+                                    </div>
+                                </label>
                             <label for="accept" id="acceptPolicyText">I've read the <a
                                     href="../../html/german/datenschutz.html">privacy policy
                                 </a> and agree to the processing of my data as outlined.</label>
@@ -644,8 +641,8 @@
     </footer>
 
 </body>
-<script src="/script.js"></script>
-<script src="./scripts/mail.js"></script>
+<script src="../../script.js"></script>
+<script src="../../scripts/mail.js"></script>
 
 
 </html>
