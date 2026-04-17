@@ -28,7 +28,7 @@
                     <p class="name">F. Puchta</p>
                     <p>Entwickler</p>
                 </div>
-                <button onclick="toggleMenu(this)" class="menu-button">
+                <button onclick="toggleMenu(this)" class="menu-button" aria-label="Navigation menu" aria-expanded="false" aria-controls="nav-menu">
                     <span class="burger-icon">
                         <span class="burger-line burger-line--top"></span>
                         <span class="burger-line burger-line--middle"></span>
@@ -37,7 +37,7 @@
                 </button>
             </div>
             <div class="main-image-container">
-                <div class="nav-menu-container">
+                <div class="nav-menu-container" id="nav-menu">
                     <img src="./assets/img/respMenuBck.svg" alt="responsive menu background image">
                     <div class="resp-menu-content">
                         <a href="#aboutSection">Warum ich</a>
@@ -68,24 +68,24 @@
                         <p>Entwickler</p>
                     </div>
                     <div class="social-media">
-                        <a href="mailto:fabianpuchta@hotmail.de" target="_blank" rel="noopener noreferrer">
+                        <a href="mailto:fabianpuchta@hotmail.de" target="_blank" rel="noopener noreferrer" aria-label="Email contact">
                             <img src="./assets/icons/social_media/emailBlue.svg" class="social-media-default"
-                                alt="mail icon">
+                                alt="" aria-hidden="true">
                             <img src="./assets/icons/social_media/mailMediaHover.svg" class="social-media-hover"
-                                alt="mail icon in hover state">
+                                alt="" aria-hidden="true">
                         </a>
                         <a href="https://www.linkedin.com/in/fabian-puchta-7ba7383b7/" target="_blank"
-                            rel="noopener noreferrer">
+                            rel="noopener noreferrer" aria-label="LinkedIn profile">
                             <img src="./assets/icons/social_media/linkedIn.svg" class="social-media-default"
-                                alt="linkedIn icon">
+                                alt="" aria-hidden="true">
                             <img src="./assets/icons/social_media/linkedInHover.svg" class="social-media-hover"
-                                alt="linkedIn icon in hover state">
+                                alt="" aria-hidden="true">
                         </a>
-                        <a href="https://github.com/FabianP95" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/FabianP95" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
                             <img src="./assets/icons/social_media/github.svg" class="social-media-default"
-                                alt="gitHub icon">
+                                alt="" aria-hidden="true">
                             <img src="./assets/icons/social_media/githubHover.svg" class="social-media-hover"
-                                alt="github icon in hover state">
+                                alt="" aria-hidden="true">
                         </a>
                     </div>
                 </div>
@@ -222,26 +222,26 @@
     <section id="projectSection" class="sub-section mrg-tp-section">
         <h2 class="content-headlines">Meine Projekte</h2>
         <nav class="nav-projects" role="tablist">
-            <button class="tab active" role="tab"><span class="color-writing-blue font-size-30 desktop-content">1.
+            <button class="tab active" role="tab" id="tab-join" aria-selected="true" aria-controls="panel-join" tabindex="0"><span class="color-writing-blue font-size-30 desktop-content">1.
                     Join</span>
                 <span class="color-writing-blue font-size-30 resp-content">1. Projekt</span>
             </button>
-            <button class="tab color-writing-blue font-size-30" role="tab"><span
+            <button class="tab color-writing-blue font-size-30" role="tab" id="tab-pollo" aria-selected="false" aria-controls="panel-pollo" tabindex="-1"><span
                     class="color-writing-blue font-size-30 desktop-content">2. Pollo Loco</span>
                 <span class="color-writing-blue font-size-30 resp-content">2. Projekt</span>
             </button>
-            <button class="tab color-writing-blue font-size-30" role="tab"><span
+            <button class="tab color-writing-blue font-size-30" role="tab" id="tab-pokedex" aria-selected="false" aria-controls="panel-pokedex" tabindex="-1"><span
                     class="color-writing-blue font-size-30 desktop-content">3. Pokedex</span>
                 <span class="color-writing-blue font-size-30 resp-content">3. Projekt</span>
             </button>
-            <button class="tab color-writing-blue font-size-30" role="tab"><span
+            <button class="tab color-writing-blue font-size-30" role="tab" id="tab-future" aria-selected="false" aria-controls="panel-future" tabindex="-1"><span
                     class="color-writing-blue font-size-30 desktop-content">4. Kommende</span>
                 <span class="color-writing-blue font-size-30 resp-content">4. Projekt</span>
             </button>
         </nav>
         <div id="projectsContainer" class="card">
             <div class="content-wrapper-projects">
-                <div class="panel active" data-panel="0">
+                <div class="panel active" data-panel="0" role="tabpanel" id="panel-join" aria-labelledby="tab-join" aria-hidden="false">
                     <div class="project-btns-resp">
                         <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                         <a href="https://github.com/FabianP95/Join" class="btn" target="_blank"
@@ -316,7 +316,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel" data-panel="1">
+                <div class="panel" data-panel="1" role="tabpanel" id="panel-pollo" aria-labelledby="tab-pollo" aria-hidden="true">
                     <div class="project-btns-resp">
                         <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                         <a href="https://github.com/FabianP95/el_pollo_loco" target="_blank" rel="noopener noreferrer"
@@ -387,7 +387,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel" data-panel="2">
+                <div class="panel" data-panel="2" role="tabpanel" id="panel-pokedex" aria-labelledby="tab-pokedex" aria-hidden="true">
                     <div class="project-btns-resp">
                         <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                         <a href="https://github.com/FabianP95/pokedex" class="btn" target="_blank"
@@ -456,7 +456,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel" data-panel="3">
+                <div class="panel" data-panel="3" role="tabpanel" id="panel-future" aria-labelledby="tab-future" aria-hidden="true">
                     <div class="pr-card-left">
                         <div class="pr-section">
                             <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
@@ -557,16 +557,18 @@
                                     erforderlich
                                 </span></label>
                             <div class="input-field">
-                                <input type="text" name="name" id="formName">
+                                <input type="text" name="name" id="formName" aria-required="true" aria-describedby="formNameError">
                             </div>
+                            <span id="formNameError" class="error-message d-none">ist erforderlich</span>
                         </div>
                         <div id="mailContainer" class="input-wrapper">
                             <label for="formMail" id="formLabelMail">Ihre Email<span class="error-message d-none"> ist
                                     erforderlich
                                 </span></label>
                             <div class="input-field">
-                                <input type="email" name="mail" id="formMail">
+                                <input type="email" name="mail" id="formMail" aria-required="true" aria-describedby="formMailError">
                             </div>
+                            <span id="formMailError" class="error-message d-none">ist erforderlich</span>
                         </div>
                     </div>
                     <div id="messageContainer" class="input-wrapper width-100">
@@ -574,26 +576,27 @@
                                 class=" error-message d-none">ist
                                 erforderlich</span></label>
                         <div class="input-field">
-                            <textarea name="message" id="formMessage" rows="10"></textarea>
+                            <textarea name="message" id="formMessage" rows="10" aria-required="true" aria-describedby="formMessageError"></textarea>
                         </div>
+                        <span id="formMessageError" class="error-message d-none">ist erforderlich</span>
                     </div>
                     <div class="contact-accept-section">
                         <div>
                             <div class="accept-policy-wrapper">
                                 <label for="accept" class="checkbox-wrapper" id="checkbox">
                                     <input onchange="setPrivacySwitch()" class="d-none" type="checkbox" id="accept"
-                                        value="accepted">
+                                        value="accepted" aria-required="true" aria-describedby="errorPolicy">
                                     <div class="checkbox-icon">
                                         <img src="./assets/icons/contact/checkBox.svg" class="icon-default"
-                                            alt="checkbox icon in default state">
+                                            alt="checkbox icon in default state" aria-hidden="true">
                                         <img src="./assets/icons/contact/checkBoxHover.svg" class="icon-hover d-none"
-                                            alt="checkbox icon in hover state">
+                                            alt="checkbox icon in hover state" aria-hidden="true">
                                         <img src="./assets/icons/contact/checkBoxChecked.svg" class="icon-checked d-none"
-                                            alt="checkbox icon in accepted state">
+                                            alt="checkbox icon in accepted state" aria-hidden="true">
                                     </div>
                                     <div class="checkbox-error d-none">
                                         <img src="./assets/icons/contact/checkBoxMissing.svg" class="icon-error"
-                                            alt="checkbox icon in missing state">
+                                            alt="checkbox icon in missing state" aria-hidden="true">
                                     </div>
                                 </label>
                                 <p id="acceptPolicyText">Ich habe die <a
@@ -605,10 +608,10 @@
                         </div>
                     </div>
                     <div class="send-btn-pos">
-                        <button class="btn-disabled" type="submit" id="sendBtn">Senden</button>
+                        <button class="btn-disabled" type="submit" id="sendBtn" disabled aria-disabled="true">Senden</button>
                     </div>
                 </form>
-                <div class="response-window" id="responseContainer">
+                <div class="response-window" id="responseContainer" role="alert" aria-live="polite" aria-hidden="true">
                     <div class="response-content">
                         <p id="responseMessage">Ihre Nachricht wurde erfolgreich an mich geschickt. Vielen Dank!</p>
                     </div>
@@ -636,21 +639,21 @@
                 <span>Entwickler</span>
             </div>
             <div class="wrapper-social-media-footer">
-                <a href="https://github.com/FabianP95" target="_blank" rel="noopener noreferrer" class="swap-image">
-                    <img src="./assets/icons/contact/githubFooter.svg" alt="gitHub icon" class="image-default">
+                <a href="https://github.com/FabianP95" target="_blank" rel="noopener noreferrer" class="swap-image" aria-label="GitHub profile">
+                    <img src="./assets/icons/contact/githubFooter.svg" alt="" class="image-default" aria-hidden="true">
                     <img src="./assets/icons/contact/gitHoverFooter.svg" class="image-hover"
-                        alt="gitHub icon in hovered state">
+                        alt="" aria-hidden="true">
                 </a>
-                <a href="mailto:fabianpuchta@hotmail.de" target="_blank" rel="noopener noreferrer" class="swap-image">
-                    <img src="./assets/icons/contact/mailFooter.svg" alt="email icon" class="image-default">
+                <a href="mailto:fabianpuchta@hotmail.de" target="_blank" rel="noopener noreferrer" class="swap-image" aria-label="Email contact">
+                    <img src="./assets/icons/contact/mailFooter.svg" alt="" class="image-default" aria-hidden="true">
                     <img src="./assets/icons/contact/mailHoverFooter.svg" class="image-hover"
-                        alt="email icon in hovered state">
+                        alt="" aria-hidden="true">
                 </a>
                 <a href="https://www.linkedin.com/in/fabian-puchta-7ba7383b7/" target="_blank" rel="noopener noreferrer"
-                    class="swap-image">
-                    <img src="./assets/icons/contact/linkedInFooter.svg" alt="linkedIn icon" class="image-default">
+                    class="swap-image" aria-label="LinkedIn profile">
+                    <img src="./assets/icons/contact/linkedInFooter.svg" alt="" class="image-default" aria-hidden="true">
                     <img src="./assets/icons/contact/linkedInHoverFooter.svg" class="image-hover"
-                        alt="linkedIn icon in hovered state">
+                        alt="" aria-hidden="true">
                 </a>
             </div>
         </div>
