@@ -51,3 +51,37 @@ function redirectBack() {
     }
 }
 
+
+/*  */
+function typewrite(el) {
+    const text = el.dataset.text;
+    let i = 0;
+    el.textContent = '';
+    el.classList.add('typing-cursor');
+
+    function tick() {
+        if (i < text.length) {
+            el.textContent = text.slice(0, ++i);
+            setTimeout(tick, 38 + Math.random() * 28);
+        } else {
+            el.classList.remove('typing-cursor');
+            const d1 = document.createElement('span');
+            d1.className = 'pipe pipe-1';
+            d1.textContent = '|';
+            el.appendChild(d1);
+        }
+    }
+    tick();
+}
+
+const done = new Set();
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !done.has(entry.target)) {
+            done.add(entry.target);
+            typewrite(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.typewriter').forEach(el => observer.observe(el));

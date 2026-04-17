@@ -33,6 +33,11 @@ sendBtn.addEventListener('click', async (e) => {
     }
 });
 
+/**
+ * Handles the server response after sending the email
+ * @param {Response} response - The fetch response object
+ * @returns {Promise<void>}
+ */
 async function handleResponse(response) {
     const result = await response.json();
     if (response.ok && result.success) {
@@ -44,6 +49,11 @@ async function handleResponse(response) {
     }
 }
 
+/**
+ * Handles errors when sending the email fails
+ * @param {Error} error - The error object
+ * @returns {void}
+ */
 function handleResponseError(error) {
     console.log(error);
 
@@ -52,6 +62,10 @@ function handleResponseError(error) {
     showFailedAnswer();
 }
 
+/**
+ * Displays a failure message when the email could not be sent
+ * @returns {void}
+ */
 function showFailedAnswer() {
     answerText.innerText = "Ihre Nachricht konnte leider nicht verschickt werden.";
     answer.classList.add('activeResponse');
@@ -61,16 +75,28 @@ function showFailedAnswer() {
     }, 2000);
 }
 
+/**
+ * Hides the contact form
+ * @returns {void}
+ */
 function hideForm() {
     form.classList.add('vis-hidden');
     sending = false;
     emptiesInputs();
 }
 
+/**
+ * Shows the contact form
+ * @returns {void}
+ */
 function showForm() {
     form.classList.remove('vis-hidden');
 }
 
+/**
+ * Displays a success message after the email is sent
+ * @returns {void}
+ */
 function showAnswer() {
     answerText.innerText = "Vielen Dank für Ihre Nachricht";
     answer.classList.add('activeResponse');
@@ -81,19 +107,35 @@ function showAnswer() {
 
 }
 
+/**
+ * Disables the send button
+ * @returns {void}
+ */
 function disableBtn() {
     sendBtn.disabled = true;
 }
 
+/**
+ * Enables the send button
+ * @returns {void}
+ */
 function activateBtn() {
     sendBtn.disabled = false;
 }
 
+/**
+ * Adds all event listeners to form inputs
+ * @returns {void}
+ */
 function addEventListeners() {
     addFocusListener();
     addBlurListener();
 }
 
+/**
+ * Sends the contact form data to the server via POST request
+ * @returns {Promise<Response>} The fetch response
+ */
 async function postMail() {
     const contactData = getDataFromForm();
     const response = await fetch('./send_mail.php', {
@@ -106,6 +148,10 @@ async function postMail() {
     return response;
 }
 
+/**
+ * Extracts form data and returns it as an object
+ * @returns {Object} Object containing name, email, and message
+ */
 function getDataFromForm() {
     const formData = new FormData(form);
     return {
@@ -116,6 +162,10 @@ function getDataFromForm() {
 }
 
 
+/**
+ * Adds focus event listeners to form inputs to reset highlights
+ * @returns {void}
+ */
 function addFocusListener() {
     formName.addEventListener("focus", (e) => {
         resetHighlight('nameContainer');
@@ -128,6 +178,10 @@ function addFocusListener() {
     });
 }
 
+/**
+ * Adds blur event listeners to form inputs to validate inputs
+ * @returns {void}
+ */
 function addBlurListener() {
     formName.addEventListener("blur", (e) => {
         checkName(formName.value);
@@ -143,6 +197,11 @@ function addBlurListener() {
     });
 }
 
+/**
+ * Validates the name input and highlights errors if invalid
+ * @param {string} name - The name value to validate
+ * @returns {void}
+ */
 function checkName(name) {
     switch (validateName(name)) {
         case false:
@@ -151,6 +210,11 @@ function checkName(name) {
     }
 }
 
+/**
+ * Validates the email input and highlights errors if invalid
+ * @param {string} mail - The email value to validate
+ * @returns {void}
+ */
 function checkMail(mail) {
     switch (validateEmail(mail)) {
         case false:
@@ -159,6 +223,11 @@ function checkMail(mail) {
     }
 }
 
+/**
+ * Validates the message input and highlights errors if invalid
+ * @param {string} msg - The message value to validate
+ * @returns {void}
+ */
 function checkMessage(msg) {
     switch (validateMessageLength(msg)) {
         case false:
@@ -167,6 +236,11 @@ function checkMessage(msg) {
     }
 }
 
+/**
+ * Highlights a form field with error styling
+ * @param {string} idContainer - The ID of the container to highlight
+ * @returns {void}
+ */
 function highlightError(idContainer) {
     let container = document.getElementById(idContainer);
     container.querySelector('span').classList.remove('d-none');
@@ -178,6 +252,11 @@ function highlightError(idContainer) {
     }
 }
 
+/**
+ * Removes error highlighting from a form field
+ * @param {string} idContainer - The ID of the container to reset
+ * @returns {void}
+ */
 function resetHighlight(idContainer) {
     let container = document.getElementById(idContainer);
     container.querySelector('span').classList.add('d-none');
@@ -189,6 +268,10 @@ function resetHighlight(idContainer) {
     }
 }
 
+/**
+ * Resets the privacy policy checkbox to unchecked state
+ * @returns {void}
+ */
 function resetCheckbox() {
     privacyAccepted = false;
     privacyCheckbox.querySelector('.checkbox-wrapper input').checked = false;
@@ -197,6 +280,10 @@ function resetCheckbox() {
     document.getElementById('errorPolicy').classList.add('vis-hidden');
 }
 
+/**
+ * Toggles the privacy policy acceptance state
+ * @returns {void}
+ */
 function setPrivacySwitch() {
     switch (privacyAccepted) {
         case true:
@@ -212,6 +299,10 @@ function setPrivacySwitch() {
     checkBtnActivation();
 }
 
+/**
+ * Checks if all form inputs are valid and enables/disables the send button accordingly
+ * @returns {void}
+ */
 function checkBtnActivation() {
     if (allInputCheck() && privacyAccepted == true) {
         sendBtn.classList.remove('btn-disabled');
@@ -222,10 +313,18 @@ function checkBtnActivation() {
     }
 }
 
+/**
+ * Validates all form inputs
+ * @returns {boolean} True if all inputs are valid, false otherwise
+ */
 function allInputCheck() {
     return validateName(formName.value) && validateEmail(formMail.value) && validateMessageLength(formMesssage.value);
 }
 
+/**
+ * Validates all inputs and displays hints for any validation errors
+ * @returns {void}
+ */
 function activateHint() {
     switch (false) {
         case validateName(formName.value):
@@ -250,6 +349,10 @@ function activateHint() {
 
 }
 
+/**
+ * Displays an error hint for the privacy policy checkbox
+ * @returns {void}
+ */
 function hintOnPrivacy() {
     privacyCheckbox.querySelector('.checkbox-icon').classList.add('d-none');
     privacyCheckbox.querySelector('.checkbox-error').classList.remove('d-none');
