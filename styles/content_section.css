@@ -121,12 +121,12 @@
 }
 
 .content-skills-right::before {
-    background-image: url('/assets/icons/currently/currently.svg');
+    background-image: url('../assets/icons/currently/currently.svg');
     opacity: 1;
 }
 
 .content-skills-right::after {
-    background-image: url('/assets/icons/currently/currentlyHover.svg');
+    background-image: url('../assets/icons/currently/currentlyHover.svg');
     opacity: 0;
 }
 

@@ -61,14 +61,14 @@
     content: "";
     width: 24px;
     height: 24px;
-    background: url("/assets/icons/social_media/emailWhite.svg") center / contain no-repeat;
+    background: url("../assets/icons/social_media/emailWhite.svg") center / contain no-repeat;
 }
 
 .contact-section-mail:hover::before {
     content: "";
     width: 24px;
     height: 24px;
-    background: url("/assets/icons/contact/mailHover.svg") center / contain no-repeat;
+    background: url("../assets/icons/contact/mailHover.svg") center / contain no-repeat;
 }
 
 .contact-section-mail:hover {
@@ -79,14 +79,14 @@
     content: "";
     width: 24px;
     height: 24px;
-    background: url("/assets/icons/contact/phone.svg") center / contain no-repeat;
+    background: url("../assets/icons/contact/phone.svg") center / contain no-repeat;
 }
 
 .contact-section-phone:hover::before {
     content: "";
     width: 24px;
     height: 24px;
-    background: url("/assets/icons/contact/phoneHover.svg") center / contain no-repeat;
+    background: url("../assets/icons/contact/phoneHover.svg") center / contain no-repeat;
 }
 
 
