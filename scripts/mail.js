@@ -22,8 +22,6 @@ sendBtn.addEventListener('click', async (e) => {
         disableBtn()
         try {
             const response = await postMail();
-            console.log(response);
-
             await handleResponse(response);
         } catch (error) {
             handleResponseError(error);
@@ -55,8 +53,6 @@ async function handleResponse(response) {
  * @returns {void}
  */
 function handleResponseError(error) {
-    console.log(error);
-
     hideForm();
     resetCheckbox();
     showFailedAnswer();
@@ -346,7 +342,6 @@ function activateHint() {
         default: sending = true;
             break;
     }
-
 }
 
 /**
@@ -358,7 +353,6 @@ function hintOnPrivacy() {
     privacyCheckbox.querySelector('.checkbox-error').classList.remove('d-none');
     document.getElementById('errorPolicy').classList.remove('vis-hidden');
 }
-
 
 
 /**
