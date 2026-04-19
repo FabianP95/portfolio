@@ -75,9 +75,14 @@ function typewrite(el) {
     let i = 0;
     el.textContent = '';
     el.classList.add('typing-cursor');
+    const firstSpaceIndex = text.indexOf(' ');
+    const firstWordEnd = firstSpaceIndex === -1 ? text.length : firstSpaceIndex;
     function tick() {
         if (i < text.length) {
-            el.textContent = text.slice(0, ++i);
+            ++i;
+            const firstWord = text.slice(0, firstWordEnd);
+            const restOfText = text.slice(firstWordEnd, i);
+            el.innerHTML = `<span class="first-word">${firstWord}</span>${restOfText}`;
             setTimeout(tick, 38 + Math.random() * 28);
         } else {
             el.classList.remove('typing-cursor');
@@ -93,7 +98,8 @@ function typewrite(el) {
 const done = new Set();
 
 /**
- * Observer osberves if elements come into view to add effect
+ * Observer observes if elements come into view to trigger typewriter effect
+ * @type {IntersectionObserver}
  */
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -102,6 +108,45 @@ const observer = new IntersectionObserver(entries => {
             typewrite(entry.target);
         }
     });
-}, { threshold: 0.6 });
+}, { threshold: 0.8 });
 
 document.querySelectorAll('.typewriter').forEach(el => observer.observe(el));
+
+/**
+ * Observer for skill icons to add fade effect when they come into view
+ * @type {IntersectionObserver}
+ */
+const skillObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade')
+        } else {
+            entry.target.classList.remove('fade')
+        }
+    })
+
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.skill-icon-big').forEach(el => skillObserver.observe(el));
+document.querySelectorAll('.skill-icon-small').forEach(el => skillObserver.observe(el));
+
+/**
+ * Observer for right-side skills section to add fade effect when it comes into view
+ * @type {IntersectionObserver}
+ */
+const skillsRight = document.querySelector('.content-skills-right');
+const skillsRightResp = document.querySelector('.content-writing-resp');
+const skillRightObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade')
+        } else {
+            entry.target.classList.remove('fade')
+        }
+    })
+}, {
+    threshold: 0.3
+});
+
+skillRightObserver.observe(skillsRight);
+skillRightObserver.observe(skillsRightResp);

@@ -63,6 +63,10 @@
     animation: blink-pipe 1.4s step-end infinite;
 }
 
+.first-word {
+    color: #89BCD9;
+}
+
 @keyframes blink {
 
     0%,
@@ -123,6 +127,17 @@
     gap: 50px;
 }
 
+.content-skills-left img {
+    translate: -100%;
+    opacity: 0;
+    transition: 800ms ease;
+}
+
+.content-skills-left img.fade {
+    translate: 0;
+    opacity: 1;
+}
+
 .skill-icon-small {
     display: none;
 }
@@ -140,6 +155,14 @@
     padding: 60px;
     text-align: center;
     overflow: hidden;
+    translate: 20%;
+    opacity: 0;
+    transition: 800ms ease;
+}
+
+.content-skills-right.fade {
+    translate: 0;
+    opacity: 1;
 }
 
 .skills-learning {
@@ -199,6 +222,14 @@
     display: flex;
     gap: 20px;
     align-items: center;
+    translate: 10px;
+    opacity: 0;
+    transition: 800ms ease;
+}
+
+.content-writing-resp.fade {
+    translate: 0;
+    opacity: 1;
 }
 
 .content-writing-resp p {
