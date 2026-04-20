@@ -148,5 +148,11 @@ const skillRightObserver = new IntersectionObserver(entries => {
     threshold: 0.3
 });
 
-skillRightObserver.observe(skillsRight);
-skillRightObserver.observe(skillsRightResp);
+if (skillsRight) {
+    skillRightObserver.observe(skillsRight);
+}
+
+if (skillsRightResp) {
+    skillRightObserver.observe(skillsRightResp);
+}
+
