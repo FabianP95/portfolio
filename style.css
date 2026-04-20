@@ -26,19 +26,6 @@
     background-color: #3f454a;
 }
 
-.btn-disabled {
-    cursor: context-menu;
-    border-radius: 20px;
-    border: 1px solid;
-    border-color: #8f9290;
-    background-color: transparent;
-    color: #8f9290;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-family: 'Josefin', sans-serif;
-    cursor: context-menu;
-}
-
 .btn-live {
     font-family: 'Josefin', sans-serif;
     cursor: pointer;

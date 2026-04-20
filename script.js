@@ -1,5 +1,7 @@
 const tabs = document.querySelectorAll('.tab');
 const panels = document.querySelectorAll('.panel');
+const skillsRight = document.querySelector('.content-skills-right');
+const skillsRightResp = document.querySelector('.content-writing-resp');
 
 
 /**
@@ -134,8 +136,6 @@ document.querySelectorAll('.skill-icon-small').forEach(el => skillObserver.obser
  * Observer for right-side skills section to add fade effect when it comes into view
  * @type {IntersectionObserver}
  */
-const skillsRight = document.querySelector('.content-skills-right');
-const skillsRightResp = document.querySelector('.content-writing-resp');
 const skillRightObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {

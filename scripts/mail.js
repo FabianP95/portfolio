@@ -301,11 +301,9 @@ function setPrivacySwitch() {
  */
 function checkBtnActivation() {
     if (allInputCheck() && privacyAccepted == true) {
-        sendBtn.classList.remove('btn-disabled');
-        sendBtn.classList.add('btn');
+        sendBtn.disabled = false;
     } else {
-        sendBtn.classList.add('btn-disabled');
-        sendBtn.classList.remove('btn');
+        sendBtn.disabled = true;
     }
 }
 
