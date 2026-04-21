@@ -29,24 +29,23 @@ function initializeFormElements() {
     sendBtn = document.getElementById('sendBtn');
     answer = document.getElementById('responseContainer');
     answerText = document.getElementById('responseMessage');
-}
-
-if (sendBtn) {
-    sendBtn.addEventListener('click', async (e) => {
-        e.preventDefault();
-        activateHint()
-        if (sending) {
-            disableBtn()
-            try {
-                const response = await postMail();
-                await handleResponse(response);
-            } catch (error) {
-                handleResponseError(error);
-            } finally {
-                activateBtn();
+    if (sendBtn) {
+        sendBtn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            activateHint()
+            if (sending) {
+                disableBtn()
+                try {
+                    const response = await postMail();
+                    await handleResponse(response);                
+                } catch (error) {
+                    handleResponseError(error);              
+                } finally {
+                    activateBtn();
+                }
             }
-        }
-    });
+        });
+    }
 }
 
 if (privacyCheckbox) {
@@ -79,8 +78,11 @@ async function handleResponse(response) {
  */
 function handleResponseError(error) {
     hideForm();
-    resetCheckbox();
-    showFailedAnswer();
+    setTimeout(() => {
+        resetCheckbox();
+        showFailedAnswer();
+    }, 800);
+
 }
 
 /**
@@ -92,7 +94,7 @@ function showFailedAnswer() {
     setTimeout(() => {
         answer.classList.remove('activeResponse');
         showForm();
-    }, 2000);
+    }, 3000);
 }
 
 /**

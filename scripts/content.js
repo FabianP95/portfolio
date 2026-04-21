@@ -629,7 +629,7 @@ function getContent(lang) {
                         </div>
                     </div>
                     <div id="wrapperBtn" class="send-btn-pos">
-                        <button class="btn" type="submit" id="sendBtn" disabled aria-disabled="true">Senden</button>
+                        <button class="btn" type="button" id="sendBtn" disabled aria-disabled="true">Senden</button>
                     </div>
                 </form>
                 <div class="response-window" id="responseContainer" role="alert" aria-live="polite" aria-hidden="true">
@@ -1268,7 +1268,7 @@ function getContent(lang) {
                         </div>
                     </div>
                     <div class="send-btn-pos">
-                        <button class="btn" type="submit" id="sendBtn" disabled aria-disabled="true">Send</button>
+                        <button class="btn" type="button" id="sendBtn" disabled aria-disabled="true">Send</button>
                     </div>
                 </form>
                 <div class="response-window" id="responseContainer" role="alert" aria-live="polite" aria-hidden="true">
