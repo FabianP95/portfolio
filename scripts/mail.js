@@ -1,35 +1,59 @@
-const formName = document.getElementById('formName');
-const nameLabel = document.getElementById('formLabelName');
-const formMail = document.getElementById('formMail');
-const mailLabel = document.getElementById('formLabelMail');
-const formMesssage = document.getElementById('formMessage');
-const messageLabel = document.getElementById('formLabelMessage');
-const form = document.getElementById('form');
-const privacyCheckbox = document.getElementById('checkbox');
-const sendBtn = document.getElementById('sendBtn');
-const answer = document.getElementById('responseContainer');
-const answerText = document.getElementById('responseMessage');
+let formName;
+let nameLabel;
+let formMail;
+let mailLabel;
+let formMesssage;
+let messageLabel;
+let form;
+let privacyCheckbox;
+let sendBtn;
+let answer;
+let answerText;
 
 let sending = false;
 let privacyAccepted = false;
 
-addEventListeners()
+/**
+ * Initializes form element references and attaches send button listener
+ * @returns {void}
+ */
+function initializeFormElements() {
+    formName = document.getElementById('formName');
+    nameLabel = document.getElementById('formLabelName');
+    formMail = document.getElementById('formMail');
+    mailLabel = document.getElementById('formLabelMail');
+    formMesssage = document.getElementById('formMessage');
+    messageLabel = document.getElementById('formLabelMessage');
+    form = document.getElementById('form');
+    privacyCheckbox = document.getElementById('checkbox');
+    sendBtn = document.getElementById('sendBtn');
+    answer = document.getElementById('responseContainer');
+    answerText = document.getElementById('responseMessage');
+}
 
-sendBtn.addEventListener('click', async (e) => {
-    e.preventDefault();
-    activateHint()
-    if (sending) {
-        disableBtn()
-        try {
-            const response = await postMail();
-            await handleResponse(response);
-        } catch (error) {
-            handleResponseError(error);
-        } finally {
-            activateBtn();
+if (sendBtn) {
+    sendBtn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        activateHint()
+        if (sending) {
+            disableBtn()
+            try {
+                const response = await postMail();
+                await handleResponse(response);
+            } catch (error) {
+                handleResponseError(error);
+            } finally {
+                activateBtn();
+            }
         }
-    }
-});
+    });
+}
+
+if (privacyCheckbox) {
+    privacyCheckbox.addEventListener('click', () => {
+        setPrivacySwitch();
+    });
+}
 
 /**
  * Handles the server response after sending the email
@@ -43,14 +67,15 @@ async function handleResponse(response) {
         showAnswer();
         resetCheckbox();
     } else {
-        alert('Error: ' + (result.error || 'Failed to send message.'));
+        hideForm();
+        showFailedAnswer();
+        resetCheckbox();
     }
 }
 
 /**
  * Handles errors when sending the email fails
  * @param {Error} error - The error object
- * @returns {void}
  */
 function handleResponseError(error) {
     hideForm();
@@ -60,7 +85,6 @@ function handleResponseError(error) {
 
 /**
  * Displays a failure message when the email could not be sent
- * @returns {void}
  */
 function showFailedAnswer() {
     answerText.innerText = "Ihre Nachricht konnte leider nicht verschickt werden.";
@@ -72,8 +96,7 @@ function showFailedAnswer() {
 }
 
 /**
- * Hides the contact form
- * @returns {void}
+ * Hides the contact form and prevents further submission
  */
 function hideForm() {
     form.classList.add('vis-hidden');
@@ -83,7 +106,6 @@ function hideForm() {
 
 /**
  * Shows the contact form
- * @returns {void}
  */
 function showForm() {
     form.classList.remove('vis-hidden');
@@ -91,7 +113,6 @@ function showForm() {
 
 /**
  * Displays a success message after the email is sent
- * @returns {void}
  */
 function showAnswer() {
     answerText.innerText = "Vielen Dank für Ihre Nachricht";
@@ -100,12 +121,10 @@ function showAnswer() {
         answer.classList.remove('activeResponse');
         showForm();
     }, 2000);
-
 }
 
 /**
  * Disables the send button
- * @returns {void}
  */
 function disableBtn() {
     sendBtn.disabled = true;
@@ -113,7 +132,6 @@ function disableBtn() {
 
 /**
  * Enables the send button
- * @returns {void}
  */
 function activateBtn() {
     sendBtn.disabled = false;
@@ -121,7 +139,6 @@ function activateBtn() {
 
 /**
  * Adds all event listeners to form inputs
- * @returns {void}
  */
 function addEventListeners() {
     addFocusListener();
@@ -157,10 +174,8 @@ function getDataFromForm() {
     };
 }
 
-
 /**
  * Adds focus event listeners to form inputs to reset highlights
- * @returns {void}
  */
 function addFocusListener() {
     formName.addEventListener("focus", (e) => {
@@ -176,7 +191,6 @@ function addFocusListener() {
 
 /**
  * Adds blur event listeners to form inputs to validate inputs
- * @returns {void}
  */
 function addBlurListener() {
     formName.addEventListener("blur", (e) => {
@@ -196,7 +210,6 @@ function addBlurListener() {
 /**
  * Validates the name input and highlights errors if invalid
  * @param {string} name - The name value to validate
- * @returns {void}
  */
 function checkName(name) {
     switch (validateName(name)) {
@@ -209,7 +222,6 @@ function checkName(name) {
 /**
  * Validates the email input and highlights errors if invalid
  * @param {string} mail - The email value to validate
- * @returns {void}
  */
 function checkMail(mail) {
     switch (validateEmail(mail)) {
@@ -222,7 +234,6 @@ function checkMail(mail) {
 /**
  * Validates the message input and highlights errors if invalid
  * @param {string} msg - The message value to validate
- * @returns {void}
  */
 function checkMessage(msg) {
     switch (validateMessageLength(msg)) {
@@ -235,7 +246,6 @@ function checkMessage(msg) {
 /**
  * Highlights a form field with error styling
  * @param {string} idContainer - The ID of the container to highlight
- * @returns {void}
  */
 function highlightError(idContainer) {
     let container = document.getElementById(idContainer);
@@ -251,7 +261,6 @@ function highlightError(idContainer) {
 /**
  * Removes error highlighting from a form field
  * @param {string} idContainer - The ID of the container to reset
- * @returns {void}
  */
 function resetHighlight(idContainer) {
     let container = document.getElementById(idContainer);
@@ -266,7 +275,6 @@ function resetHighlight(idContainer) {
 
 /**
  * Resets the privacy policy checkbox to unchecked state
- * @returns {void}
  */
 function resetCheckbox() {
     privacyAccepted = false;
@@ -278,7 +286,6 @@ function resetCheckbox() {
 
 /**
  * Toggles the privacy policy acceptance state
- * @returns {void}
  */
 function setPrivacySwitch() {
     switch (privacyAccepted) {
@@ -297,7 +304,6 @@ function setPrivacySwitch() {
 
 /**
  * Checks if all form inputs are valid and enables/disables the send button accordingly
- * @returns {void}
  */
 function checkBtnActivation() {
     if (allInputCheck() && privacyAccepted == true) {
@@ -317,7 +323,6 @@ function allInputCheck() {
 
 /**
  * Validates all inputs and displays hints for any validation errors
- * @returns {void}
  */
 function activateHint() {
     switch (false) {
@@ -344,7 +349,6 @@ function activateHint() {
 
 /**
  * Displays an error hint for the privacy policy checkbox
- * @returns {void}
  */
 function hintOnPrivacy() {
     privacyCheckbox.querySelector('.checkbox-icon').classList.add('d-none');
@@ -352,9 +356,8 @@ function hintOnPrivacy() {
     document.getElementById('errorPolicy').classList.remove('vis-hidden');
 }
 
-
 /**
- * empties input fields after the message has successfully been send
+ * Empties input fields after the message has successfully been sent
  */
 function emptiesInputs() {
     formName.value = "";
@@ -363,7 +366,7 @@ function emptiesInputs() {
 }
 
 /**
- * validates entered email
+ * Validates entered email
  */
 function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -371,14 +374,14 @@ function validateEmail(email) {
 }
 
 /**
- * validates entered name
+ * Validates entered name
  */
 function validateName(str) {
     return /^[a-zA-Z]+( [a-zA-Z]+)*$/.test(str);
 }
 
 /**
- * validates message length
+ * Validates message length (minimum 10 characters excluding whitespace)
  */
 function validateMessageLength(str) {
     return str.replace(/\s/g, '').length > 10;

@@ -1,25 +1,51 @@
-const tabs = document.querySelectorAll('.tab');
-const panels = document.querySelectorAll('.panel');
-const skillsRight = document.querySelector('.content-skills-right');
-const skillsRightResp = document.querySelector('.content-writing-resp');
-
+let tabs;
+let panels;
+let skillsRight;
+let skillsRightResp;
+let menuBtn;
+let menuContent;
 
 /**
- * Applies the according css class to the project clicked on
+ * Initializes all event listeners and observers after content is loaded
+ * @returns {void}
  */
-tabs.forEach((tab, i) => {
-    tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        panels.forEach(p => p.classList.remove('active'));
-        tab.classList.add('active');
-        panels[i].classList.add('active');
-        addBorderRadius(i);
+function initializeEventListeners() {
+    tabs = document.querySelectorAll('.tab');
+    panels = document.querySelectorAll('.panel');
+    skillsRight = document.querySelector('.content-skills-right');
+    skillsRightResp = document.querySelector('.content-writing-resp');
+    menuBtn = document.getElementById('burgerBtn');
+    menuContent = document.getElementById('nav-menu');
+    if (menuContent) {
+        menuContent.addEventListener('click', (e) => {
+            toggleMenu();
+        });
+    }
+    addTabFunction(tabs)
+    initializeFormElements();
+    addEventListeners();
+    initializeObservers();
+}
 
-    });
-});
 
 /**
- * Applies border radius classes to the projects container based on the selected tab index
+ * Attaches click event listeners to project tabs
+ * @returns {void}
+ */
+function addTabFunction(tabs) {
+    tabs.forEach((tab, i) => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            panels.forEach(p => p.classList.remove('active'));
+            tab.classList.add('active');
+            panels[i].classList.add('active');
+            addBorderRadius(i);
+        });
+    });
+}
+
+/**
+ * Applies border radius classes to the projects container based on selected tab index
  * @param {number} i - The index of the selected tab
  * @returns {void}
  */
@@ -29,43 +55,32 @@ function addBorderRadius(i) {
     document.getElementById('projectsContainer').classList.remove('border-radius-3');
     if (i <= 0) {
         document.getElementById('projectsContainer').classList.add('border-radius-0');
-    } else
-        if (i >= 1 && i <= 2) {
-            document.getElementById('projectsContainer').classList.add('border-radius-1-2');
-        } else {
-            document.getElementById('projectsContainer').classList.add('border-radius-3');
-        }
-};
-
-
+    } else if (i >= 1 && i <= 2) {
+        document.getElementById('projectsContainer').classList.add('border-radius-1-2');
+    } else {
+        document.getElementById('projectsContainer').classList.add('border-radius-3');
+    }
+}
 
 /**
  * Toggles the burger menu visibility and icon state
- * @param {HTMLElement} buttonElement - The burger menu button element
  * @returns {void}
  */
-function toggleMenu(buttonElement) {
-    buttonElement.querySelector('span').classList.toggle('burger-icon--open');
+function toggleMenu() {
+    menuBtn.querySelector('span').classList.toggle('burger-icon--open');
     const burgerMenu = document.querySelector('.nav-menu-container');
     if (burgerMenu) {
         burgerMenu.classList.toggle('is-active');
     }
-};
+}
 
 /**
  * Redirects user back to the appropriate referrer site based on page language
  * @returns {void}
  */
 function redirectBack() {
-    if (["datenschutz.html", "impressum.html"].some(page => document.referrer.includes(page))) {
-        window.location.href = '../../index.html';
-    } else if (["imprint.html", "privacy_policy.html"].some(page => document.referrer.includes(page))) {
-        window.location.href = '../../html/english/english_main.html';
-    } else {
-        window.location.href = document.referrer;
-    }
-};
-
+    window.location.href = '../../index.html';
+}
 
 /**
  * Creates a typewriter effect by gradually displaying text from the element's data-text attribute
@@ -95,64 +110,75 @@ function typewrite(el) {
         }
     }
     tick();
-};
+}
 
 const done = new Set();
 
 /**
- * Observer observes if elements come into view to trigger typewriter effect
- * @type {IntersectionObserver}
+ * Initializes all intersection observers after content is loaded
+ * @returns {void}
  */
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !done.has(entry.target)) {
-            done.add(entry.target);
-            typewrite(entry.target);
-        }
+function initializeObservers() {
+    done.clear();
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !done.has(entry.target)) {
+                done.add(entry.target);
+                typewrite(entry.target);
+            }
+        });
+    }, { threshold: 0.8 });
+
+    document.querySelectorAll('.typewriter').forEach(el => observer.observe(el));
+
+    const skillObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade')
+            } else {
+                entry.target.classList.remove('fade')
+            }
+        })
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.skill-icon-big').forEach(el => skillObserver.observe(el));
+    document.querySelectorAll('.skill-icon-small').forEach(el => skillObserver.observe(el));
+
+    const skillRightObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade')
+            } else {
+                entry.target.classList.remove('fade')
+            }
+        })
+    }, {
+        threshold: 0.3
     });
-}, { threshold: 0.8 });
 
-document.querySelectorAll('.typewriter').forEach(el => observer.observe(el));
+    skillsRight = document.querySelector('.content-skills-right');
+    skillsRightResp = document.querySelector('.content-writing-resp');
 
-/**
- * Observer for skill icons to add fade effect when they come into view
- * @type {IntersectionObserver}
- */
-const skillObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade')
-        } else {
-            entry.target.classList.remove('fade')
-        }
-    })
+    if (skillsRight) {
+        skillRightObserver.observe(skillsRight);
+    }
 
-}, { threshold: 0.3 });
+    if (skillsRightResp) {
+        skillRightObserver.observe(skillsRightResp);
+    }
 
-document.querySelectorAll('.skill-icon-big').forEach(el => skillObserver.observe(el));
-document.querySelectorAll('.skill-icon-small').forEach(el => skillObserver.observe(el));
+    const formObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear')
+            } else {
+                entry.target.classList.remove('appear')
+            }
+        })
+    }, {
+        threshold: 0.3
+    });
 
-/**
- * Observer for right-side skills section to add fade effect when it comes into view
- * @type {IntersectionObserver}
- */
-const skillRightObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade')
-        } else {
-            entry.target.classList.remove('fade')
-        }
-    })
-}, {
-    threshold: 0.3
-});
-
-if (skillsRight) {
-    skillRightObserver.observe(skillsRight);
+    document.querySelectorAll('.input-wrapper').forEach(el => formObserver.observe(el));
 }
-
-if (skillsRightResp) {
-    skillRightObserver.observe(skillsRightResp);
-}
-

@@ -411,6 +411,7 @@
         height: 20px;
         justify-content: center;
         margin-left: -40px;
+        padding-right: 0;
     }
 
     .wrapper-footer {
@@ -423,11 +424,23 @@
         padding: 40px 20px 0 20px;
     }
 
+    .wrapper-arrow-up {
+        margin: 40px 0 0 -20px;
+    }
+
     .title p {
         font-size: 20px;
     }
 
     .resp-menu-content {
         gap: 24px;
+    }
+
+    .wrapper-footer {
+        margin-top: 200px;
+    }
+
+    .send-btn-pos {
+        margin: 0 0 0 0;
     }
 }

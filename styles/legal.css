@@ -4,10 +4,12 @@
     justify-content: space-between;
     gap: 20px;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1250px;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 60px 20px 100px 20px;
+    height: auto;
+    min-height: 100vh;
 }
 
 .imprint-container {
@@ -54,4 +56,16 @@
 
 .btn-legal:hover {
     background-color: #3f454a;
+}
+
+.navbar-language a {
+    color: #262E34;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 8px 8px 4px 6px;
+}
+
+.navbar-language a:hover {
+    color: #F8F5EC;
+     cursor: pointer;
 }

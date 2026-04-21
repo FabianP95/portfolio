@@ -31,15 +31,15 @@ h1 {
     text-align: center;
     padding: 40px 30px 0 30px;
     margin: 0 auto;
-    max-width: 1240px;
+    max-width: 1440px;
     width: 100%;
-    max-height: 811px;
+    max-height: 1440px;
     height: 100vh;
     box-sizing: border-box;
 }
 
 .info-hero-section {
-    margin: 68px 0 0 auto;
+    margin: 100px 0 0 auto;
     padding-left: 24px;
 }
 
@@ -329,15 +329,16 @@ nav {
 
 }
 
-.navbar-language a {
+.navbar-language span {
     color: #262E34;
     font-size: 18px;
     transition: background-color 0.3s, color 0.3s;
     padding: 8px 8px 4px 6px;
 }
 
-.navbar-language a:hover {
+.navbar-language span:hover {
     color: #F8F5EC;
+     cursor: pointer;
 }
 
 .nav-menu-container {
@@ -348,9 +349,6 @@ nav {
     opacity: 0;
     transition: opacity 0.6s ease;
 }
-
-
-
 
 .resp-menu-content {
     display: flex;
