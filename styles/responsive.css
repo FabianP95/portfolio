@@ -1,6 +1,6 @@
 @media (max-width: 1500px) {
     .hero {
-        padding: 40px 20px 0 20px;
+        padding: 10px 20px 0 20px;
     }
 }
 
@@ -76,7 +76,7 @@
     }
 
     .wrapper-arrow-down {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .main-image-container {
