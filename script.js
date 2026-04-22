@@ -24,7 +24,7 @@ function initializeEventListeners() {
     addTabFunction(tabs)
     initializeFormElements();
     addEventListeners();
-    initializeObservers();
+    initializeAllObservers();
 }
 
 
@@ -126,9 +126,20 @@ const done = new Set();
  * Initializes all intersection observers after content is loaded
  * @returns {void}
  */
-function initializeObservers() {
-    done.clear();
+function initializeAllObservers() {
+    typeObserver();
+    formObserver();
+    skillRightObserver();
+    skillObserver();
+}
 
+
+/**
+ * Sets up an Intersection Observer to trigger typewriter effect on elements when they come into view
+ * @returns {void}
+ */
+function typeObserver() {
+    done.clear();
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting && !done.has(entry.target)) {
@@ -139,7 +150,14 @@ function initializeObservers() {
     }, { threshold: 0.8 });
 
     document.querySelectorAll('.typewriter').forEach(el => observer.observe(el));
+}
 
+
+/**
+ * Sets up an Intersection Observer to add fade animation to skill icons when they come into view
+ * @returns {void}
+ */
+function skillObserver() {
     const skillObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -152,7 +170,14 @@ function initializeObservers() {
 
     document.querySelectorAll('.skill-icon-big').forEach(el => skillObserver.observe(el));
     document.querySelectorAll('.skill-icon-small').forEach(el => skillObserver.observe(el));
+}
 
+
+/**
+ * Sets up an Intersection Observer to add fade animation to right-aligned skill content when in view
+ * @returns {void}
+ */
+function skillRightObserver() {
     const skillRightObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -164,18 +189,22 @@ function initializeObservers() {
     }, {
         threshold: 0.3
     });
-
     skillsRight = document.querySelector('.content-skills-right');
     skillsRightResp = document.querySelector('.content-writing-resp');
-
     if (skillsRight) {
         skillRightObserver.observe(skillsRight);
     }
-
     if (skillsRightResp) {
         skillRightObserver.observe(skillsRightResp);
     }
+}
 
+
+/**
+ * Sets up an Intersection Observer to add appear animation to form input wrappers when they come into view
+ * @returns {void}
+ */
+function formObserver() {
     const formObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -187,6 +216,5 @@ function initializeObservers() {
     }, {
         threshold: 0.3
     });
-
     document.querySelectorAll('.input-wrapper').forEach(el => formObserver.observe(el));
 }
