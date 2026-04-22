@@ -89,7 +89,6 @@
     }
 
     .quote-section {
-        justify-content: flex-start;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         scrollbar-width: thin;
