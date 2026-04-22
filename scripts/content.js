@@ -248,7 +248,7 @@ function getContent(lang) {
     </div>
     <section id="projectSection" class="sub-section mrg-tp-section">
         <h2 class="content-headlines">Meine Projekte</h2>
-        <nav class="nav-projects" role="tablist">
+        <div class="nav-projects" role="tablist">
             <button class="tab active" role="tab" id="tab-join" aria-selected="true" aria-controls="panel-join"
                 tabindex="0"><span class="color-writing-blue font-size-30 desktop-content">1.
                     Join</span>
@@ -269,7 +269,7 @@ function getContent(lang) {
                     class="color-writing-blue font-size-30 desktop-content">4. Kommende</span>
                 <span class="color-writing-blue font-size-30 resp-content">4. Projekt</span>
             </button>
-        </nav>
+        </div>
         <div id="projectsContainer" class="card">
             <div class="content-wrapper-projects">
                 <div class="panel active" data-panel="0" role="tabpanel" id="panel-join" aria-labelledby="tab-join"
@@ -887,7 +887,7 @@ function getContent(lang) {
     </main>
     <section id="projectSection" class="sub-section mrg-tp-section">
         <h2 class="content-headlines">My Projects</h2>
-        <nav class="nav-projects" role="tablist">
+        <div class="nav-projects" role="tablist">
             <button class="tab active" role="tab" id="tab-join" aria-selected="true" aria-controls="panel-join"
                 tabindex="0"><span class="color-writing-blue font-size-30 desktop-content">1.
                     Join</span>
@@ -908,7 +908,7 @@ function getContent(lang) {
                     class="color-writing-blue font-size-30 desktop-content">4. Upcoming</span>
                 <span class="color-writing-blue font-size-30 resp-content">4. Project</span>
             </button>
-        </nav>
+        </div>
         <div id="projectsContainer" class="card">
             <div class="content-wrapper-projects">
                 <div class="panel active" data-panel="0" role="tabpanel" id="panel-join" aria-labelledby="tab-join"
