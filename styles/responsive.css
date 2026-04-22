@@ -114,7 +114,7 @@
     }
 }
 
-@media (max-width: 1200px) and (min-width: 700px) {
+@media (max-width: 1330px) and (min-width: 700px) {
     .main-image-container {
         height: 700px;
     }

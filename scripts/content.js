@@ -21,7 +21,16 @@ function getLanguagePreference() {
  */
 function initializeLanguage() {
     const preferredLang = getLanguagePreference();
+    const targetHash = window.location.hash;
     displayContent(preferredLang);
+    if (targetHash) {
+        setTimeout(() => {
+            const element = document.querySelector(targetHash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 0);
+    }
 }
 
 /**
@@ -680,8 +689,8 @@ function getContent(lang) {
             </div>
         </div>
     </footer>`;
-    case "en":
-        return ` <div class="wrapper-hero-section">
+        case "en":
+            return ` <div class="wrapper-hero-section">
         <section id="hero" class="hero">
             <div class="header-resp d-none">
                 <div class="logo-hero">

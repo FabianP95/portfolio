@@ -76,10 +76,18 @@ function toggleMenu() {
 
 /**
  * Redirects user back to the appropriate referrer site based on page language
+ * Preserves hash for anchor links if coming from a legal page
  * @returns {void}
  */
 function redirectBack() {
-    window.location.href = '../../index.html';
+    const referrer = document.referrer;
+    if (referrer && referrer.includes('index.html')) {
+        // If referrer was index.html, try to go back with history
+        window.history.back();
+    } else {
+        // Otherwise redirect to index.html with contact section
+        window.location.href = '../../index.html#contactSection';
+    }
 }
 
 /**
