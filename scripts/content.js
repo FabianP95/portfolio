@@ -529,7 +529,7 @@ function getContent(lang) {
             </div>
         </div>
     </section>
-    <section class="sub-section mrg-tp-section content-wrapper">
+    <section class="sub-section mrg-tp-section">
         <div>
             <p class="team-title">Sie brauchen einen Teamplayer?<span class="team-title-sub"> Das sagen meine
                     Kollegen</span></p>
@@ -544,7 +544,7 @@ function getContent(lang) {
                 <a class="single-link margin-team-link" href="https://www.linkedin.com/in/gerd-l%C3%B6dige-4a08802a9/"
                     target="_blank" rel="noopener noreferrer">LinkedIn Profil</a>
             </article>
-            <article class="single-quote">
+            <article class="single-quote mrg-left">
                 <h4 class="font-size-26 margin-team">Max L.</h4>
                 <p class="font-size-18 margin-team">Projekt <span class="color-writing-blue font-size-18 ">Join</span>
                 </p>
@@ -1167,7 +1167,7 @@ function getContent(lang) {
             </div>
         </div>
     </section>
-    <section class="sub-section mrg-tp-section content-wrapper">
+    <section class="sub-section mrg-tp-section">
         <div>
             <p class="team-title">Need a team player?<span class="team-title-sub"> Here's what my colleagues say about
                     me</span></p>
@@ -1182,7 +1182,7 @@ function getContent(lang) {
                 <a class="single-link margin-team-link" href="https://www.linkedin.com/in/gerd-l%C3%B6dige-4a08802a9/"
                     target="_blank" rel="noopener noreferrer">LinkedIn Profil</a>
             </article>
-            <article class="single-quote">
+            <article class="single-quote mrg-left">
                 <h4 class="font-size-26 margin-team">Max L.</h4>
                 <p class="font-size-18 margin-team">Project <span class="color-writing-blue font-size-18 ">Join</span>
                 </p>

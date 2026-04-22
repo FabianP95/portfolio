@@ -114,7 +114,7 @@
     }
 
     section {
-        scroll-margin-top: 10px;
+        scroll-margin-top: 80px;
     }
 
     .info-hero-section {
@@ -148,6 +148,7 @@
         display: flex;
         flex-direction: column;
         text-align: left;
+        padding-left: 20px;
     }
 
     .team-title-sub {
@@ -161,7 +162,18 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 1180px) and (min-height: 600px) and (max-height: 900px) {
+    .hero {
+        height: 100vh;
+    }
+}
+
 @media (max-width: 700px) {
+
+    section {
+        scroll-margin-top: -30px;
+    }
+
     h1 {
         margin: 0 auto 16px auto;
     }
@@ -176,16 +188,19 @@
     }
 
     .hero {
+        height: 100vh;
         flex-direction: column;
     }
 
     .info-hero-section {
         margin: 8px 0 0 0;
         padding: 0;
+        flex: 1;
     }
 
     .main-image-container {
         aspect-ratio: 1/1;
+
     }
 
     .social-media-wrapper {
@@ -241,7 +256,8 @@
     }
 
     .content-wrapper {
-        margin-top: 150px;
+        margin-top: 110px;
+        padding: 0 20px;
     }
 
     .info-left img {
@@ -290,7 +306,7 @@
     }
 
     .quote-section {
-
+        gap: 0px;
         padding: 0 0px;
         justify-content: flex-start;
     }
@@ -443,4 +459,9 @@
     .send-btn-pos {
         margin: 0 0 0 0;
     }
+
+    .mrg-left {
+        margin-left: -20px;
+    }
+
 }

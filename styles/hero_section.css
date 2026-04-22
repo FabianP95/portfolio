@@ -285,7 +285,7 @@ nav {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding: 0 110px;
+    padding: 0 110px 0 0;
 }
 
 .navbar-logo p {
@@ -313,7 +313,7 @@ nav {
 .navbar-language {
     display: flex;
     gap: 35px;
-    padding: 20px 110px;
+    padding: 20px 0 20px 110px;
     align-items: center;
     justify-content: center;
     font-size: 16px;
