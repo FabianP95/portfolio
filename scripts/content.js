@@ -558,7 +558,7 @@ function getContent(lang) {
                 <p class="font-size-18 margin-team">Projekt <span class="color-writing-blue font-size-18 ">Join</span>
                 </p>
                 <p class="font-size-18 margin-team">"Ich bedanke mich bei Fabian für seine Zusammenarbeit. Es war sehr
-                    angenehm mit ihm Zusammen zu Arbeiten und ich wünsche ihm alles gute auf seinem weiteren Weg."</p>
+                          angenehm, mit ihm zusammenzuarbeiten, und ich wünsche ihm alles Gute auf seinem weiteren Weg."</p>
                 <a class="single-link margin-team-link" href="https://www.linkedin.com/in/lukas-lehmann-b7b5683bb/"
                     target="_blank" rel="noopener noreferrer">LinkedIn
                     Profil</a>
