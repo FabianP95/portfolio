@@ -203,30 +203,38 @@ function getContent(lang) {
                     <img class="skill-icon-big" src="./assets/icons/skills/htmlBig.svg" alt="icon for html">
                     <img class="skill-icon-big" src="./assets/icons/skills/cssBig.svg" alt="icon for css">
                     <img class="skill-icon-big" src="./assets/icons/skills/jsBig.svg" alt="icon for java script">
+                     <img class="skill-icon-big" src="./assets/icons/skills/typeScriptBig.svg" alt="icon for typescript">
                     <img class="skill-icon-big" src="./assets/icons/skills/apiBig.svg" alt="icon for an API">
                     <img class="skill-icon-big" src="./assets/icons/skills/firebaseBig.svg"
                         alt="icon for firebase storage">
                     <img class="skill-icon-big" src="./assets/icons/skills/gitBig.svg" alt="icon for gitHub">
                     <img class="skill-icon-big" src="./assets/icons/skills/scrumBig.svg" alt="icon for scrum">
+                    <img class="skill-icon-big" src="./assets/icons/skills/reactBig.svg" alt="icon for react">
+                    <img class="skill-icon-big" src="./assets/icons/skills/supabaseBig.svg" alt="icon for supabase">
+                    <img class="skill-icon-big" src="./assets/icons/skills/angularBig.svg" alt="icon for angular">
                     <img class="skill-icon-small" src="./assets/icons/skills/htmlSmall.svg" alt="icon for html">
                     <img class="skill-icon-small" src="./assets/icons/skills/cssSmall.svg" alt="icon for css">
                     <img class="skill-icon-small" src="./assets/icons/skills/jsSmall.svg" alt="icon for java script">
+                    <img class="skill-icon-small" src="./assets/icons/skills/typeScriptSmall.svg" alt="icon for typescript">
                     <img class="skill-icon-small" src="./assets/icons/skills/apiSmall.svg" alt="icon for an API">
                     <img class="skill-icon-small" src="./assets/icons/skills/firebaseSmall.svg"
                         alt="icon for firebase storage">
                     <img class="skill-icon-small" src="./assets/icons/skills/gitSmall.svg" alt="icon for gitHub">
                     <img class="skill-icon-small" src="./assets/icons/skills/scrumSmall.svg" alt="icon for scrum">
+                    <img class="skill-icon-small" src="./assets/icons/skills/angularSmall.svg" alt="icon for angular">
+                    <img class="skill-icon-small" src="./assets/icons/skills/reactSmall.svg" alt="icon for react">
+                    <img class="skill-icon-small" src="./assets/icons/skills/supabaseSmall.svg" alt="icon for supabase">
                 </div>
                 <div class="content-skills-right">
                     <p class="font-size-18">Momentan lerne ich</p>
                     <div class="skills-learning">
                         <div class="new-skill">
-                            <img src="./assets/icons/skills/angularSmall.svg" alt="icon for an angular">
-                            <p>Angular</p>
+                            <img src="./assets/icons/skills/pythonSmall.svg" alt="icon for a python">
+                            <p>Python</p>
                         </div>
                         <div class="new-skill">
-                            <img src="./assets/icons/skills/typeScriptSmall.svg" alt="icon for an typescript">
-                            <p>TypeScript</p>
+                            <img src="./assets/icons/skills/djangoSmall.svg" alt="icon for a django">
+                            <p>Django</p>
                         </div>
                     </div>
                     <p>Um mit den modernen Ansätzen der Webentwicklung Schritt zu halten
@@ -239,12 +247,12 @@ function getContent(lang) {
                             halten</p>
                         <div class="div-space skills-icons-resp">
                             <div class="new-skill">
-                                <img src="./assets/icons/skills/angularSmall.svg" alt="icon for an angular">
-                                <p>Angular</p>
+                                 <img src="./assets/icons/skills/pythonSmall.svg" alt="icon for a python">
+                            <p>Python</p>
                             </div>
                             <div class="new-skill">
-                                <img src="./assets/icons/skills/typeScriptSmall.svg" alt="icon for an typescript">
-                                <p>TypeScript</p>
+                                 <img src="./assets/icons/skills/djangoSmall.svg" alt="icon for a django">
+                            <p>Django</p>
                             </div>
                         </div>
                     </div>
@@ -270,13 +278,8 @@ function getContent(lang) {
             </button>
             <button class="tab color-writing-blue font-size-30" role="tab" id="tab-pokedex" aria-selected="false"
                 aria-controls="panel-pokedex" tabindex="-1"><span
-                    class="color-writing-blue font-size-30 desktop-content">3. Pokedex</span>
+                    class="color-writing-blue font-size-30 desktop-content">3. Poll App</span>
                 <span class="color-writing-blue font-size-30 resp-content">3. Projekt</span>
-            </button>
-            <button class="tab color-writing-blue font-size-30" role="tab" id="tab-future" aria-selected="false"
-                aria-controls="panel-future" tabindex="-1"><span
-                    class="color-writing-blue font-size-30 desktop-content">4. Kommende</span>
-                <span class="color-writing-blue font-size-30 resp-content">4. Projekt</span>
             </button>
         </div>
         <div id="projectsContainer" class="card">
@@ -284,7 +287,7 @@ function getContent(lang) {
                 <div class="panel active" data-panel="0" role="tabpanel" id="panel-join" aria-labelledby="tab-join"
                     aria-hidden="false">
                     <div class="project-btns-resp">
-                        <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                        <a href="https://join.fabian-puchta.de" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                         <a href="https://github.com/FabianP95/Join" class="btn" target="_blank"
                             rel="noopener noreferrer">GitHub</a>
                     </div>
@@ -351,7 +354,7 @@ function getContent(lang) {
                             <img src="./assets/img/joinScreen.png" alt="screenshot of the project 'join'">
                         </div>
                         <div class="project-btns">
-                            <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                            <a href="https://join.fabian-puchta.de" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                             <a href="https://github.com/FabianP95/Join" class="btn" target="_blank"
                                 rel="noopener noreferrer">GitHub</a>
                         </div>
@@ -360,7 +363,7 @@ function getContent(lang) {
                 <div class="panel" data-panel="1" role="tabpanel" id="panel-pollo" aria-labelledby="tab-pollo"
                     aria-hidden="true">
                     <div class="project-btns-resp">
-                        <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                        <a href="https://pollo-loco.fabian-puchta.de" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                         <a href="https://github.com/FabianP95/el_pollo_loco" target="_blank" rel="noopener noreferrer"
                             class="btn">GitHub</a>
                     </div>
@@ -423,7 +426,7 @@ function getContent(lang) {
                             <img src="./assets/img/polloScreen.png" alt="screenshot of the project 'el pollo loco'">
                         </div>
                         <div class="project-btns">
-                            <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                            <a href="https://pollo-loco.fabian-puchta.de" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                             <a href="https://github.com/FabianP95/el_pollo_loco" target="_blank"
                                 rel="noopener noreferrer" class="btn">GitHub</a>
                         </div>
@@ -432,7 +435,7 @@ function getContent(lang) {
                 <div class="panel" data-panel="2" role="tabpanel" id="panel-pokedex" aria-labelledby="tab-pokedex"
                     aria-hidden="true">
                     <div class="project-btns-resp">
-                        <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                        <a href="https://pollapp.fabian-puchta.de" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                         <a href="https://github.com/FabianP95/pokedex" class="btn" target="_blank"
                             rel="noopener noreferrer">GitHub</a>
                     </div>
@@ -442,14 +445,12 @@ function getContent(lang) {
                             <div>
                                 <h3 class="pr-title">
                                     Über das Projekt
-                                    <span class="font-size-18 pr-duration">Dauer: 4 Wochen</span>
+                                    <span class="font-size-18 pr-duration">Dauer: 2 Wochen</span>
                                 </h3>
                                 <p class="font-size-18 line-height">
-                                    Pokedex ist die Darstellung aller Pokemon, nach der bekannten Vorlage aus den
-                                    Spielen.<br>
-                                    Hierbei werden die Pokemon mit Bild und verschiedenen Werten, sortiert nach ihrer
-                                    Nummer, anhand einer Karte angezeigt.
-                                    Dabei erlangt der Nutzer eine umfassende Übersicht zu jedem Pokemon.
+                                    Poll App ist ein Umfrage App zum Erstellen von Surveys.<br>
+                                    Hierbei werden aktuell erstellte und alte Umfragen angezeigt. Es können neue Umfragen erstellt und einer
+                                    Themenrichtung zugeordnet werden.
                                 </p>
                             </div>
                         </div>
@@ -458,7 +459,7 @@ function getContent(lang) {
                             <div>
                                 <h3 class="pr-title">Wie habe ich meine Arbeit organisiert</h3>
                                 <p class="font-size-18 line-height">
-                                    Mit Trello gelang mir hierbei die erfolgreiche Umsetzung dieses Projekts.
+                                    Durch die Erstellung eines Fahrplans mittels Analyse der Designvorgabe, mit dem Schwerpunkt der Komponenten Struktur von Angular.
                                 </p>
                             </div>
                         </div>
@@ -467,8 +468,8 @@ function getContent(lang) {
                             <div>
                                 <h3 class="pr-title">Was habe ich gelernt</h3>
                                 <p class="font-size-18 line-height">
-                                    Gelernt habe ich bei diesem Projekt den Umgang mit APIs und JSON Objekten.<br>
-                                    Vertieft wurde zudem das Nutzen von HTML Templates zur Darstellung der Pokemon.
+                                    Gelernt habe ich bei diesem Projekt den Umgang mit Angular.<br>
+                                    Zudem war ein großer Schwerpunkt die strukturierte Gestaltung der Datenbankarchitektur mit Supabase.
                                 </p>
                             </div>
                         </div>
@@ -477,61 +478,25 @@ function getContent(lang) {
                         <div class="sub-section pr-tech">
                             <p class="font-size-18">Technologien</p>
                             <div class="tech-icon-row">
-                                <img src="./assets/icons/skills/htmlSmall.svg" alt="html icon">
+                                <img src="./assets/icons/skills/angularSmall.svg" alt="angualr icon">
                                 <img src="./assets/icons/skills/cssSmall.svg" alt="css icon">
-                                <img src="./assets/icons/skills/jsSmall.svg" alt="javascript icon">
+                                <img src="./assets/icons/skills/typeScriptSmall.svg" alt="typescript icon">
                             </div>
                         </div>
                         <div class="pr-section">
                             <div class="pr-header-resp">
-                                <h3 class="pr-title-resp">Pokedex</h3>
-                                <p>Technologien: Firebase, CSS, JavaScript, HTML</p>
-                                <p>Dauer: 4 Wochen</p>
+                                <h3 class="pr-title-resp">Poll App</h3>
+                                <p>Technologien: Angular, TypeScript, SCSS</p>
+                                <p>Dauer: 2 Wochen</p>
                             </div>
                         </div>
                         <div class="screenshot-project">
-                            <img src="./assets/img/pokeScreen.png" alt="screenshot of the project 'el pollo loco'">
+                            <img src="./assets/img/pollapp_preview.png" alt="screenshot of the project 'pollapp'">
                         </div>
                         <div class="project-btns">
-                            <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                            <a href="https://pollapp.fabian-puchta.de" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                             <a href="https://github.com/FabianP95/pokedex" class="btn" target="_blank"
                                 rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" data-panel="3" role="tabpanel" id="panel-future" aria-labelledby="tab-future"
-                    aria-hidden="true">
-                    <div class="pr-card-left">
-                        <div class="pr-section">
-                            <img src="./assets/icons/bulletPoint.svg" alt="bulletpoint graphic">
-                            <div>
-                                <h3 class="pr-title">
-                                    Über das Projekt
-                                </h3>
-                                <p class="font-size-18 line-height">
-                                    In kommenden Projekten möchte ich meine Fähigkeiten in der Softwareentwicklung
-                                    erweitern. Hierbei liegt mein Fokus auf dem Arbeiten und Entwickeln
-                                    mit Angular und TypeScript.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pr-right ">
-                        <div class="sub-section pr-tech">
-                            <p class="font-size-18">Technologien</p>
-                            <div class="tech-icon-row">
-                                <img src="./assets/icons/skills/typeScriptSmall.svg" alt="typescript icon">
-                                <img src="./assets/icons/skills/angularSmall.svg" alt="angular icon">
-                            </div>
-                        </div>
-                        <div class="pr-section">
-                            <div class="pr-header-resp">
-                                <h3 class="pr-title-resp">Kommendes Projekt</h3>
-                                <p>Technologien: TypeScript, Angular, HTML, CSS, JavaScript</p>
-                            </div>
-                        </div>
-                        <div class="future-project">
-                            <span>Demnächst...</span>
                         </div>
                     </div>
                 </div>
@@ -842,31 +807,38 @@ function getContent(lang) {
                     <img class="skill-icon-big" src="./assets/icons/skills/htmlBig.svg" alt="icon for html">
                     <img class="skill-icon-big" src="./assets/icons/skills/cssBig.svg" alt="icon for css">
                     <img class="skill-icon-big" src="./assets/icons/skills/jsBig.svg" alt="icon for java script">
+                     <img class="skill-icon-big" src="./assets/icons/skills/typeScriptBig.svg" alt="icon for typescript">
                     <img class="skill-icon-big" src="./assets/icons/skills/apiBig.svg" alt="icon for an API">
                     <img class="skill-icon-big" src="./assets/icons/skills/firebaseBig.svg"
                         alt="icon for firebase storage">
                     <img class="skill-icon-big" src="./assets/icons/skills/gitBig.svg" alt="icon for gitHub">
                     <img class="skill-icon-big" src="./assets/icons/skills/scrumBig.svg" alt="icon for scrum">
+                    <img class="skill-icon-big" src="./assets/icons/skills/reactBig.svg" alt="icon for react">
+                    <img class="skill-icon-big" src="./assets/icons/skills/supabaseBig.svg" alt="icon for supabase">
+                    <img class="skill-icon-big" src="./assets/icons/skills/angularBig.svg" alt="icon for angular">
                     <img class="skill-icon-small" src="./assets/icons/skills/htmlSmall.svg" alt="icon for html">
                     <img class="skill-icon-small" src="./assets/icons/skills/cssSmall.svg" alt="icon for css">
-                    <img class="skill-icon-small" src="./assets/icons/skills/jsSmall.svg"
-                        alt="icon for java script">
+                    <img class="skill-icon-small" src="./assets/icons/skills/jsSmall.svg" alt="icon for java script">
+                    <img class="skill-icon-small" src="./assets/icons/skills/typeScriptSmall.svg" alt="icon for typescript">
                     <img class="skill-icon-small" src="./assets/icons/skills/apiSmall.svg" alt="icon for an API">
                     <img class="skill-icon-small" src="./assets/icons/skills/firebaseSmall.svg"
                         alt="icon for firebase storage">
                     <img class="skill-icon-small" src="./assets/icons/skills/gitSmall.svg" alt="icon for gitHub">
                     <img class="skill-icon-small" src="./assets/icons/skills/scrumSmall.svg" alt="icon for scrum">
+                    <img class="skill-icon-small" src="./assets/icons/skills/angularSmall.svg" alt="icon for angular">
+                    <img class="skill-icon-small" src="./assets/icons/skills/reactSmall.svg" alt="icon for react">
+                    <img class="skill-icon-small" src="./assets/icons/skills/supabaseSmall.svg" alt="icon for supabase">
                 </div>
                 <div class="content-skills-right">
                     <p class="font-size-18">I am currently learning</p>
                     <div class="skills-learning">
                         <div class="new-skill">
-                            <img src="./assets/icons/skills/angularSmall.svg" alt="icon for an angular">
-                            <p>Angular</p>
+                            <img src="./assets/icons/skills/pythonSmall.svg" alt="icon for a python">
+                            <p>Python</p>
                         </div>
                         <div class="new-skill">
-                            <img src="./assets/icons/skills/typeScriptSmall.svg" alt="icon for an typescript">
-                            <p>TypeScript</p>
+                            <img src="./assets/icons/skills/djangoSmall.svg" alt="icon for a django">
+                            <p>Django</p>
                         </div>
                     </div>
                     <p>To keep up with modern web development approaches
@@ -878,12 +850,12 @@ function getContent(lang) {
                         <p class="div-space line-height">To keep up with modern web development approaches</p>
                         <div class="div-space skills-icons-resp">
                             <div class="new-skill">
-                                <img src="./assets/icons/skills/angularSmall.svg" alt="icon for an angular">
-                                <p>Angular</p>
+                                <img src="./assets/icons/skills/pythonSmall.svg" alt="icon for a python">
+                                 <p>Python</p>
                             </div>
                             <div class="new-skill">
-                                <img src="./assets/icons/skills/typeScriptSmall.svg" alt="icon for an typescript">
-                                <p>TypeScript</p>
+                                  <img src="./assets/icons/skills/djangoSmall.svg" alt="icon for a django">
+                                  <p>Django</p>
                             </div>
                         </div>
                     </div>
@@ -909,13 +881,8 @@ function getContent(lang) {
             </button>
             <button class="tab color-writing-blue font-size-30" role="tab" id="tab-pokedex" aria-selected="false"
                 aria-controls="panel-pokedex" tabindex="-1"><span
-                    class="color-writing-blue font-size-30 desktop-content">3. Pokedex</span>
+                    class="color-writing-blue font-size-30 desktop-content">3. Poll App</span>
                 <span class="color-writing-blue font-size-30 resp-content">3. Project</span>
-            </button>
-            <button class="tab color-writing-blue font-size-30" role="tab" id="tab-future" aria-selected="false"
-                aria-controls="panel-future" tabindex="-1"><span
-                    class="color-writing-blue font-size-30 desktop-content">4. Upcoming</span>
-                <span class="color-writing-blue font-size-30 resp-content">4. Project</span>
             </button>
         </div>
         <div id="projectsContainer" class="card">
@@ -923,7 +890,7 @@ function getContent(lang) {
                 <div class="panel active" data-panel="0" role="tabpanel" id="panel-join" aria-labelledby="tab-join"
                     aria-hidden="false">
                     <div class="project-btns-resp">
-                        <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                        <a href="https://join.fabian-puchta.de/" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                         <a href="https://github.com/FabianP95/Join" class="btn" target="_blank"
                             rel="noopener noreferrer">GitHub</a>
                     </div>
@@ -989,7 +956,7 @@ function getContent(lang) {
                             <img src="./assets/img/joinScreen.png" alt="screenshot of the project 'join'">
                         </div>
                         <div class="project-btns">
-                            <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                            <a href="https://join.fabian-puchta.de/" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                             <a href="https://github.com/FabianP95/Join" class="btn" target="_blank"
                                 rel="noopener noreferrer">GitHub</a>
                         </div>
@@ -998,7 +965,7 @@ function getContent(lang) {
                 <div class="panel" data-panel="1" role="tabpanel" id="panel-pollo" aria-labelledby="tab-pollo"
                     aria-hidden="true">
                     <div class="project-btns-resp">
-                        <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                        <a href="https://pollo-loco.fabian-puchta.de/" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                         <a href="https://github.com/FabianP95/el_pollo_loco" target="_blank" rel="noopener noreferrer"
                             class="btn">GitHub</a>
                     </div>
@@ -1060,7 +1027,7 @@ function getContent(lang) {
                             <img src="./assets/img/polloScreen.png" alt="screenshot of the project 'el pollo loco'">
                         </div>
                         <div class="project-btns">
-                            <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                            <a href="https://pollo-loco.fabian-puchta.de/" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
                             <a href="https://github.com/FabianP95/el_pollo_loco" target="_blank"
                                 rel="noopener noreferrer" class="btn">GitHub</a>
                         </div>
@@ -1069,8 +1036,8 @@ function getContent(lang) {
                 <div class="panel" data-panel="2" role="tabpanel" id="panel-pokedex" aria-labelledby="tab-pokedex"
                     aria-hidden="true">
                     <div class="project-btns-resp">
-                        <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
-                        <a href="https://github.com/FabianP95/pokedex" class="btn" target="_blank"
+                        <a href="https://pollapp.fabian-puchta.de/" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
+                        <a href="https://github.com/FabianP95/Poll-App" class="btn" target="_blank"
                             rel="noopener noreferrer">GitHub</a>
                     </div>
                     <div class="pr-card-left">
@@ -1079,14 +1046,11 @@ function getContent(lang) {
                             <div>
                                 <h3 class="pr-title">
                                     About the Project
-                                    <span class="font-size-18 pr-duration">Duration: 4 Weeks</span>
+                                    <span class="font-size-18 pr-duration">Duration: 2 Weeks</span>
                                 </h3>
                                 <p class="font-size-18 line-height">
-                                    The Pokédex is a collection of all Pokémon, based on the familiar format from the
-                                    games. <br>
-                                    The Pokémon are displayed on a card with images and various stats, sorted by their
-                                    number.
-                                    This provides users with a comprehensive overview of each Pokémon.
+                                    Poll App is a survey app for creating surveys. <br>
+                                    It displays both recently created and older surveys. You can create new surveys and assign them to a specific category.
                                 </p>
                             </div>
                         </div>
@@ -1095,7 +1059,7 @@ function getContent(lang) {
                             <div>
                                 <h3 class="pr-title">How I have organised my work process</h3>
                                 <p class="font-size-18 line-height">
-                                    Using Trello, I was able to successfully complete this project.
+                                    By creating a roadmap through an analysis of the design specifications, with a focus on the structural components of Angular.
                                 </p>
                             </div>
                         </div>
@@ -1104,9 +1068,8 @@ function getContent(lang) {
                             <div>
                                 <h3 class="pr-title">What I have learnt</h3>
                                 <p class="font-size-18 line-height">
-                                    Through this project, I learned how to work with APIs and JSON objects. <br>
-                                    I also gained a deeper understanding of how to use HTML templates to display the
-                                    Pokémon.
+                                    Through this project, I learned how to work with Angular. <br>
+                                    Another major focus was on designing a structured database architecture using Supabase.
                                 </p>
                             </div>
                         </div>
@@ -1115,24 +1078,24 @@ function getContent(lang) {
                         <div class="sub-section pr-tech">
                             <p class="font-size-18">Technologies</p>
                             <div class="tech-icon-row">
-                                <img src="./assets/icons/skills/htmlSmall.svg" alt="html icon">
+                                <img src="./assets/icons/skills/angularSmall.svg" alt="angular icon">
                                 <img src="./assets/icons/skills/cssSmall.svg" alt="css icon">
-                                <img src="./assets/icons/skills/jsSmall.svg" alt="javascript icon">
+                                <img src="./assets/icons/skills/typeScriptSmall.svg" alt="typescript icon">
                             </div>
                         </div>
                         <div class="pr-section">
                             <div class="pr-header-resp">
-                                <h3 class="pr-title-resp">Pokedex</h3>
-                                <p>Technologies: Firebase, CSS, JavaScript, HTML</p>
-                                <p>Duration: 4 Weeks</p>
+                                <h3 class="pr-title-resp">Poll App</h3>
+                                <p>Technologies: Angular, TypeScript, SCSS</p>
+                                <p>Duration: 2 Weeks</p>
                             </div>
                         </div>
                         <div class="screenshot-project">
-                            <img src="./assets/img/pokeScreen.png" alt="screenshot of the project 'el pollo loco'">
+                            <img src="./assets/img/pollapp_preview.png" alt="screenshot of the project 'pollapp'">
                         </div>
                         <div class="project-btns">
                             <a href="" class="btn-live" target="_blank" rel="noopener noreferrer">Live Test</a>
-                            <a href="https://github.com/FabianP95/pokedex" class="btn" target="_blank"
+                            <a href="https://github.com/FabianP95/Poll-App" class="btn" target="_blank"
                                 rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
